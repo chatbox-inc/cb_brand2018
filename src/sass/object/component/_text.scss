@@ -1,0 +1,117 @@
+/* slogan */
+.c-slogan {
+  display: table-cell;
+  width: 830px;
+  height: 250px;
+  border-radius: 0 6px 6px 0;
+  background-color: #C3504F;
+  opacity: 0.9;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.c-slogan_text {
+  line-height: 84px;
+  font-family: YuGothic;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+}
+
+/* title */
+.c-title {
+  font-family: YuMincho;
+  font-size: 40px;
+  font-weight: 500;
+  color: #393739;
+  line-height: 120px;
+}
+
+.c-title:first-letter {
+  font-size: 80px;
+  color: #C3504F;
+}
+
+/* subTitle */
+.c-subTitle {
+  font-family: YuMincho;
+  font-size: 40px;
+  font-weight: 500;
+  color: #393739;
+}
+
+/* caption */
+.c-caption {
+  font-family: YuGothic;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #C3504F;
+}
+
+/* sentence */
+.c-sentence {
+  line-height: 30px;
+  font-family: YuGothic;
+  font-size: 15px;
+  font-weight: 500;
+  color: #393739;
+}
+
+/* overview */
+.c-overview {
+  font-family: YuGothic;
+  font-size: 20px;
+  font-weight: bold;
+  color: #C3504F;
+}
+
+/* address */
+.c-address {
+  font-family: YuGothic;
+  font-size: 20px;
+  font-weight: bold;
+  color: #393739;
+}
+
+/* access */
+.c-access {
+  font-family: YuGothic;
+  font-size: 15px;
+  font-weight: 500;
+  color: #393739;
+}
+
+/* company */
+.c-company_header {
+  font-family: YuGothic;
+  font-size: 15px;
+  font-weight: bold;
+  color: #393739;
+}
+
+.c-company_data {
+  font-family: YuGothic;
+  font-size: 15px;
+  font-weight: 500;
+  color: #393739;
+}
+
+/* detail */
+.c-detail {
+  width: 1090px;
+  height: 200px;
+  box-shadow: 15px 15px 0 0 #C3504F;
+  border: 1px solid #C3504F;
+  background-color: #FFFFFF;
+}
+
+.c-detail_anchor {
+  text-decoration: none;
+  font-family: YuGothic;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #C3504F;
+}
