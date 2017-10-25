@@ -8,15 +8,14 @@
   opacity: 0.9;
   vertical-align: middle;
   text-align: center;
-}
-
-.c-slogan_text {
-  line-height: 84px;
-  font-family: YuGothic;
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 4px;
-  color: #FFFFFF;
+  &_text {
+    line-height: 84px;
+    font-family: YuGothic;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #FFFFFF;
+  }
 }
 
 /* title */
@@ -26,11 +25,10 @@
   font-weight: 500;
   color: #393739;
   line-height: 120px;
-}
-
-.c-title:first-letter {
-  font-size: 80px;
-  color: #C3504F;
+  &::first-letter {
+    font-size: 80px;
+    color: #C3504F;
+  }
 }
 
 /* subTitle */
@@ -84,18 +82,19 @@
 }
 
 /* company */
-.c-company_header {
-  font-family: YuGothic;
-  font-size: 15px;
-  font-weight: bold;
-  color: #393739;
-}
-
-.c-company_data {
-  font-family: YuGothic;
-  font-size: 15px;
-  font-weight: 500;
-  color: #393739;
+.c-company {
+  &_header {
+    font-family: YuGothic;
+    font-size: 15px;
+    font-weight: bold;
+    color: #393739;
+  }
+  &_data {
+    font-family: YuGothic;
+    font-size: 15px;
+    font-weight: 500;
+    color: #393739;
+  }
 }
 
 /* detail */
@@ -105,13 +104,12 @@
   box-shadow: 15px 15px 0 0 #C3504F;
   border: 1px solid #C3504F;
   background-color: #FFFFFF;
-}
-
-.c-detail_anchor {
-  text-decoration: none;
-  font-family: YuGothic;
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #C3504F;
+  &_anchor {
+    text-decoration: none;
+    font-family: YuGothic;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #C3504F;
+  }
 }
