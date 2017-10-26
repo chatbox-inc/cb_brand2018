@@ -6,6 +6,7 @@
 
 .u-title_center {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 /* image */
@@ -39,7 +40,23 @@
 }
 
 /* link */
-.u-link {
+.u-link_small {
   margin-left: 7%;
   clear: both;
+}
+
+.u-link_large {
+  width: 90%;
+}
+
+/* sentence */
+.u-sentence {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.u-link_large {
+  margin: 0 auto;
 }
