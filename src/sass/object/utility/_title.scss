@@ -54,10 +54,11 @@
 }
 
 .u-detail {
-  width: 90%;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.u-section {
+.u-section_01 {
   margin: 0 auto;
   width: 400px;
 }
@@ -76,4 +77,28 @@
   margin-left: 5%;
   max-width: 400px;
   width: 90%;
+}
+
+.u-intro {
+  margin-bottom: 200px;
+}
+
+.u-creation {
+  margin-bottom: 200px;
+}
+
+.u-talking {
+  margin-bottom: 200px;
+}
+
+.u-enjoy {
+  margin-bottom: 200px;
+}
+
+.u-about {
+  margin-bottom: 200px;
+}
+
+.u-member {
+  margin-bottom: 200px;
 }
