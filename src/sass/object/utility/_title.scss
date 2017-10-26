@@ -56,3 +56,24 @@
 .u-detail {
   width: 90%;
 }
+
+.u-section {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.u-caption_01 {
+  margin-left: 5%;
+  &:nth-child(1) {
+    padding-top: 30px;
+  }
+  &:nth-child(2) {
+    margin-bottom: 30px;
+  }
+}
+
+.u-sentence_01 {
+  margin-left: 5%;
+  max-width: 400px;
+  width: 90%;
+}
