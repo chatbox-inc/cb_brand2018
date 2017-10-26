@@ -5,8 +5,11 @@ Error: File to import not found or unreadable: src/sass/object/project/_title.
 1: //@import "node_modules/bootstrap/scss/bootstrap";
 2: 
 3: @import 'src/sass/object/project/_title';
-4: @import 'src/sass/object/component/_title';
-5: @import 'src/sass/object/utility/_title';
+4: 
+5: @import 'src/sass/object/component/_container';
+6: @import 'src/sass/object/component/_title';
+7: @import 'src/sass/object/component/_button';
+8: @import 'src/sass/object/component/_anchor';
 
 Backtrace:
 app.scss:3
@@ -52,4 +55,4 @@ app.scss:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: src/sass/object/project/_title.\A         on line 3 of app.scss\A \A 1: //@import \"node_modules/bootstrap/scss/bootstrap\";\A 2: \A 3: @import 'src/sass/object/project/_title';\A 4: @import 'src/sass/object/component/_title';\A 5: @import 'src/sass/object/utility/_title';"; }
+  content: "Error: File to import not found or unreadable: src/sass/object/project/_title.\A         on line 3 of app.scss\A \A 1: //@import \"node_modules/bootstrap/scss/bootstrap\";\A 2: \A 3: @import 'src/sass/object/project/_title';\A 4: \A 5: @import 'src/sass/object/component/_container';\A 6: @import 'src/sass/object/component/_title';\A 7: @import 'src/sass/object/component/_button';\A 8: @import 'src/sass/object/component/_anchor';"; }

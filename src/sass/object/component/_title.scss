@@ -1,15 +1,3 @@
-/* container */
-.c-outerContaier {
-
-}
-
-.c-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: red;
-}
-
-/* slogan */
 .c-slogan {
   display: table-cell;
   width: 830px;
@@ -29,7 +17,6 @@
   }
 }
 
-/* title */
 .c-title {
   font-family: YuMincho, serif;
   font-size: 40px;
@@ -41,109 +28,9 @@
   }
 }
 
-/* subTitle */
 .c-subTitle {
   font-family: YuMincho, serif;
   font-size: 40px;
   font-weight: 500;
   color: #393739;
-}
-
-/* caption */
-.c-caption {
-  font-family: YuGothic, serif;
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  color: #C3504F;
-}
-
-/* sentence */
-.c-sentence {
-  line-height: 30px;
-  font-family: YuGothic, serif;
-  font-size: 15px;
-  font-weight: 500;
-  color: #393739;
-}
-
-/* overview */
-.c-overview {
-  font-family: YuGothic, serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #C3504F;
-}
-
-/* company */
-.c-company {
-  &_row {
-    line-height: 30px;
-  }
-  &_header {
-    text-align: left;
-    font-family: YuGothic, serif;
-    font-size: 15px;
-    font-weight: bold;
-    color: #393739;
-  }
-  &_data {
-    padding-left: 30px;
-    font-family: YuGothic, serif;
-    font-size: 15px;
-    font-weight: 500;
-    color: #393739;
-  }
-}
-
-/* address */
-.c-address {
-  line-height: 40px;
-  &_text {
-    font-family: YuGothic, serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #393739;
-  }
-}
-
-/* access */
-.c-access {
-  line-height: 40px;
-  &_text {
-    font-family: YuGothic, serif;
-    font-size: 15px;
-    font-weight: 500;
-    color: #393739;
-  }
-}
-
-/* detail */
-.c-detail {
-  width: 1090px;
-  height: 200px;
-  box-shadow: 15px 15px 0 0 #C3504F;
-  border: 1px solid #C3504F;
-  background-color: #FFFFFF;
-  &_anchor {
-    text-decoration: none;
-    font-family: YuGothic, serif;
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #C3504F;
-  }
-}
-
-/* link */
-.c-link {
-  display: block;
-  width: 240px;
-  height: 50px;
-  border-radius: 6px;
-  background-color: #C3504F;
-  text-decoration: none;
-  text-align: center;
-  line-height: 50px;
-  color: #fff;
 }
