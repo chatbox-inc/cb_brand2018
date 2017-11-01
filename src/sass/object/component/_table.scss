@@ -1,0 +1,19 @@
+.c-company {
+  &_row {
+    line-height: 30px;
+  }
+  &_header {
+    text-align: left;
+    font-family: YuGothic, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #393739;
+  }
+  &_data {
+    padding-left: 30px;
+    font-family: YuGothic, serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #393739;
+  }
+}

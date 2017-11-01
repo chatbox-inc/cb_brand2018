@@ -1,3 +1,13 @@
 //@import "node_modules/bootstrap/scss/bootstrap";
 
-@import 'src/sass/object/component/_text';
+@import 'src/sass/object/project/_title';
+
+@import 'src/sass/object/component/_container';
+@import 'src/sass/object/component/_title';
+@import 'src/sass/object/component/_content';
+@import 'src/sass/object/component/_button';
+@import 'src/sass/object/component/_anchor';
+@import 'src/sass/object/component/_table';
+@import 'src/sass/object/component/_image';
+
+@import 'src/sass/object/utility/_title';
