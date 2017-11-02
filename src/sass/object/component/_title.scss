@@ -1,0 +1,36 @@
+.c-slogan {
+  display: table-cell;
+  width: 830px;
+  height: 250px;
+  border-radius: 0 6px 6px 0;
+  background-color: #C3504F;
+  opacity: 0.9;
+  vertical-align: middle;
+  text-align: center;
+  &_text {
+    line-height: 84px;
+    font-family: YuGothic, serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #FFFFFF;
+  }
+}
+
+.c-title {
+  font-family: YuMincho, serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: #393739;
+  &::first-letter {
+    font-size: 80px;
+    color: #C3504F;
+  }
+}
+
+.c-subTitle {
+  font-family: YuMincho, serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: #393739;
+}

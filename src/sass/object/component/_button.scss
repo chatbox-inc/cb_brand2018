@@ -1,0 +1,22 @@
+.c-link_small {
+  display: block;
+  max-width: 240px;
+  height: 50px;
+  border-radius: 6px;
+  background-color: #C3504F;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.c-link_large {
+  @extend .c-link_small;
+  max-width: 400px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 24px;
+}

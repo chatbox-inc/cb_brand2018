@@ -1,0 +1,15 @@
+.c-detail {
+  max-width: 1090px;
+  height: 200px;
+  box-shadow: 15px 15px 0 0 #C3504F;
+  border: 1px solid #C3504F;
+  background-color: #FFFFFF;
+  &_anchor {
+    text-decoration: none;
+    font-family: YuGothic, serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #C3504F;
+  }
+}
