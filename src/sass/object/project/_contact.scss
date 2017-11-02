@@ -1,0 +1,278 @@
+/* common */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+dd{
+  margin-left: 0;
+
+}
+a:link{
+  text-decoration: none;
+}
+.c_clear{
+  clear: both;
+}
+/* css checkbox01 */
+.checkbox01-input{
+  display: none;
+}
+.checkbox01-parts{
+  padding-left: 26%;
+  position:relative;
+  margin-right: 30%;
+}
+.current{
+  .checkbox01-parts::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+  }
+}
+.checkbox01-parts::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #C3504F;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+
+}
+.current{
+  .checkbox01-input:checked + .checkbox01-parts{
+    color: #FFFFFF;
+  }
+}
+
+.checkbox01-input:checked + .checkbox01-parts{
+  color: #C3504F;
+}
+.checkbox01-input:checked + .checkbox01-parts::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  transform: rotate(40deg);
+  border-bottom: 3px solid #C3504F;
+  border-right: 3px solid #C3504F;
+}
+
+
+/* content */
+
+.c-contact_sub_info{
+  margin-bottom: 7%;
+}
+.c-contact_container{
+  padding: 0 2%;
+}
+.c_border_content{
+  border: 1px solid #C3504F;
+}
+.c_border{
+  border: 1px solid #C3504F;
+}
+.c_modal_text{
+  color: #C3504F;
+}
+.c_modal_text_number{
+  font-family: YuGothic;
+  font-size:3rem;
+  font-weight: bold;
+  color: #C3504F;
+}
+/* contact */
+.contact_box{
+  overflow: auto;
+  padding: 5% 3% 2%;
+  .c_border{
+    margin-bottom: 3%;
+  }
+  .ttl{
+    font-weight: 600;
+    margin-bottom: 3%;
+  }
+}
+.c-contactContainer{
+  line-height: 1.6;
+  padding: 0 14px;
+
+  .p-intro{
+    margin-top: 64px;
+  }
+}
+.c_content_center{
+  text-align: center;
+}
+
+/* button */
+.c-btn_base{
+  background-color: #C3504F;
+  color: #FFFFFF;
+  padding: 7%;
+  border-radius: 7px;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 3%;
+  width: 100%;
+}
+i{
+  margin-right: 3%;
+}
+
+
+/* contact */
+.contact_sub{
+  margin-bottom: 87px;
+}
+.p-contact_check{
+}
+.p_form_box{
+  .c-link_anchor{
+    border: 1px solid #C3504F;
+    border-radius: 7px;
+    color: #c3504f;
+    margin: 1% 0;
+    padding: 3% 16%;
+    display: inline-block;
+    width: 16%;
+    white-space: nowrap;
+    font-size: 100%;
+  }
+  .current{
+    background-color: #C3504F;
+    color: #FFFFFF;
+  }
+}
+.p-contact{
+  text-align: left;
+
+}
+.p_form{
+  margin-top: 7%;
+  dt{
+    margin-bottom: 1%;
+  }
+  dd{
+    margin-bottom: 3%;
+  }
+  input,textarea{
+    border: 1px solid #cacaca;
+    padding: 2%;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-size: 120%;
+  }
+}
+.submit{
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+
+}
+.submit::after{
+  font-family: 'FontAwesome';
+  content: "\f054";
+  position: absolute;
+  top: 50%;
+  right: 9%;
+  margin-top: -12px;
+  color: #FFFFFF;
+
+}
+/* pc */
+@media screen and (min-width: 768px) {
+  .contact_box{
+    overflow: hidden;
+    .c_border {
+      border-style: none;
+    }
+    .c_contact_sns_box{
+      width: 60%;
+      float: left;
+    }
+    .c-link{
+      width: 48%;
+      float: left;
+      margin-right: 1%;
+      a{
+        padding: 5% 10%;
+      }
+      &:first-child{
+        margin-left: 3%;
+      }
+    }
+    .c_contact_tel_box{
+      border-left: 1px solid #C3504F;
+      width: 34%;
+      float: left;
+      margin-left: 3%;
+      padding-bottom: 2%;
+      .c_modal_text_number{
+        font-size: 3rem;
+      }
+    }
+  }
+  .p-contact_check{
+    .c-link{
+      width: 55%;
+      margin: 0 auto;
+    }
+  }
+  .p_form{
+    margin-top: 7%;
+    dt{
+      margin-bottom: 1%;
+      width: 10%;
+      float: left;
+      clear: both;
+      text-align: right;
+      margin-right: 3%;
+    }
+    dd{
+      margin-bottom: 3%;
+      width: 80%;
+      float: left;
+    }
+    input,textarea{
+      border: 1px solid #cacaca;
+      padding: 2%;
+      width: 100%;
+      box-sizing: border-box;
+      line-height: 1.2;
+      font-size: 80%;
+    }
+  }
+  .p-contact{
+    text-align: center;
+    .submit{
+      width: 30%;
+      margin: 0 auto;
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+
+
+}
+
