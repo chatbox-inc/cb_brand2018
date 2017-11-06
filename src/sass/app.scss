@@ -1,15 +1,15 @@
 //@import "node_modules/bootstrap/scss/bootstrap";
 
-@import 'src/sass/object/project/_title';
+@import './object/project/_title';
 
-@import 'src/sass/object/component/_container';
-@import 'src/sass/object/component/_title';
-@import 'src/sass/object/component/_content';
-@import 'src/sass/object/component/_button';
-@import 'src/sass/object/component/_anchor';
-@import 'src/sass/object/component/_table';
-@import 'src/sass/object/component/_image';
+@import './object/component/_container';
+@import './object/component/_title';
+@import './object/component/_content';
+@import './object/component/_button';
+@import './object/component/_anchor';
+@import './object/component/_table';
+@import './object/component/_image';
 
-@import 'src/sass/object/utility/_title';
-@import './object/component/_text';
+@import './object/utility/_title';
+//@import './object/component/_text';
 @import './object/project/_contact';
