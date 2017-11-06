@@ -146,16 +146,10 @@
   max-width: 1200px; }
 
 .c-img_01 {
-  height: 300px;
-  background-image: url("/img/intro01.jpg");
-  background-repeat: no-repeat;
-  background-size: contain; }
+  height: 300px; }
 
 .c-img_02 {
-  height: 300px;
-  background-image: url("/img/creation01.jpg");
-  background-repeat: no-repeat;
-  background-size: contain; }
+  height: 300px; }
 
 .c-img_03 {
   height: 300px;
@@ -273,6 +267,22 @@
   max-width: 400px;
   width: 90%; }
 
+.u-section_02 {
+  margin: 0 auto;
+  width: 400px; }
+
+.u-caption_02 {
+  margin-left: 5%; }
+  .u-caption_02:nth-child(1) {
+    padding-top: 30px; }
+  .u-caption_02:nth-child(2) {
+    margin-bottom: 30px; }
+
+.u-sentence_02 {
+  margin-left: 5%;
+  max-width: 400px;
+  width: 90%; }
+
 .u-firstView {
   position: relative;
   height: 900px; }
@@ -298,8 +308,11 @@
   height: 900px; }
 
 .u-member {
+  margin-bottom: 200px; }
+
+.u-container {
   position: relative;
-  height: 900px; }
+  height: 100%; }
 
 .u-outerContainer {
   position: relative;
@@ -321,6 +334,9 @@
   position: absolute;
   top: 100px;
   height: 400px;
+  width: 100%; }
+
+.u-img_02 {
   width: 100%; }
 
 /* common */
