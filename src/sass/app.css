@@ -256,7 +256,9 @@
   width: 100%; }
 
 .u-section_01 {
+  position: relative;
   margin: 0 auto;
+  margin-top: 300px;
   width: 400px; }
 
 .u-caption_01 {
@@ -276,22 +278,28 @@
   height: 900px; }
 
 .u-intro {
-  margin-bottom: 200px; }
+  position: relative;
+  height: 900px; }
 
 .u-creation {
-  margin-bottom: 200px; }
+  position: relative;
+  height: 900px; }
 
 .u-talking {
-  margin-bottom: 200px; }
+  position: relative;
+  height: 900px; }
 
 .u-enjoy {
-  margin-bottom: 200px; }
+  position: relative;
+  height: 900px; }
 
 .u-about {
-  margin-bottom: 200px; }
+  position: relative;
+  height: 900px; }
 
 .u-member {
-  margin-bottom: 200px; }
+  position: relative;
+  height: 900px; }
 
 .u-outerContainer {
   position: relative;
@@ -308,6 +316,12 @@
   position: absolute;
   top: 45%;
   width: 85%; }
+
+.u-img_01 {
+  position: absolute;
+  top: 100px;
+  height: 400px;
+  width: 100%; }
 
 /* common */
 html {
