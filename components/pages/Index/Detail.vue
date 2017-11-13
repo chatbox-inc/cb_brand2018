@@ -14,9 +14,9 @@
         <div class="p-detail--inner">
           <h2 class="p-detail--subtitle">{{messages.subtitle}}</h2>
           <p class="p-detail--body">{{messages.message}}</p>
-          <div class="p-detail--image" style="background-image: url('/img/creation02.jpg');"></div>
+          <div class="p-detail--image" :style="{backgroundImage: `url('${messages.image1}')`}"></div>
           <br>
-          <div class="p-detail--image" style="background-image: url('/img/creation02.jpg');"></div>
+          <div class="p-detail--image" :style="{backgroundImage: `url('${messages.image2}')`}"></div>
         </div>
       </div>
     </div>
