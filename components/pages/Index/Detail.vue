@@ -91,6 +91,7 @@
 
   .p-detail{
     @include c-container;
+    padding-top: 8rem;
     &--titleArea{
       margin-top:4.0rem;
     }
@@ -120,6 +121,9 @@
       background-size: cover;
       background-repeat: no-repeat;
       margin: 1rem;
+      @include desktop(){
+        height: 32rem;
+      }
     }
     &--content2{
       display: flex;
@@ -136,7 +140,7 @@
       background-repeat: no-repeat;
       margin: 1rem;
       @include desktop(){
-        height: 70rem;
+        height: 32rem;
         width: 100%;
       }
     }
