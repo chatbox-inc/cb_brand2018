@@ -16,6 +16,7 @@
   .p-contact{
     @include c-container;
     margin-bottom: 2rem;
+    margin-top:4.0rem;
     &--title{
       @include c-title;
       text-align: center;

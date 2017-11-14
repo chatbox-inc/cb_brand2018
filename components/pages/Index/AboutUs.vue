@@ -53,6 +53,7 @@
 
   .p-about{
     @include c-container;
+    margin-top:4.0rem;
     &--title{
       @include c-title
     }

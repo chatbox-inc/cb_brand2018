@@ -91,6 +91,9 @@
 
   .p-detail{
     @include c-container;
+    &--titleArea{
+      margin-top:4.0rem;
+    }
     &--inner{
       @include c-containerInner;
       @include desktop{
@@ -116,6 +119,7 @@
       height: 20rem;
       background-size: cover;
       background-repeat: no-repeat;
+      margin: 1rem;
     }
     &--content2{
       display: flex;
@@ -130,6 +134,7 @@
       background-size: cover;
       background-position-y: 50%;
       background-repeat: no-repeat;
+      margin: 1rem;
       @include desktop(){
         height: 70rem;
         width: 100%;
