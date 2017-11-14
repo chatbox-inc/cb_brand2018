@@ -91,8 +91,8 @@
 
   .p-detail{
     @include c-container;
-    padding-top: 8rem;
     &--titleArea{
+      padding: 4rem 0;
       margin-top:4.0rem;
     }
     &--inner{
