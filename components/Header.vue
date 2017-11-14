@@ -33,7 +33,7 @@
     }
     &--logoImg{
       display: block;
-      width: 230px;
+      width: 18rem;
       margin: 0 auto;
     }
   }
