@@ -9,16 +9,25 @@
 </template>
 
 <style lang="scss" scoped>
+  @import "~assets/scss/layout/_layout.scss";
   @import "~assets/scss/object/component/_container.scss";
   @import "~assets/scss/object/component/_title.scss";
 
   .p-hero{
     @include c-container;
-    background: url("/img/moc/1200x600.png");
-    background-position: center;
+    background: url("/images/brand_top.jpg");
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 30rem;
-    padding-top: 8em;
+    padding-top: 8rem;
     padding-bottom: 10em;
+
+    @include desktop(){
+      background-size: 90%;
+      padding-top: 30rem;
+      height: 70rem;
+    }
 
     &--inner{
       @include c-containerInner
@@ -29,8 +38,8 @@
       color: white;
       font-size: 1.5rem;
       width: 80%;
-      margin-top:3em;
-      padding: 2em 1em;
+      margin-top:3rem;
+      padding: 2rem 1rem;
       border-radius: 0 6px 6px 0;
       background-color: #C3504F;
       text-align: left;
@@ -42,6 +51,11 @@
         letter-spacing: 4px;
         color: #FFFFFF;
       }
+      @include desktop(){
+        font-size: 3rem;
+        line-height: 8rem;
+      }
+
     }
   }
 </style>

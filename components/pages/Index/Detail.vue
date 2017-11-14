@@ -12,11 +12,18 @@
     <div class="p-detail--mainArea">
       <div class="p-detail">
         <div class="p-detail--inner">
-          <h2 class="p-detail--subtitle">{{messages.subtitle}}</h2>
-          <p class="p-detail--body">{{messages.message}}</p>
-          <div class="p-detail--image" :style="{backgroundImage: `url('${messages.image1}')`}"></div>
-          <br>
-          <div class="p-detail--image" :style="{backgroundImage: `url('${messages.image2}')`}"></div>
+          <div class="p-detail--content1">
+            <h2 class="p-detail--subtitle">{{messages.subtitle}}</h2>
+            <p class="p-detail--body">{{messages.message}}</p>
+            <div class="p-detail--image" v-if='image1' :style="imageStyle1"></div>
+          </div>
+          <div class="p-detail--content2">
+            <div class="p-detail--image" v-if='image2' :style="imageStyle2"></div>
+            <div class="p-detail--tags">
+              <p>Web制作</p>
+              <p>技術顧問</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,8 +43,43 @@
         default: true
       }
     },
+    data () {
+      return {
+        image1: null,
+        image2: null
+      }
+    },
     components: {
       PageLink
+    },
+    computed: {
+      imageStyle1 () {
+        if (this.image1) {
+          return {
+            backgroundImage: `url('${this.image1}')`
+          }
+        } else {
+          return {}
+        }
+      },
+      imageStyle2 () {
+        if (this.image2) {
+          return {
+            backgroundImage: `url('${this.image2}')`
+          }
+        } else {
+          return {}
+        }
+      }
+    },
+    async mounted () {
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve()
+        }, 1000)
+      })
+      this.image1 = this.messages.image1
+      this.image2 = this.messages.image2
     }
   }
 </script>
