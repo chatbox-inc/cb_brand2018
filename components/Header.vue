@@ -35,6 +35,9 @@
       display: block;
       width: 18rem;
       margin: 0 auto;
+      @include desktop(){
+        width: 23rem;
+      }
     }
   }
 </style>
