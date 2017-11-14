@@ -2,8 +2,8 @@
   <div class="p-hero">
     <!--<img src="/img/moc/1200x600.png" class="p-hero&#45;&#45;background">-->
     <div class="p-hero--slogan">
-      <div class="">Webのこれからを語り合う</div>
-      <div class="">「作る」「伝える」「語り合う」</div>
+      <div class="p-hero--slogan_text">Webのこれからを語り合う</div>
+      <div class="p-hero--slogan_text">「作る」「伝える」「語り合う」</div>
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@
       margin-top:3rem;
       padding: 2rem 1rem;
       border-radius: 0 6px 6px 0;
-      background-color: #C3504F;
+      background-color: rgba(195,80,79,0.9);
       text-align: left;
       &_text {
         line-height: 84px;
