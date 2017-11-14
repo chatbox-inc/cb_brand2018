@@ -44,12 +44,15 @@
       background-color: rgba(195,80,79,0.9);
       text-align: left;
       &_text {
-        line-height: 84px;
-        font-family: YuGothic, serif;
-        font-size: 30px;
         font-weight: bold;
-        letter-spacing: 4px;
-        color: #FFFFFF;
+        font-family: YuGothic, serif;
+        @include desktop() {
+          line-height: 84px;
+          font-family: YuGothic, serif;
+          font-size: 30px;
+          letter-spacing: 4px;
+          color: #FFFFFF;
+        }
       }
       @include desktop(){
         font-size: 3rem;
