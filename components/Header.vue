@@ -16,11 +16,16 @@
       position: absolute;
       top: 0;
       left: 0;
-      border: 30px solid transparent;
-      border-top: 30px solid #c2504f;
-      border-left: 30px solid #c2504f;
+      border: 40px solid transparent;
+      border-top: 40px solid #c2504f;
+      border-left: 40px solid #c2504f;
       width: 0;
       height: 0;
+      @include desktop(){
+        border: 50px solid transparent;
+        border-top: 50px solid #c2504f;
+        border-left: 50px solid #c2504f;
+      }
     }
     &--logoArea{
       padding-top: 10px;
@@ -28,8 +33,11 @@
     }
     &--logoImg{
       display: block;
-      width: 230px;
+      width: 18rem;
       margin: 0 auto;
+      @include desktop(){
+        width: 23rem;
+      }
     }
   }
 </style>

@@ -47,7 +47,7 @@
             image1: '/images/creation01.jpg',
             image2: '/images/creation02.jpg',
             link: {
-              image: '',
+              image: '/images/creation01.jpg',
               href: '',
               title: 'Web制作を詳しく見る'
             }
@@ -59,7 +59,7 @@
             image1: '/images/talking01.jpg',
             image2: '/images/talking02.jpg',
             link: {
-              image: '',
+              image: '/images/enjoy01.jpg',
               href: '',
               title: 'Web制作を詳しく見る'
             }
@@ -71,7 +71,7 @@
             image1: '/images/enjoy01.jpg',
             image2: '/images/enjoy02.jpg',
             link: {
-              image: '',
+              image: '/images/enjoy01.jpg',
               href: '',
               title: 'Web制作を詳しく見る'
             }
@@ -81,7 +81,7 @@
             subtitle: 'chatboxで働く個性的なメンバー',
             message: 'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。',
             link: {
-              image: '',
+              image: '/images/enjoy01.jpg',
               href: '',
               title: 'Web制作を詳しく見る'
             }

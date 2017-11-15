@@ -16,6 +16,10 @@
   .p-contact{
     @include c-container;
     margin-bottom: 2rem;
+    margin-top:4.0rem;
+    @include desktop(){
+      margin-top:18rem;
+    }
     &--title{
       @include c-title;
       text-align: center;
@@ -25,11 +29,19 @@
       max-width: 550px;
       margin: 0 auto;
       margin-bottom: 2rem;
+      @include desktop() {
+        margin-bottom: 4rem;
+      }
     }
     &--button{
       @include c-btn_block;
       max-width:470px;
       margin: 0 auto;
+      @include desktop() {
+        height: 12rem;
+        line-height: 12rem;
+        font-size: 2.5rem;
+      }
     }
   }
 </style>

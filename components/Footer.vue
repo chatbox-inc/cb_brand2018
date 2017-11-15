@@ -37,7 +37,8 @@
   .p-footer{
     @include c-container;
     color: #B43B3E;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 10rem;
     &--body{
       display: flex;
       font-size: 1rem;

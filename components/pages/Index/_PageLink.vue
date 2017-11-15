@@ -51,6 +51,12 @@
     &--image{
       width: 12rem;
       height: 10rem;
+      background-size: cover;
+      background-position: center;
+      @include desktop(){
+        width: 45rem;
+        height: 15rem;
+      }
     }
     &--link{
       text-decoration: none;
@@ -59,6 +65,11 @@
       font-weight: bold;
       letter-spacing: 2px;
       color: #C3504F;
+      @include desktop(){
+        text-align: center;
+        width: 100%;
+        font-size: 2.5rem;
+      }
     }
   }
 </style>
