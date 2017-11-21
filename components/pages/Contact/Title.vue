@@ -20,9 +20,16 @@
         }
         &--title{
             @include c-title;
+            font-size: 5rem;
             text-align: center;
         }
         &--sub_info{
+            font-family:"YuGothic";
+            font-size: 2.4rem;
+            padding: .5rem 2rem;
+            letter-spacing: .6rem;
+            color: #2B292B;
+            line-height: 5.5rem;
             text-align: center;
         }
     }

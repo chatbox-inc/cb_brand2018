@@ -131,16 +131,7 @@
         color: #FFFFFF;
 
     }
-    .c-btn_base {
-        background-color: #C3504F;
-        color: #FFFFFF;
-        padding: 7%;
-        border-radius: 7px;
-        display: block;
-        box-sizing: border-box;
-        margin-bottom: 3%;
-        width: 100%;
-    }
+
 
     i {
         margin-right: 3%;

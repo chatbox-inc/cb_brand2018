@@ -1,24 +1,27 @@
 <template>
     <div class="c-container">
-        <div class="c_border_content c_content_center">
-            <div class="contact_box">
-                <div class="c_contact_sns_box">
-                    <div class="ttl">
-                        SNSチャットツールからのお問い合わせ
+        <div class="p-contact">
+            <div class="c_border_content c_content_center">
+                <div class="p-contact_box">
+                    <div class="c_contact_sns_box">
+                        <div class="ttl">
+                            SNSチャットツールからのお問い合わせ
 
+                        </div>
+                        <div class="c-link">
+                            <a class="c-btn_base" href="#">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>Facebookからメッセージを送る</a>
+                        </div>
+                        <div class="c-link">
+                            <a class="c-btn_base" href="#">Chatworkからコンタクトを送る</a>
+                        </div>
                     </div>
-                    <div class="c-link">
-                        <a class="c-btn_base" href="#">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>Facebookからメッセージを送る</a>
+                    <div class="c_contact_tel_box">
+                        <div class="c_border"></div>
+                        <div class="ttl">電話でのお問い合わせ</div>
+                        <div class="c_modal_text_number ">050-3555-1212</div>
+                        <div class="c_modal_text ">24時間対応：メッセージ預かり</div>
                     </div>
-                    <div class="c-link">
-                        <a class="c-btn_base" href="#">Chatworkからコンタクトを送る</a>
-                    </div>
-                </div>
-                <div class="c_contact_tel_box">
-                    <div class="c_border"></div>
-                    <div class="ttl">電話でのお問い合わせ</div>
-                    <div class="c_modal_text_number ">050-3555-1212</div>
                 </div>
             </div>
         </div>
@@ -29,19 +32,53 @@
     @import "~assets/scss/object/component/_container.scss";
     @import "~assets/scss/object/component/_title.scss";
     @import "~assets/scss/object/component/_button.scss";
-
-    .contact_box {
-        overflow: auto;
-        padding: 5% 3% 2%;
-        .c_border {
-            margin-bottom: 3%;
+    .c-contaiter{
+        @include c-container();
+    }
+    .p-contact {
+        padding: 5rem 2rem;
+        .p-contact_box {
+            overflow: auto;
+            padding: 5% 3% 2%;
+            .c_border {
+                margin-bottom: 3%;
+            }
+            .ttl {
+                margin-bottom: 3%;
+                color: #393739;
+                font-family: YuGothic;
+                font-size: 2.4rem;
+                font-weight: bold;
+                letter-spacing: 3px;
+                line-height: 3.6rem;
+                text-align: center;
+            }
         }
-        .ttl {
-            font-weight: 600;
-            margin-bottom: 3%;
+        .c_contact_tel_box{
+            .c_border {
+                margin: 4rem 0;
+                border: 1px solid #C3504F;
+            }
+            .c_modal_text_number{
+                font-size: 5.3rem;
+                font-family: YuGothic;
+                font-weight: bold;
+                color: #C3504F;
+            }
+            .c_modal_text{
+                font-size: 2.4rem;
+                color: #393739;
+                margin: 2rem 0 4rem 0;
+            }
         }
     }
 
+    .c-link{
+        .c-btn_base{
+            @include c-btn_base();
+            font-size: 2.4rem;
+        }
+    }
     .c-contactContainer {
         line-height: 1.6;
         padding: 0 14px;
@@ -54,6 +91,7 @@
     .c_content_center {
         text-align: center;
     }
+
     .c-contact_sub_info {
         margin-bottom: 7%;
     }
@@ -66,20 +104,7 @@
         border: 1px solid #C3504F;
     }
 
-    .c_border {
-        border: 1px solid #C3504F;
-    }
 
-    .c_modal_text {
-        color: #C3504F;
-    }
-
-    .c_modal_text_number {
-        font-family: YuGothic;
-        font-size: 3rem;
-        font-weight: bold;
-        color: #C3504F;
-    }
     .checkbox01-input {
         display: none;
     }
