@@ -1,7 +1,7 @@
 <template>
-    <div class="c-container">
+    <div class="u-container">
         <div class="p_form_box">
-            <div class="c-container">
+            <div class="u-container">
                 <h2 class="p-intro">
                     フォームからのお問い合わせ
                 </h2>
@@ -54,7 +54,7 @@
             </div>
 
         </div>
-        <div class="p-contact">
+        <div class="p-contact p-contact_submit">
             <div class="submit">
                 <a class="c-btn_base" href="#">送信する</a>
             </div>
@@ -71,19 +71,27 @@
         margin-top: 7%;
         dt {
             margin-bottom: 1%;
+            color: #393739;
+            font-family: YuGothic;
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 3.6rem;
         }
         dd {
             margin-bottom: 3%;
         }
         input, textarea {
-            border: 1px solid #cacaca;
+            border: 1px solid #CCCCCC;
+            background-color: #FAF7F7;
             padding: 2%;
             width: 100%;
+            height: 9rem;
             box-sizing: border-box;
             line-height: 1.2;
             font-size: 120%;
         }
     }
+
     .contact_sub {
         margin-bottom: 87px;
     }
@@ -92,33 +100,87 @@
     }
 
     .p_form_box {
+        padding: 5rem 2rem;
+        .p-intro {
+            color: #393739;
+            font-family: YuGothic;
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: .4rem;
+            line-height: 4.5rem;
+            text-align: center;
+        }
+        .c-contact_sub_info {
+            color: #393739;
+            font-family: YuGothic;
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 4.8rem;
+            text-align: center;
+            padding-top: 3rem;
+        }
+        .c-link {
+            display: -webkit-flex;
+            display: flex;
+            flex-wrap: wrap;
+            -webkit-justify-content: space-around; /* Safari */
+            justify-content: space-around;
+        }
         .c-link_anchor {
             border: 1px solid #C3504F;
             border-radius: 7px;
             color: #c3504f;
-            margin: 1% 0;
-            padding: 3% 16%;
-            display: inline-block;
-            width: 16%;
+            height: 9rem;
+            line-height: 9rem;
+            font-weight: bold;
+            margin: 1rem;
+            box-sizing: border-box;
             white-space: nowrap;
-            font-size: 100%;
+            font-size: 2.4rem;
+            width: 45%;
+            input{
+
+            }
         }
         .current {
             background-color: #C3504F;
             color: #FFFFFF;
         }
+        .c_modal_text {
+            color: #B43B3E;
+            font-family: YuGothic;
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 4.8rem;
+            text-align: center;
+        }
     }
 
     .p-contact {
         text-align: left;
+    }
 
+    .p-contact_submit {
+        padding: 5rem 2rem;
+        margin-bottom: 10rem;
     }
 
     .submit {
         text-align: center;
         width: 100%;
+        height: 12rem;
         font-size: 2rem;
-
+        border-radius: 6px;
+        background-color: #C3504F;
+        a {
+            color: #FFFFFF;
+            font-family: YuGothic;
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: 12rem;
+            text-decoration: none;
+        }
     }
 
     .submit::after {
@@ -131,7 +193,6 @@
         color: #FFFFFF;
 
     }
-
 
     i {
         margin-right: 3%;
