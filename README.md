@@ -1,6 +1,7 @@
 # brand.pwa
 
-> Nuxt.js project
+Netlify https://app.netlify.com/sites/chatbox-brand2018/overview
+domain https://top.chatbox-inc.com/
 
 ## Build Setup
 
