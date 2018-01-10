@@ -115,6 +115,7 @@
     &--body{
       @include c-sentence;
       padding: 10px;
+      width: 430px;
     }
     &--image{
       height: 20rem;
@@ -160,6 +161,8 @@
       font-weight: bold;
       margin: 3rem 1rem;
       height: 20rem;
+      -webkit-text-orientation: upright;
+      text-orientation: upright;
     }
   }
   //画像の順番とかも無理あるかも Talking だけ別コンポーネントも検討

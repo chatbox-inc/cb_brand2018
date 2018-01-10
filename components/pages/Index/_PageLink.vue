@@ -1,10 +1,14 @@
 <template>
   <div class="p-link">
     <div class="p-link--inner">
-      <div class="p-link--contents">
-        <div class="p-link--image" :style="imgStyle"></div>
-        <a class="p-link--link" :href="link.href">{{link.title}}</a>
-      </div>
+      <a :href="link.href">
+        <div class="p-link--contents">
+          <div class="p-link--image" :style="imgStyle"></div>
+          <div class="p-link--link">{{link.title}}
+            <div class="p-link--icon"></div>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -58,8 +62,10 @@
         height: 15rem;
       }
     }
-    &--link{
+    a {
       text-decoration: none;
+    }
+    &--link{
       font-family: YuGothic, serif;
       font-size: 1.4rem;
       font-weight: bold;
@@ -70,6 +76,16 @@
         width: 100%;
         font-size: 2.5rem;
       }
+    }
+    &--icon{
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.4rem;
+      background-image: url("~static/images/icon_externalLink.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
   }
 </style>
