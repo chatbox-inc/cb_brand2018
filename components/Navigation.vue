@@ -40,29 +40,29 @@
     }
     .p-navigation {
         @include c-container;
-    }
-    .p-navigation--inner {
-        display: flex;
-        justify-content: flex-start;
-    }
-    .p-navigation--link {
-        display: block;
-        margin-right: 40px;
-        text-decoration: none;
-        text-align: center;
-    }
-    .p-navigation--char {
-        display: block;
-        font-size: 18px;
-        font-weight: bold;
-        color: #da9695;
-    }
-    .p-navigation--dot {
-        display: none;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-        color: #c2504f;
+        &--inner {
+            display: flex;
+            justify-content: flex-start;
+        }
+        &--link {
+            display: block;
+            margin-right: 40px;
+            text-decoration: none;
+            text-align: center;
+        }
+        &--char {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #da9695;
+        }
+        &--dot {
+            display: none;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #c2504f;
+        }
     }
     .active {
         color: #c2504f;
