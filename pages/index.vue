@@ -8,7 +8,6 @@
     <page-aboutus></page-aboutus>
     <page-message :messages="messages.member"></page-message>
     <page-contact></page-contact>
-
   </section>
 </template>
 
