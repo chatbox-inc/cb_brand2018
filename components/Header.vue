@@ -3,7 +3,7 @@
     <div class="p-header--triangle"></div>
     <img class="p-header--triangleLogoImg" src="/images/icon_chatbox-white.svg" alt="">
     <div class="p-header--logoArea">
-        <img class="p-header--logoImg" src="/img/logo.svg" alt="">
+        <img class="p-header--logoImg" src="/images/logo.svg" alt="">
     </div>
   </div>
 </template>
