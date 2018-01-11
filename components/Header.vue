@@ -1,6 +1,7 @@
 <template>
   <div class="p-header">
     <div class="p-header--triangle"></div>
+    <img class="p-header--triangleLogoImg" src="/images/icon_chatbox-white.svg" alt="">
     <div class="p-header--logoArea">
         <img class="p-header--logoImg" src="/img/logo.svg" alt="">
     </div>
@@ -26,6 +27,12 @@
         border-top: 50px solid #c2504f;
         border-left: 50px solid #c2504f;
       }
+    }
+    &--triangleLogoImg {
+      z-index: 200;
+      position: absolute;
+      top: 12px;
+      left: 12px;
     }
     &--logoArea{
       padding-top: 10px;
