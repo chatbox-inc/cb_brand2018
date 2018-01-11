@@ -150,19 +150,21 @@
       width: 40%;
       justify-content: center;
       flex-wrap: wrap;
+
       @include desktop(){
         width: 100%;
       }
 
     }
     &--tagItem{
-      writing-mode: vertical-rl;
       color: #C3504F;
       font-weight: bold;
       margin: 3rem 1rem;
       height: 20rem;
       -webkit-text-orientation: upright;
-      text-orientation: upright;
+      writing-mode: vertical-rl;
+      text-orientation:upright;
+      -webkit-text-orientation:upright;
     }
   }
   //画像の順番とかも無理あるかも Talking だけ別コンポーネントも検討
