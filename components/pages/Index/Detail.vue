@@ -115,6 +115,7 @@
     &--body{
       @include c-sentence;
       padding: 10px;
+      width: 430px;
     }
     &--image{
       height: 20rem;
@@ -160,6 +161,7 @@
       font-weight: bold;
       margin: 3rem 1rem;
       height: 20rem;
+      -webkit-text-orientation: upright;
       writing-mode: vertical-rl;
       text-orientation:upright;
       -webkit-text-orientation:upright;

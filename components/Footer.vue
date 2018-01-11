@@ -10,14 +10,8 @@
         </nav>
 
         <div class="p-footer--body">
-          <div>
-            <div class="p-footer--icon">d</div>
-          </div>
+          <div class="p-footer--icon"></div>
           <div class="p-footer--copyright">Copyright © chatbox.inc All Rights Reserved.</div>
-          <div>
-            <div class="p-footer--icon">d</div>
-            <div class="p-footer--icon">d</div>
-          </div>
         </div>
       </div>
     </div>
@@ -44,12 +38,19 @@
       font-size: 1rem;
       align-items: center;
       padding: 1rem 0;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     &--icon{
       display: inline-block;
       width: 1.4rem;
+      height: 1.4rem;
       font-size: 1.4rem;
+      background-image: url("~static/images/icon_chatbox.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &--copyright{
+      text-align: left;
     }
   }
   .p-navi{

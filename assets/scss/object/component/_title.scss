@@ -18,6 +18,7 @@
 }
 
 @mixin c-caption {
+  padding: 10px 0;
   font-size: 1.7rem;
   font-weight: bold;
   letter-spacing: 5px;
@@ -35,10 +36,11 @@
 }
 
 @mixin c-sentence {
-  line-height: 30px;
   font-family: YuGothic, serif;
-  font-size: 1.2rem;
   font-weight: 500;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  line-height: 2;
   color: #393739;
 }
 
