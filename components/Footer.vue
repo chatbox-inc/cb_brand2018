@@ -1,5 +1,10 @@
 <template>
   <div class="p-footerArea">
+    <div class="p-footer--pageTop">
+      <a href="">
+        <img class="p-footer--pageTopImg" src="/images/pagetop.svg" alt="">
+      </a>
+    </div>
     <div class="p-footer">
       <div class="p-footer--inner">
         <nav class="p-navi">
@@ -24,6 +29,7 @@
   @import "~assets/scss/object/component/_button.scss";
 
   .p-footerArea{
+    margin-top: 18rem;
     border-top: 2px solid #C3504F;
     background-color: #FAF7F7;
   }
@@ -33,6 +39,14 @@
     color: #B43B3E;
     margin-bottom: 2rem;
     padding-bottom: 10rem;
+    &--pageTop {
+      position: relative;
+    }
+    &--pageTopImg {
+      position: absolute;
+      right: 10%;
+      bottom: 100px;
+    }
     &--body{
       display: flex;
       font-size: 1rem;
