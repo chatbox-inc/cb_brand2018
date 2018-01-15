@@ -3,6 +3,7 @@
     <page-header></page-header>
     <nuxt/>
     <page-footer></page-footer>
+    <navigation></navigation>
   </div>
 </template>
 
@@ -10,11 +11,13 @@
 <script>
   import PageHeader from '~/components/Header.vue'
   import PageFooter from '~/components/Footer.vue'
+  import Navigation from '~/components/Navigation.vue'
 
   export default {
     components: {
       PageHeader,
-      PageFooter
+      PageFooter,
+      Navigation
     },
     data () {
       return {}

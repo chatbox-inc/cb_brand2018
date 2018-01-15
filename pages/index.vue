@@ -8,7 +8,6 @@
     <page-aboutus></page-aboutus>
     <page-message :messages="messages.member"></page-message>
     <page-contact></page-contact>
-
   </section>
 </template>
 
@@ -61,7 +60,7 @@
             link: {
               image: '/images/enjoy01.jpg',
               href: '',
-              title: 'Web制作を詳しく見る'
+              title: '技術顧問を詳しく見る'
             }
           },
           enjoy: {
@@ -73,7 +72,7 @@
             link: {
               image: '/images/enjoy01.jpg',
               href: '',
-              title: 'Web制作を詳しく見る'
+              title: 'イベント・スクールを詳しく見る'
             }
           },
           member: {
@@ -83,7 +82,7 @@
             link: {
               image: '/images/enjoy01.jpg',
               href: '',
-              title: 'Web制作を詳しく見る'
+              title: 'メンバーを詳しく見る'
             }
           }
         }

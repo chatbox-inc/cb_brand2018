@@ -7,7 +7,8 @@
         <div class="p-hero--slogan_text"><span>Webのこれからを語り合う</span></div>
         <div class="p-hero--slogan_text"><span></span><span>「作る」</span><span>「伝える」</span><span>「語り合う」</span></div>
       </div>
-   </div>
+    </div>
+    <div class="p-hero--border"></div>
   </div>
 </template>
 
@@ -117,6 +118,12 @@
         font-size: 3rem;
         line-height: 8rem;
       }
-    }    
+    }
+    &--border {
+      margin-top: 60px;
+      width: 50%;
+      height: 140px;
+      border-right: 2px solid #c2504f;
+    }
   }
 </style>
