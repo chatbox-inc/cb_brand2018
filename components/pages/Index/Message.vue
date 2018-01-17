@@ -43,7 +43,7 @@
       font-size: 2rem;
     }
     &--body{
-      background: url("/img/intro01.jpg");
+      background: url("/images/intro01.jpg");
       background-repeat: no-repeat;
       background-size: contain;
     }

@@ -27,6 +27,20 @@
     padding-top: 8rem;
     padding-bottom: 10em;
     animation: hero_bg_img 1s cubic-bezier(.4, .2, 0, 1) 0s 1 alternate both running;
+    position: relative;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 2px;
+      height: 70px;
+      background: #c2504f;
+      position: absolute;
+      left: 50%;
+      bottom: -35px;
+      transform: translateX(-1px);
+    }
+
     @keyframes hero_bg_img {
       from {
         opacity: 0;
@@ -76,9 +90,11 @@
       }
 
       &_text_wrapper {
-        padding: 2rem 1rem;
+        padding: 2.5rem 1rem 2rem;
+        padding-left: 10%;
       }
       &_text {
+        margin-bottom: 1rem;
         font-weight: bold;
         font-family: YuGothic, serif;
         perspective: 250px;
@@ -118,12 +134,6 @@
         font-size: 3rem;
         line-height: 8rem;
       }
-    }
-    &--border {
-      margin-top: 60px;
-      width: 50%;
-      height: 140px;
-      border-right: 2px solid #c2504f;
     }
   }
 </style>

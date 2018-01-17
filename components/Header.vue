@@ -1,7 +1,6 @@
 <template>
   <div class="p-header">
     <div class="p-header--triangle"></div>
-    <img class="p-header--triangleLogoImg" src="/images/icon_chatbox-white.svg" alt="">
     <div class="p-header--logoArea">
         <img class="p-header--logoImg" src="/images/logo.svg" alt="">
     </div>
@@ -14,25 +13,29 @@
   .p-header{
     &--triangle{
       z-index: 100;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       border: 40px solid transparent;
       border-top: 40px solid #c2504f;
       border-left: 40px solid #c2504f;
-      width: 0;
-      height: 0;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: url("/images/icon_chatbox-white.svg") no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+      }
       @include desktop(){
         border: 50px solid transparent;
         border-top: 50px solid #c2504f;
         border-left: 50px solid #c2504f;
       }
-    }
-    &--triangleLogoImg {
-      z-index: 200;
-      position: absolute;
-      top: 12px;
-      left: 12px;
     }
     &--logoArea{
       padding-top: 10px;
