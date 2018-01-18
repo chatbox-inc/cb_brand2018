@@ -68,10 +68,14 @@
       @include c-title
     }
     &--image{
-      margin-bottom:40px;
-      height: 28rem;
+      margin-bottom: 20px;
       background-size: cover;
       background-repeat: no-repeat;
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 30%;
+      }
     }
   }
 

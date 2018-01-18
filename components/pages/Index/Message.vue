@@ -36,11 +36,10 @@
    @import "~assets/scss/object/component/_title.scss";
   .p-greeting{
     @include c-container;
-    margin-top:4.0rem;
+    margin-bottom: 20px;
     &--title{
       @include c-containerInner;
       @include c-title;
-      font-size: 2rem;
     }
     &--body{
       background: url("/images/intro01.jpg");
@@ -57,6 +56,9 @@
       }
     }
     &--contents{
+      padding: 2.5rem;
+      box-sizing: border-box;
+      background: white;
       @include desktop(){
         position: relative;
         right:0;
@@ -66,8 +68,7 @@
     }
     &--bodyTitle{
       @include c-caption;
-      background: white;
-      padding: 10px;
+      padding-top: 0;
       @include desktop(){
         background: transparent;
       }
@@ -75,7 +76,6 @@
     &--bodyMessage{
       @include c-sentence;
       background: white;
-      padding: 10px;
       @include desktop(){
         background: transparent;
       }

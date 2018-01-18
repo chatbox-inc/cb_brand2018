@@ -38,7 +38,6 @@
       }
     }
     &--logoArea{
-      padding-top: 10px;
 
     }
     &--logoImg{
