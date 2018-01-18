@@ -48,7 +48,7 @@
           backgroundImage: `url("/images/about01.jpg")`
         },
         PlacementImage: {
-          backgroundImage: `url("/img/moc/700x600_GoogleMap.png")`
+          backgroundImage: `url("http://placehold.it/300x700")`
         }
 
       }
@@ -105,8 +105,8 @@
     }
     &--map{
       height: 400px;
-      width: 450px;
-      margin-left: 60px;
+      width: 100%;
+      margin-top: 70px;
       display: inline-block;
 
     }
