@@ -115,7 +115,7 @@
     &--body{
       @include c-sentence;
       padding: 10px;
-      width: 430px;
+      width: 100%;
     }
     &--image{
       height: 20rem;
