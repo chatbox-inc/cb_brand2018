@@ -2,7 +2,9 @@
   <div class="p-about">
     <div class="p-about--inner">
       <h1 class="p-about--title">About Us</h1>
-      <div class="p-about--image"  v-bind:style="aboutImage"></div>
+      <div class="p-about--imageWrapper">
+        <div class="p-about--image"  v-bind:style="aboutImage"></div>
+      </div>
       <table class="p-abouTable">
         <tbody>
           <tr class="p-aboutTable--row" v-for="i in info">
@@ -67,9 +69,22 @@
     &--title{
       @include c-title
     }
-    &--image{
+    &--imageWrapper {
+      position: relative;
       margin-bottom:40px;
-      height: 28rem;
+      width: 100%;
+    }
+    &--imageWrapper:before {
+      content:"";
+      display: block;
+      padding-top: 30%;
+    }
+    &--image{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
       background-size: cover;
       background-repeat: no-repeat;
     }
