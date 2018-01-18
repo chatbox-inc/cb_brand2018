@@ -69,7 +69,6 @@
     }
     &--link{
       width: 100%;
-      font-family: YuGothic, serif;
       font-size: 1.4rem;
       font-weight: bold;
       letter-spacing: 2px;

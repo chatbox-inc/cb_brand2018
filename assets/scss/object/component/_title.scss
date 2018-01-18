@@ -1,7 +1,7 @@
 @import "../../layout/layout";
 
 @mixin c-title {
-  font-family: YuMincho, serif;
+  font-family: "Yu Mincho Medium", "游明朝 Medium", "游明朝体", YuMincho, serif;
   font-weight: 500;
   font-size: 2.5rem;
   color: #393739;
@@ -37,9 +37,6 @@
 }
 
 @mixin c-sentence {
-  font-family: YuGothic, serif;
-  font-weight: 500;
-  font-size: 1.5rem;
   line-height: 2;
   color: #393739;
 }

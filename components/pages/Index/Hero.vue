@@ -97,7 +97,6 @@
       &_text {
         margin-bottom: 1rem;
         font-weight: bold;
-        font-family: YuGothic, serif;
         perspective: 250px;
         @include desktop() {
           line-height: 84px;
