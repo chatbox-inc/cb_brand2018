@@ -17,11 +17,13 @@
         <div class="p-footer--body">
           <div class="p-footer--icon"></div>
           <div class="p-footer--copyright">Copyright © chatbox.inc All Rights Reserved.</div>
-          <div class=""><i class="fa fa-instagram" aria-hidden="true"></i></div>
-          <div class=""><i class="fa fa-facebook" aria-hidden="true"></i></div>
+          <div class="p-footer--instagram"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+          <div class="p-footer--facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div>
         </div>
       </div>
     </div>
+    <!--仮-->
+    <script src="https://use.fontawesome.com/c086a26845.js"></script>
   </div>
 </template>
 
@@ -64,9 +66,6 @@
       background-image: url("~static/images/icon_chatbox.svg");
       background-repeat: no-repeat;
       background-size: contain;
-    }
-    &--copyright{
-      text-align: left;
     }
   }
   .p-navi{
