@@ -17,6 +17,8 @@
         <div class="p-footer--body">
           <div class="p-footer--icon"></div>
           <div class="p-footer--copyright">Copyright © chatbox.inc All Rights Reserved.</div>
+          <div class=""><i class="fa fa-instagram" aria-hidden="true"></i></div>
+          <div class=""><i class="fa fa-facebook" aria-hidden="true"></i></div>
         </div>
       </div>
     </div>
