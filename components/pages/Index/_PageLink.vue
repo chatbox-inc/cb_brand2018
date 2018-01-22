@@ -4,9 +4,8 @@
       <a :href="link.href">
         <div class="p-link--contents">
           <div class="p-link--image" :style="imgStyle"></div>
-          <div class="p-link--link">{{link.title}}
-            <div class="p-link--icon"></div>
-          </div>
+          <div class="p-link--link">{{link.title}}</div>
+          <div class="p-link--icon"></div>
         </div>
       </a>
     </div>
@@ -66,9 +65,11 @@
       text-decoration: none;
     }
     &--link{
+      width: 160px;
       font-family: YuGothic, serif;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: bold;
+      padding-left: 1.2rem;
       letter-spacing: 2px;
       color: #C3504F;
       @include desktop(){
@@ -79,8 +80,8 @@
     }
     &--icon{
       display: inline-block;
-      width: 3rem;
-      height: 3rem;
+      width: 1.3rem;
+      height: 1.3rem;
       font-size: 1.4rem;
       background-image: url("~static/images/icon_externalLink.svg");
       background-repeat: no-repeat;
