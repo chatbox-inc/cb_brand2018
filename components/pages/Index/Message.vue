@@ -36,12 +36,12 @@
    @import "~assets/scss/object/component/_title.scss";
   .p-greeting{
     @include c-container;
-    margin-top:4.0rem;
+    margin-top: 2.0rem;
     &--title{
       @include c-containerInner;
       @include c-title;
       font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     &--body{
       background: url("/images/intro01.jpg");

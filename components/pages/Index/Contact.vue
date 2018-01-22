@@ -16,7 +16,7 @@
   .p-contact{
     @include c-container;
     margin-bottom: 2rem;
-    margin-top:4.0rem;
+    margin-top: 2.0rem;
     @include desktop(){
       margin-top:18rem;
     }

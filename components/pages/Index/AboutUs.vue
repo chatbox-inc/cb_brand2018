@@ -61,7 +61,7 @@
   .p-about{
     @include c-container;
     margin-top:4.0rem;
-    margin-bottom: 100px;
+    /*margin-bottom: 100px;*/
     &--title{
       @include c-title
     }
@@ -99,14 +99,14 @@
   }
 
   .p-placement{
-    margin-top:60px;
-    &--box{display: inline-block;
-
+    margin-top: 20px;
+    &--box{
+      display: inline-block;
     }
     &--title{
       @include c-subTitle;
       font-size: 2.0rem;
-      margin:0 0 30px 0;
+      margin:0 0 10px 0;
     }
     &--sentence{
       font-weight: bold;
@@ -118,7 +118,7 @@
       display: inline-block;
       width: 100%;
       height: 400px;
-      margin-top: 70px;
+      margin-top: 40px;
       border: 0;
     }
     &--route{
