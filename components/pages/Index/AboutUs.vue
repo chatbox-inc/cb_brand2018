@@ -28,9 +28,10 @@
         </div>
         <a class="p-placement--button" href="#">Google Mapで開く　　></a>
         </div>
-        <iframe class="p-placement--map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.0041797124945!2d135.50695531523166!3d34.67984398043977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e723237eaaab%3A0x7d8bc4d8a57d77bc!2z5qCq5byP5Lya56S-Y2hhdGJveA!5e0!3m2!1sja!2sjp!4v1516262751239" frameborder="0" allowfullscreen></iframe>
+        <div class="p-placement--map" id="map"></div>
       </div>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQhqThDuP7ZVFZhwasR32oufVOo4xqHxc"></script>
   </div>
 </template>
 
@@ -50,6 +51,15 @@
           backgroundImage: `url("/images/about01.jpg")`
         }
       }
+    },
+    mounted() {
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: 34.7019399,
+          lng: 135.51002519999997
+        },
+        zoom: 19
+      })
     }
   }
 </script>
