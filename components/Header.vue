@@ -37,13 +37,9 @@
         border-left: 50px solid #c2504f;
       }
     }
-    &--logoArea{
-      padding-top: 10px;
-
-    }
     &--logoImg{
       display: block;
-      width: 18rem;
+      width: 13rem;
       margin: 0 auto;
       @include desktop(){
         width: 23rem;
