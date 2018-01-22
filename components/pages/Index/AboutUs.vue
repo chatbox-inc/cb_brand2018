@@ -53,12 +53,24 @@
       }
     },
     mounted() {
+      const latLng = {
+        lat: 34.6798386,
+        lng: 135.506939
+      }
+
       const map = new google.maps.Map(document.getElementById('map'), {
-        center: {
-          lat: 34.7019399,
-          lng: 135.51002519999997
+        center: latLng,
+        zoom: 16
+      })
+
+      const marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        title: 'hello, world!',
+        icon: {
+          url: '/images/google_maps.svg',
+          size: new google.maps.Size(100, 100),
         },
-        zoom: 19
       })
     }
   }
@@ -71,7 +83,6 @@
   .p-about{
     @include c-container;
     margin-top:4.0rem;
-    /*margin-bottom: 100px;*/
     &--title{
       @include c-title
     }
