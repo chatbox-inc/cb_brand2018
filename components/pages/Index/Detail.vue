@@ -2,35 +2,33 @@
   <div :class="{
       'is-colored': this.coloredCover
     }">
-    <div class="p-detail--wrap">
-      <div class="p-detail--titleArea">
-        <div class="p-detail">
-          <div class="p-detail--inner">
-            <h1 class="p-detail--title">{{messages.title}}</h1>
-          </div>
+    <div class="p-detail--titleArea">
+      <div class="p-detail">
+        <div class="p-detail--inner">
+          <h1 class="p-detail--title">{{messages.title}}</h1>
         </div>
       </div>
-      <div class="p-detail--mainArea">
-        <div class="p-detail">
-          <div class="p-detail--inner">
-            <div class="p-detail--content1">
-              <h2 class="p-detail--subtitle">{{messages.subtitle}}</h2>
-              <p class="p-detail--body">{{messages.message}}</p>
-              <div class="p-detail--image" v-if='image1' :style="imageStyle1"></div>
-            </div>
-            <div class="p-detail--content2">
-              <div class="p-detail--image2" v-if='image2' :style="imageStyle2"></div>
-              <div class="p-detail--tags">
-                <p class="p-detail--tagItem">Web制作</p>
-                <p class="p-detail--tagItem">技術顧問</p>
-              </div>
+    </div>
+    <div class="p-detail--mainArea">
+      <div class="p-detail">
+        <div class="p-detail--inner">
+          <div class="p-detail--content1">
+            <h2 class="p-detail--subtitle">{{messages.subtitle}}</h2>
+            <p class="p-detail--body">{{messages.message}}</p>
+            <div class="p-detail--image" v-if='image1' :style="imageStyle1"></div>
+          </div>
+          <div class="p-detail--content2">
+            <div class="p-detail--image2" v-if='image2' :style="imageStyle2"></div>
+            <div class="p-detail--tags">
+              <p class="p-detail--tagItem">Web制作</p>
+              <p class="p-detail--tagItem">技術顧問</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="p-detail--linkArea">
-        <page-link v-if="messages.link" :link="messages.link"></page-link>
-      </div>
+    </div>
+    <div class="p-detail--linkArea">
+      <page-link v-if="messages.link" :link="messages.link"></page-link>
     </div>
   </div>
 </template>
@@ -89,14 +87,16 @@
 <style lang="scss" scoped>
   @import "~assets/scss/object/component/_container.scss";
   @import "~assets/scss/object/component/_title.scss";
-  .p-detail--wrap {
-    margin-bottom: 40px;
-  }
+
+
   .p-detail{
     @include c-container;
     &--titleArea{
+      padding: 4rem 0;
+      margin-top:4.0rem;
     }
     &--inner{
+      @include c-containerInner;
       @include desktop{
         display: flex;
       }
@@ -110,24 +110,20 @@
       }
     }
     &--subtitle{
-      @include c-caption;
+      @include c-caption
     }
     &--body{
-      margin-bottom: 2.5rem;
       @include c-sentence;
-      @include desktop {
-        width: 430px;
-      }
+      padding: 10px;
+      width: 100%;
     }
     &--image{
-      margin-bottom: 20px;
-      /*height: 20rem;*/
+      height: 20rem;
       background-size: cover;
       background-repeat: no-repeat;
-      &::before {
-        content: "";
-        display: block;
-        padding-top: 70%;
+      margin: 1rem;
+      @include desktop(){
+        height: 32rem;
       }
     }
     &--content2{
@@ -138,15 +134,15 @@
       }
     }
     &--image2{
-      margin-bottom: 20px;
+      height: 20rem;
       width: 60%;
       background-size: cover;
       background-position-y: 50%;
       background-repeat: no-repeat;
-      &::before {
-        content: "";
-        display: block;
-        padding-top: 50%;
+      margin: 1rem;
+      @include desktop(){
+        height: 32rem;
+        width: 100%;
       }
     }
     &--tags{

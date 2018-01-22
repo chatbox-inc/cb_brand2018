@@ -31,6 +31,7 @@
     @import "~assets/scss/object/component/_container.scss";
 
     .p-navigationArea {
+        display: none;
         position: fixed;
         bottom: 0;
         width: 100%;
