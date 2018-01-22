@@ -41,6 +41,7 @@
       @include c-containerInner;
       @include c-title;
       font-size: 2rem;
+      margin-bottom: 20px;
     }
     &--body{
       background: url("/images/intro01.jpg");
