@@ -16,8 +16,10 @@
         <div class="p-footer--body">
           <div class="p-footer--icon"></div>
           <div class="p-footer--copyright">Copyright © chatbox.inc All Rights Reserved.</div>
-          <div class="p-footer--instagram"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-          <div class="p-footer--facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+          <div class="p-footer--sns">
+            <i class="fa fa-instagram p-footer--instagram" aria-hidden="true"></i>
+            <i class="fa fa-facebook p-footer--facebook" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -58,12 +60,23 @@
     }
     &--icon{
       display: inline-block;
-      width: 1.4rem;
+      width: 2.4rem;
       height: 1.4rem;
-      font-size: 1.4rem;
       background-image: url("~static/images/icon_chatbox.svg");
       background-repeat: no-repeat;
       background-size: contain;
+    }
+    &--copyright {
+      display: inline-block;
+    }
+    &--sns {
+      display: inline-block;
+      margin-left: auto;
+      font-size: 2.0rem;
+    }
+    &--instagram {
+      display: inline-block;
+      margin-right: 10px;
     }
   }
   .p-navi{
