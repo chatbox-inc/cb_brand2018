@@ -66,10 +66,10 @@
       const marker = new google.maps.Marker({
         position: latLng,
         map: map,
-        title: 'hello, world!',
+        title: 'chatbox is here!',
         icon: {
           url: '/images/google_maps.svg',
-          size: new google.maps.Size(100, 100),
+          scaledSize: new google.maps.Size(60, 80)
         },
       })
     }
