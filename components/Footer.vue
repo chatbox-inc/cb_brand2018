@@ -1,7 +1,7 @@
 <template>
   <div class="p-footerArea">
     <div class="p-footer--pageTop">
-      <a href="">
+      <a href="#top" v-smooth-scroll>
         <img class="p-footer--pageTopImg" src="/images/pagetop.svg" alt="">
       </a>
     </div>
