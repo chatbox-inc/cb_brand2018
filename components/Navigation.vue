@@ -50,6 +50,10 @@
             margin-right: 40px;
             text-decoration: none;
             text-align: center;
+            font-size: 1rem;
+            a {
+                font-size: 2px;
+            }
         }
         &--char {
             display: block;

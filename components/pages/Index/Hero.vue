@@ -19,13 +19,14 @@
 
   .p-hero{
     @include c-container;
+    margin-bottom: 60px;
+    padding-top: 8rem;
+    padding-bottom: 10em;
+    height: 30rem;
     background: url("/images/brand_top.jpg");
     background-position: 100% 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 30rem;
-    padding-top: 8rem;
-    padding-bottom: 10em;
     animation: hero_bg_img 1s cubic-bezier(.4, .2, 0, 1) 0s 1 alternate both running;
     position: relative;
 
@@ -96,7 +97,6 @@
       &_text {
         margin-bottom: 1rem;
         font-weight: bold;
-        font-family: YuGothic, serif;
         perspective: 250px;
         @include desktop() {
           line-height: 84px;

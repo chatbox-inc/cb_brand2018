@@ -58,6 +58,9 @@
       }
     }
     &--contents{
+      padding: 2.5rem;
+      box-sizing: border-box;
+      background: white;
       @include desktop(){
         position: relative;
         right:0;
@@ -67,8 +70,7 @@
     }
     &--bodyTitle{
       @include c-caption;
-      background: white;
-      padding: 10px;
+      padding-top: 0;
       @include desktop(){
         background: transparent;
       }
@@ -76,7 +78,6 @@
     &--bodyMessage{
       @include c-sentence;
       background: white;
-      padding: 10px;
       @include desktop(){
         background: transparent;
       }

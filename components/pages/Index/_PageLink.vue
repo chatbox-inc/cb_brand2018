@@ -4,7 +4,9 @@
       <a :href="link.href">
         <div class="p-link--contents">
           <div class="p-link--image" :style="imgStyle"></div>
-          <div class="p-link--link">{{link.title}}</div>
+            <div class="p-link--link">
+                <span>{{link.title}}</span>
+            </div>
           <div class="p-link--icon"></div>
         </div>
       </a>
@@ -44,6 +46,7 @@
       display: flex;
       align-items: center;
       background: #fff;
+      position: relative;
       @include desktop(){
         border: 1px solid #C3504F;
         margin-right: 10px;
@@ -65,13 +68,14 @@
       text-decoration: none;
     }
     &--link{
-      width: 160px;
+      width: 100%;
       font-family: YuGothic, serif;
       font-size: 1.2rem;
       font-weight: bold;
       padding-left: 1.2rem;
       letter-spacing: 2px;
       color: #C3504F;
+      text-align: center;
       @include desktop(){
         text-align: center;
         width: 100%;
@@ -87,6 +91,25 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.4rem;
+        background-image: url("~static/images/icon_externalLink.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-0.8rem);
+      }
+      span {
+        display: inline-block;
+        max-width: 170px;
+      }
     }
   }
 </style>
