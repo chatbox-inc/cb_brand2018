@@ -40,8 +40,8 @@
   .p-footer{
     @include c-container;
     color: #B43B3E;
-    margin-bottom: 2rem;
-    padding-bottom: 10rem;
+    /*margin-bottom: 2rem;*/
+    padding-bottom: 1rem;
     &--pageTop {
       position: relative;
     }
