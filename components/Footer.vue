@@ -13,7 +13,6 @@
           <a class="p-navi--link" href="/">メンバー</a>
           <a class="p-navi--link" href="/contact">お問い合わせ</a>
         </nav>
-
         <div class="p-footer--body">
           <div class="p-footer--icon"></div>
           <div class="p-footer--copyright">Copyright © chatbox.inc All Rights Reserved.</div>
@@ -33,7 +32,7 @@
   @import "~assets/scss/object/component/_button.scss";
 
   .p-footerArea{
-    margin-top: 18rem;
+    margin-top: 10rem;
     border-top: 2px solid #C3504F;
     background-color: #FAF7F7;
   }
@@ -48,8 +47,10 @@
     }
     &--pageTopImg {
       position: absolute;
-      right: 10%;
-      bottom: 100px;
+      bottom : 20px;
+      right: 20px;
+      /*right: 10%;*/
+      /*bottom: 100px;*/
     }
     &--body{
       display: flex;
