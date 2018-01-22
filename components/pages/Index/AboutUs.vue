@@ -105,14 +105,14 @@
     }
     &--title{
       @include c-subTitle;
-      font-size: 40px;
+      font-size: 2.0rem;
       margin:0 0 30px 0;
     }
     &--sentence{
       font-weight: bold;
       margin-bottom: 2rem;
       line-height: 40px;
-      font-size: 18px;
+      font-size: 1.3rem;
     }
     &--map{
       display: inline-block;
@@ -122,7 +122,7 @@
       border: 0;
     }
     &--route{
-      line-height: 40px;
+      line-height: 20px;
       margin-bottom: 40px;
     }
     &--button{
