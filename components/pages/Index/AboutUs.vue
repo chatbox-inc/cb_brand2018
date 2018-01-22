@@ -111,7 +111,7 @@
     &--sentence{
       font-weight: bold;
       margin-bottom: 2rem;
-      line-height: 40px;
+      line-height: 25px;
       font-size: 1.3rem;
     }
     &--map{
