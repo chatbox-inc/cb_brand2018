@@ -50,9 +50,9 @@
     }
     &--bodyInner{
       @include c-containerInner;
-      padding-top: 10rem;
+      padding-top: 8rem;
       @include desktop(){
-        padding-top: 0rem;
+        padding-top: 0;
         display: flex;
         justify-content: flex-end;
       }
