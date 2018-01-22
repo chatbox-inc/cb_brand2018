@@ -40,7 +40,6 @@
   .p-footer{
     @include c-container;
     color: #B43B3E;
-    /*margin-bottom: 2rem;*/
     padding-bottom: 1rem;
     &--pageTop {
       position: relative;
@@ -49,8 +48,6 @@
       position: absolute;
       bottom : 20px;
       right: 20px;
-      /*right: 10%;*/
-      /*bottom: 100px;*/
     }
     &--body{
       display: flex;
