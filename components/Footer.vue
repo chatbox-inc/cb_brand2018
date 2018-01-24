@@ -28,28 +28,15 @@
   </div>
 </template>
 
-<script>
-  export default {
-    mounted() {
-      addEventListener('scroll', function() {
-        console.log(window.pageYOffset)
-      })
-    }
-  }
-</script>
-
 <style lang="scss" scoped>
   @import "~assets/scss/object/component/_container.scss";
   @import "~assets/scss/object/component/_title.scss";
   @import "~assets/scss/object/component/_button.scss";
 
   .p-footerArea{
-    margin-top: 10rem;
+    /*margin-top: 10rem;*/
     border-top: 2px solid #C3504F;
     background-color: #FAF7F7;
-    @include desktop() {
-      margin-bottom: 100px;
-    }
   }
 
   .p-footer{

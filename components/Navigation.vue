@@ -1,5 +1,5 @@
 <template>
-    <div class="p-navigationArea">
+    <div class="p-navigationArea sticky">
         <div class="p-navigation">
             <nav class="p-navigation--inner">
                 <a class="p-navigation--link" href="">
@@ -37,6 +37,7 @@
         bottom: 0;
         width: 100%;
         height: 70px;
+        margin-top: 100px;
         padding-top: 10px;
         background: #fff;
         @include desktop() {
@@ -78,5 +79,9 @@
     }
     .show {
         display: inline;
+    }
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
     }
 </style>
