@@ -82,6 +82,9 @@
 
   .p-about{
     @include c-container;
+    @include desktop() {
+      margin-top: 100px;
+    }
     margin-top:4.0rem;
     &--title{
       @include c-title
