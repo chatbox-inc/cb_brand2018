@@ -29,6 +29,7 @@
 
 <style lang="scss" scoped>
     @import "~assets/scss/object/component/_container.scss";
+    @import "~assets/scss/layout/_layout.scss";
 
     .p-navigationArea {
         display: none;
@@ -38,6 +39,9 @@
         height: 70px;
         padding-top: 10px;
         background: #fff;
+        @include desktop() {
+            display: block;
+        }
     }
     .p-navigation {
         @include c-container;
