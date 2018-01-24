@@ -83,33 +83,19 @@
       }
     }
     &--icon{
+      content: "";
       display: inline-block;
-      width: 1.3rem;
-      height: 1.3rem;
+      width: 1.5rem;
+      height: 1.5rem;
       font-size: 1.4rem;
       background-image: url("~static/images/icon_externalLink.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      &::after {
-        content: "";
-        display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
-        font-size: 1.4rem;
-        background-image: url("~static/images/icon_externalLink.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-0.8rem);
-      }
-      span {
-        display: inline-block;
-        max-width: 170px;
-      }
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-0.8rem);
     }
   }
 </style>
