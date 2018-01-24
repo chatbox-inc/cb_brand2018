@@ -1,7 +1,7 @@
 <template>
   <div class="p-footerArea">
     <div class="p-footer--pageTop">
-      <a href="">
+      <a href="#top" v-smooth-scroll>
         <img class="p-footer--pageTopImg" src="/images/pagetop.svg" alt="">
       </a>
     </div>
@@ -13,12 +13,13 @@
           <a class="p-navi--link" href="/">メンバー</a>
           <a class="p-navi--link" href="/contact">お問い合わせ</a>
         </nav>
-
         <div class="p-footer--body">
           <div class="p-footer--icon"></div>
           <div class="p-footer--copyright">Copyright © chatbox.inc All Rights Reserved.</div>
-          <div class="p-footer--instagram"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-          <div class="p-footer--facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+          <div class="p-footer--sns">
+            <i class="fa fa-instagram p-footer--instagram" aria-hidden="true"></i>
+            <i class="fa fa-facebook p-footer--facebook" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -33,7 +34,7 @@
   @import "~assets/scss/object/component/_button.scss";
 
   .p-footerArea{
-    margin-top: 18rem;
+    margin-top: 10rem;
     border-top: 2px solid #C3504F;
     background-color: #FAF7F7;
   }
@@ -41,15 +42,14 @@
   .p-footer{
     @include c-container;
     color: #B43B3E;
-    margin-bottom: 2rem;
-    padding-bottom: 10rem;
+    padding-bottom: 1rem;
     &--pageTop {
       position: relative;
     }
     &--pageTopImg {
       position: absolute;
-      right: 10%;
-      bottom: 100px;
+      bottom : 20px;
+      right: 20px;
     }
     &--body{
       display: flex;
@@ -60,12 +60,23 @@
     }
     &--icon{
       display: inline-block;
-      width: 1.4rem;
+      width: 2.4rem;
       height: 1.4rem;
-      font-size: 1.4rem;
       background-image: url("~static/images/icon_chatbox.svg");
       background-repeat: no-repeat;
       background-size: contain;
+    }
+    &--copyright {
+      display: inline-block;
+    }
+    &--sns {
+      display: inline-block;
+      margin-left: auto;
+      font-size: 2.0rem;
+    }
+    &--instagram {
+      display: inline-block;
+      margin-right: 10px;
     }
   }
   .p-navi{
