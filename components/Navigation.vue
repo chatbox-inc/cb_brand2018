@@ -81,7 +81,9 @@
         display: inline;
     }
     .sticky {
-        position: -webkit-sticky;
-        position: sticky;
+        @include desktop() {
+            position: -webkit-sticky;
+            position: sticky;
+        }
     }
 </style>

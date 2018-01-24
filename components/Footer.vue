@@ -34,9 +34,12 @@
   @import "~assets/scss/object/component/_button.scss";
 
   .p-footerArea{
-    /*margin-top: 10rem;*/
+    margin-top: 10rem;
     border-top: 2px solid #C3504F;
     background-color: #FAF7F7;
+    @include desktop() {
+      margin-top: 0;
+    }
   }
 
   .p-footer{
@@ -50,6 +53,10 @@
       position: absolute;
       bottom : 20px;
       right: 20px;
+      @include desktop() {
+        bottom: 100px;
+        right: 150px;
+      }
     }
     &--body{
       display: flex;
