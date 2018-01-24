@@ -153,6 +153,7 @@
 
       @include desktop(){
         width: 100%;
+        margin-left: -35%;
       }
 
     }
