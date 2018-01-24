@@ -40,6 +40,11 @@
       left: 50%;
       bottom: -35px;
       transform: translateX(-1px);
+      @include desktop() {
+        width: 3px;
+        height: 160px;
+        bottom: -60px;
+      }
     }
 
     @keyframes hero_bg_img {
