@@ -124,19 +124,30 @@
 
   .p-placement{
     margin-top: 20px;
+    @include desktop() {
+      display: flex;
+    }
     &--box{
       display: inline-block;
+      @include desktop() {
+        width: 100%;
+      }
     }
     &--title{
       @include c-subTitle;
-      font-size: 2.0rem;
-      margin:0 0 10px 0;
+      @include desktop() {
+        font-size: 4rem;
+      }
     }
     &--sentence{
       font-weight: bold;
       margin-bottom: 2rem;
       line-height: 25px;
       font-size: 1.3rem;
+      @include desktop() {
+        font-size: 1.7rem;
+        line-height: 35px;
+      }
     }
     &--map{
       display: inline-block;
@@ -148,6 +159,9 @@
     &--route{
       line-height: 20px;
       margin-bottom: 40px;
+      @include desktop() {
+        line-height: 35px;
+      }
     }
     &--button{
       margin-top: 40px;
