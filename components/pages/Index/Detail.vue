@@ -160,14 +160,15 @@
       font-weight: bold;
       margin: 3rem 1rem;
       height: 20rem;
-      -webkit-text-orientation: upright;
       writing-mode: vertical-rl;
       text-orientation:upright;
-      -webkit-text-orientation:upright;
     }
   }
   //画像の順番とかも無理あるかも Talking だけ別コンポーネントも検討
   .is-colored{
+    @include desktop() {
+      margin-top: 80px;
+    }
     .p-detail{
       &--titleArea{
         background: linear-gradient(#fff 50%, #FAF7F7 50%);
