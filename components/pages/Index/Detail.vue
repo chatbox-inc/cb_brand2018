@@ -20,8 +20,8 @@
           <div class="p-detail--content2">
             <div class="p-detail--image2" v-if='image2' :style="imageStyle2"></div>
             <div class="p-detail--tags">
-              <p class="p-detail--tagItem">Web制作</p>
-              <p class="p-detail--tagItem">技術顧問</p>
+              <p class="p-detail--tagItem">{{messages.tags.tagItem1}}</p>
+              <p class="p-detail--tagItem">{{messages.tags.tagItem2}}</p>
             </div>
           </div>
         </div>
