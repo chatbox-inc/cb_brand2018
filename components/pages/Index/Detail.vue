@@ -98,6 +98,7 @@
       @include c-containerInner;
       @include desktop{
         display: flex;
+        padding-bottom: 70px;
       }
     }
     &--title{
