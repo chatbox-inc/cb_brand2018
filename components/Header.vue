@@ -30,6 +30,12 @@
         position: absolute;
         top: -20px;
         left: -25px;
+        @include desktop() {
+          width: 30px;
+          height: 30px;
+          top: -33px;
+          left: -38px;
+        }
       }
       @include desktop(){
         border: 50px solid transparent;
