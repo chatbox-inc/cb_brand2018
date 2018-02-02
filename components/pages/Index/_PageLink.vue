@@ -4,10 +4,12 @@
       <a :href="link.href">
         <div class="p-link--contents">
           <div class="p-link--image" :style="imgStyle"></div>
+          <div class="p-link--linkWrapper">
             <div class="p-link--link">
-                <span>{{link.title}}</span>
+              <span>{{link.title}}</span>
             </div>
-          <div class="p-link--icon"></div>
+            <div class="p-link--icon"></div>
+          </div>
         </div>
       </a>
     </div>
@@ -67,15 +69,17 @@
     a {
       text-decoration: none;
     }
+    &--linkWrapper {
+      margin: 0 auto;
+    }
     &--link{
-      width: 100%;
+      width: 160px;
       font-family: YuGothic, serif;
       font-size: 1.2rem;
       font-weight: bold;
-      padding-left: 1.2rem;
       letter-spacing: 2px;
       color: #C3504F;
-      text-align: center;
+      text-align: left;
       @include desktop(){
         text-align: center;
         width: 100%;
@@ -83,6 +87,7 @@
       }
     }
     &--icon{
+      content: "";
       display: inline-block;
       width: 1.3rem;
       height: 1.3rem;
@@ -91,25 +96,10 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      &::after {
-        content: "";
-        display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
-        font-size: 1.4rem;
-        background-image: url("~static/images/icon_externalLink.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-0.8rem);
-      }
-      span {
-        display: inline-block;
-        max-width: 170px;
-      }
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-0.8rem);
     }
   }
 </style>

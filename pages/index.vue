@@ -49,6 +49,10 @@
               image: '/images/creation01.jpg',
               href: '',
               title: 'Web制作を詳しく見る'
+            },
+            tags: {
+                tagItem1: 'Webページ制作',
+                tagItem2: 'Webシステム制作'
             }
           },
           talking: {
@@ -61,6 +65,10 @@
               image: '/images/enjoy01.jpg',
               href: '',
               title: '技術顧問を詳しく見る'
+            },
+            tags: {
+                tagItem1: '社員研修',
+                tagItem2: '技術顧問'
             }
           },
           enjoy: {
@@ -73,6 +81,10 @@
               image: '/images/enjoy01.jpg',
               href: '',
               title: 'イベント・スクールを詳しく見る'
+            },
+            tags: {
+                tagItem1: 'スクール',
+                tagItem2: 'イベント'
             }
           },
           member: {

@@ -20,8 +20,8 @@
           <div class="p-detail--content2">
             <div class="p-detail--image2" v-if='image2' :style="imageStyle2"></div>
             <div class="p-detail--tags">
-              <p class="p-detail--tagItem">Web制作</p>
-              <p class="p-detail--tagItem">技術顧問</p>
+              <p class="p-detail--tagItem">{{messages.tags.tagItem1}}</p>
+              <p class="p-detail--tagItem">{{messages.tags.tagItem2}}</p>
             </div>
           </div>
         </div>
@@ -98,6 +98,7 @@
       @include c-containerInner;
       @include desktop{
         display: flex;
+        padding-bottom: 70px;
       }
     }
     &--title{
@@ -152,6 +153,7 @@
 
       @include desktop(){
         width: 100%;
+        margin-left: -35%;
       }
 
     }
@@ -160,14 +162,15 @@
       font-weight: bold;
       margin: 3rem 1rem;
       height: 20rem;
-      -webkit-text-orientation: upright;
       writing-mode: vertical-rl;
       text-orientation:upright;
-      -webkit-text-orientation:upright;
     }
   }
   //画像の順番とかも無理あるかも Talking だけ別コンポーネントも検討
   .is-colored{
+    @include desktop() {
+      margin-top: 80px;
+    }
     .p-detail{
       &--titleArea{
         background: linear-gradient(#fff 50%, #FAF7F7 50%);

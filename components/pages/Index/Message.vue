@@ -36,6 +36,9 @@
    @import "~assets/scss/object/component/_title.scss";
   .p-greeting{
     @include c-container;
+    @include desktop() {
+      margin-top: 100px;
+    }
     margin-top: 2.0rem;
     &--title{
       @include c-containerInner;

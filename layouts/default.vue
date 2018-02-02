@@ -2,8 +2,8 @@
   <div>
     <page-header></page-header>
     <nuxt/>
-    <page-footer></page-footer>
     <navigation></navigation>
+    <page-footer></page-footer>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="p-navigationArea">
+    <div class="p-navigationArea sticky">
         <div class="p-navigation">
             <nav class="p-navigation--inner">
                 <a class="p-navigation--link" href="">
@@ -29,6 +29,7 @@
 
 <style lang="scss" scoped>
     @import "~assets/scss/object/component/_container.scss";
+    @import "~assets/scss/layout/_layout.scss";
 
     .p-navigationArea {
         display: none;
@@ -36,8 +37,12 @@
         bottom: 0;
         width: 100%;
         height: 70px;
+        margin-top: 100px;
         padding-top: 10px;
         background: #fff;
+        @include desktop() {
+            display: block;
+        }
     }
     .p-navigation {
         @include c-container;
@@ -74,5 +79,11 @@
     }
     .show {
         display: inline;
+    }
+    .sticky {
+        @include desktop() {
+            position: -webkit-sticky;
+            position: sticky;
+        }
     }
 </style>
