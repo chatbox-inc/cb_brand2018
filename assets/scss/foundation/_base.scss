@@ -30,10 +30,17 @@
   font-weight: bold;
 }
 
-body{
+html,body{
   font-size: 1.2rem;
   font-family: "Yu Gothic Medium","YuGothic Medium", YuGothic, "Yu Gothic",sans-serif;
+  background-color: #FAF7F7;
+  color: #393739;
   @include desktop(){
     font-size: 1.5rem;
   }
 }
+
+::selection {
+  background: rgba(231, 6, 0, 0.1);
+}
+

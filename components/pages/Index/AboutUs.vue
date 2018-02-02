@@ -17,16 +17,18 @@
         <div class="p-placement--box">
         <h2 class="p-placement--title">Placement</h2>
         <div class="p-placement--sentence">
-          <div class="">株式会社chatbox</div>
-          <div class="">〒541-0057</div>
-          <div class="">大阪市中央区北久宝寺町1-4-11 la Suite 4F</div>
+          <div class="">〒541-0059</div>
+          <div class="">大阪府大阪市中央区博労町1-2-17
+            <br>
+            Briq SHINSO BLDG 403
+          </div>
         </div>
         <div class="p-placement--route">
           <div class="">大阪市営地下鉄「堺筋本町」駅 3号出入口より徒歩10分</div>
           <div class="">大阪市営地下鉄「本町」駅 11号出入口より徒歩15分</div>
           <div class="">大阪市営地下鉄「松屋町」駅 1号出入口より徒歩15分</div>
         </div>
-        <a class="p-placement--button" href="#">Google Mapで開く　　></a>
+        <a class="p-placement--button" href="https://goo.gl/maps/LLuR2E8Nwos" target="_blank">Google Mapで開く</a>
         </div>
         <div class="p-placement--map" id="map"></div>
       </div>
@@ -42,7 +44,6 @@
         info: [
           {label: '会社名', data: '株式会社 chatbox'},
           {label: '代表', data: '後藤 知宏'},
-          {label: '所在地', data: '〒 541-0057 大阪市中央区北久宝寺町1-4-11 la Suite 4F'},
           {label: '設立', data: '2014年 10月 02日'},
           {label: '事業内容', data: 'Web制作 / IT教育'},
           {label: '従業員数', data: '4名'}
@@ -53,10 +54,7 @@
       }
     },
     mounted() {
-      const latLng = {
-        lat: 34.6798386,
-        lng: 135.506939
-      }
+      const latLng = {lat: 34.678718, lng: 135.509419}
 
       const map = new google.maps.Map(document.getElementById('map'), {
         center: latLng,
@@ -67,9 +65,10 @@
         position: latLng,
         map: map,
         title: 'chatbox is here!',
+        animation: google.maps.Animation.BOUNCE,
         icon: {
           url: '/images/google_maps.svg',
-          scaledSize: new google.maps.Size(60, 80)
+          scaledSize: new google.maps.Size(80, 100)
         },
       })
     }
@@ -82,16 +81,18 @@
 
   .p-about{
     @include c-container;
+    margin-bottom: 40px;
     @include desktop() {
       margin-top: 100px;
     }
     margin-top:4.0rem;
     &--title{
-      @include c-title
+      @include c-title;
+      margin-bottom: 2rem;
     }
     &--imageWrapper {
       position: relative;
-      margin-bottom:40px;
+      margin-bottom:10px;
       width: 100%;
     }
     &--imageWrapper:before {
@@ -158,21 +159,37 @@
     }
     &--route{
       line-height: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       @include desktop() {
         line-height: 35px;
+        margin-bottom: 40px;
       }
     }
     &--button{
-      margin-top: 40px;
-      padding:18px 30px 18px 50px;
-      border-radius: 10px;
+      display: inline-block;
+      padding: 1.5rem 3rem;
+      border-radius: 4px;
       color: #FFF;
       font-weight: bold;
       background:#C3504F;
       text-decoration: none;
+      position:relative;
     }
-
+    &--button::before {
+      content: "";
+      display: inline-block;
+      width: 1.4rem;
+      height: 1.4rem;
+      font-size: 1.4rem;
+      background-image: url("/images/icon_arrow-white.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      right: .7rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
   .p-detail{
     &.is-colored &--titleArea{

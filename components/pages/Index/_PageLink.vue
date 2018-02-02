@@ -38,6 +38,7 @@
     background: #C3504F;
     @include c-container;
     padding: 1.5rem 0;
+    margin-bottom: 40px;
     @include desktop(){
       background: transparent;
     }
@@ -58,7 +59,7 @@
     }
     &--image{
       width: 12rem;
-      height: 10rem;
+      height: 80px;
       background-size: cover;
       background-position: center;
       @include desktop(){
@@ -73,8 +74,7 @@
       margin: 0 auto;
     }
     &--link{
-      width: 160px;
-      font-family: YuGothic, serif;
+      width: 150px;
       font-size: 1.2rem;
       font-weight: bold;
       letter-spacing: 2px;
@@ -89,8 +89,8 @@
     &--icon{
       content: "";
       display: inline-block;
-      width: 1.3rem;
-      height: 1.3rem;
+      width: 1.6rem;
+      height: 1.6rem;
       font-size: 1.4rem;
       background-image: url("~static/images/icon_externalLink.svg");
       background-repeat: no-repeat;

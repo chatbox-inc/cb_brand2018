@@ -1,7 +1,7 @@
 @import "../../layout/layout";
 
 @mixin c-title {
-  font-family: "Yu Mincho Medium", "游明朝 Medium", "游明朝体", YuMincho, serif;
+  font-family: "Yu Mincho Medium", YuMincho, serif;
   font-weight: 500;
   font-size: 2.5rem;
   color: #393739;
@@ -18,7 +18,7 @@
 }
 
 @mixin c-caption {
-  padding-top: 2rem;
+  padding-top: 1rem;
   margin-bottom: 1.5rem;
   font-size: 1.7rem;
   font-weight: bold;
@@ -30,8 +30,9 @@
 }
 
 @mixin c-subTitle {
+  margin-bottom: 1rem;
   font-family: YuMincho, serif;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-weight: 500;
   color: #393739;
 }

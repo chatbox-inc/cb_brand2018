@@ -23,6 +23,7 @@
     &--title{
       @include c-title;
       text-align: center;
+      margin-bottom: 1rem;
     }
     &--sentence{
       @include c-sentence;
@@ -34,14 +35,32 @@
       }
     }
     &--button{
-      @include c-btn_block;
-      max-width:470px;
-      margin: 0 auto;
-      @include desktop() {
-        height: 12rem;
-        line-height: 12rem;
-        font-size: 2.5rem;
-      }
+      display: inline-block;
+      padding: 1.5rem 3rem;
+      width:100%;
+      text-align: center;
+      border-radius: 4px;
+      color: #FFF;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background:#C3504F;
+      text-decoration: none;
+      position:relative;
+    }
+    &--button::before {
+      content: "";
+      display: inline-block;
+      width: 1.4rem;
+      height: 1.4rem;
+      font-size: 1.4rem;
+      background-image: url("/images/icon_arrow-white.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      right: .7rem;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 </style>

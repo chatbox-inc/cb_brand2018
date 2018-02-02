@@ -28,8 +28,8 @@
         background-size: contain;
         background-position: center;
         position: absolute;
-        top: -20px;
-        left: -25px;
+        top: -24px;
+        left: -24px;
         @include desktop() {
           width: 30px;
           height: 30px;

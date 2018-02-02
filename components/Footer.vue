@@ -50,6 +50,8 @@
       position: relative;
     }
     &--pageTopImg {
+      width: 20px;
+      height: auto;
       position: absolute;
       bottom : 20px;
       right: 20px;
@@ -67,8 +69,9 @@
     }
     &--icon{
       display: inline-block;
-      width: 2.4rem;
-      height: 1.4rem;
+      margin-right: 10px;
+      width: 2.2rem;
+      height: 2.2rem;
       background-image: url("~static/images/icon_chatbox.svg");
       background-repeat: no-repeat;
       background-size: contain;
@@ -79,24 +82,26 @@
     &--sns {
       display: inline-block;
       margin-left: auto;
-      font-size: 2.0rem;
+      font-size: 2.3rem;
     }
     &--instagram {
       display: inline-block;
-      margin-right: 10px;
+      margin-right: 20px;
     }
   }
   .p-navi{
-    font-size: 1.2rem;
-    border-bottom: 1px solid rgba(195,80,79,0.5);
     display: flex;
     justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(195,80,79,0.5);
+    letter-spacing: 1px;
     @include desktop{
       justify-content: flex-start;
     }
     &--link{
       text-decoration: none;
-      padding: 1rem 0;
+      padding: 1.2rem 0;
       color: inherit;
       @include desktop{
         padding-top: 3rem;

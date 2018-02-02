@@ -43,7 +43,6 @@
     &--title{
       @include c-containerInner;
       @include c-title;
-      font-size: 2rem;
       margin-bottom: 10px;
     }
     &--body{
@@ -53,7 +52,7 @@
     }
     &--bodyInner{
       @include c-containerInner;
-      padding-top: 8rem;
+      padding-top: 110px;
       @include desktop(){
         padding-top: 0;
         display: flex;

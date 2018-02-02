@@ -23,7 +23,8 @@
     padding-top: 8rem;
     padding-bottom: 10em;
     height: 30rem;
-    background: url("/images/brand_top.jpg");
+    background-color: #fff;
+    background-image: url("/images/brand_top.jpg");
     background-position: 100% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -83,7 +84,7 @@
         width: 100%;
         height: 100%;
         background-color: rgba(195,80,79,0.9);
-        animation: slogan .8s cubic-bezier(.4, .2, 0, 1) .4s 1 alternate both running;
+        animation: slogan 1s cubic-bezier(.4, .2, 0, 1) 1s 1 alternate both running;
         z-index: -1;
       }
       @keyframes slogan {
@@ -115,16 +116,16 @@
           transform-origin: 50% 50% -10px;
         }
         span:nth-child(1) {
-          animation: slogan_text .6s cubic-bezier(.4, .2, 0, 1) .6s 1 alternate both running;
+          animation: slogan_text .8s cubic-bezier(.4, .2, 0, 1) 2s 1 alternate both running;
         }
         span:nth-child(2) {
-          animation: slogan_text .6s cubic-bezier(.4, .2, 0, 1) 1.2s 1 alternate both running;
+          animation: slogan_text .6s cubic-bezier(.4, .2, 0, 1) 2.8s 1 alternate both running;
         }
         span:nth-child(3) {
-          animation: slogan_text .6s cubic-bezier(.4, .2, 0, 1) 1.4s 1 alternate both running;
+          animation: slogan_text .6s cubic-bezier(.4, .2, 0, 1) 3.4s 1 alternate both running;
         }
         span:nth-child(4) {
-          animation: slogan_text .6s cubic-bezier(.4, .2, 0, 1) 1.6s 1 alternate both running;
+          animation: slogan_text .6s cubic-bezier(.4, .2, 0, 1) 4s 1 alternate both running;
         }
         @keyframes slogan_text {
           0% {

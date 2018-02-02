@@ -92,7 +92,7 @@
   .p-detail{
     @include c-container;
     &--titleArea{
-      padding: 2rem 0;
+      padding: 1rem 0;
     }
     &--inner{
       @include c-containerInner;
@@ -114,14 +114,14 @@
     }
     &--body{
       @include c-sentence;
-      padding: 10px;
+      margin-bottom: 3rem;
       width: 100%;
     }
     &--image{
+      margin-bottom: 1rem;
       height: 20rem;
       background-size: cover;
       background-repeat: no-repeat;
-      margin: 1rem;
       @include desktop(){
         height: 32rem;
       }
@@ -134,12 +134,12 @@
       }
     }
     &--image2{
+      margin-bottom: 1rem;
       height: 20rem;
       width: 60%;
       background-size: cover;
       background-position-y: 50%;
       background-repeat: no-repeat;
-      margin: 1rem;
       @include desktop(){
         height: 32rem;
         width: 100%;
@@ -160,10 +160,11 @@
     &--tagItem{
       color: #C3504F;
       font-weight: bold;
-      margin: 3rem 1rem;
+      margin: .5rem 1rem;
       height: 20rem;
       writing-mode: vertical-rl;
-      text-orientation:upright;
+      text-orientation: upright;
+      font-feature-settings: 'pkna';
     }
   }
   //画像の順番とかも無理あるかも Talking だけ別コンポーネントも検討
