@@ -13,7 +13,7 @@
   @import "~assets/scss/layout/_layout.scss";
   .p-header{
     &--triangle{
-      z-index: 100;
+      z-index: 1000;
       position: fixed;
       top: 0;
       left: 0;
@@ -46,24 +46,22 @@
     }
     &--logoArea{
       width:100%;
-      height: 60px;
+      padding: 2rem 0;
       text-align: center;
       @include desktop {
         width: 100%;
-        height: 170px;
+        padding: 4rem 0;
       }
     }
     &--logoImg{
       display: inline-block;
-      margin-top : 15px;
       width: auto;
-      height: 50%;
+      height: 4rem;
 
       @include desktop(){
         display: inline-block;
         width: auto;
-        height: 40%;
-        margin-top: 40px;
+        height: 8rem;
       }
     }
   }
