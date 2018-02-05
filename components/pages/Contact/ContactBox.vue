@@ -56,6 +56,10 @@
                 letter-spacing: 3px;
                 line-height: 3.6rem;
                 text-align: center;
+                @include desktop() {
+                    font-size: 16px;
+                    font-weight: normal;
+                }
             }
         }
         .c_contact_tel_box{
@@ -68,11 +72,17 @@
                 font-family: YuGothic;
                 font-weight: bold;
                 color: #C3504F;
+                @include desktop() {
+                    font-size: 36px;
+                }
             }
-            .c_modal_text{
+            .c_modal_text {
                 font-size: 2.4rem;
                 color: #393739;
                 margin: 2rem 0 4rem 0;
+                @include desktop() {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -82,6 +92,10 @@
             @include c-btn_base();
             font-size: 2.4rem;
             text-decoration: none;
+            @include desktop() {
+                width: 200px;
+                height: 50px;
+            }
         }
     }
 
