@@ -1,5 +1,5 @@
 <template>
-  <div style="background: #fff;">
+  <div>
     <page-header></page-header>
     <nuxt/>
     <navigation></navigation>

@@ -10,6 +10,7 @@
 <style lang="scss" scoped>
   @import "~assets/scss/object/component/_container.scss";
   @import "~assets/scss/object/component/_title.scss";
+  @import "~assets/scss/layout/_layout.scss";
   .p-header{
     &--triangle{
       z-index: 100;
@@ -43,12 +44,26 @@
         border-left: 50px solid #c2504f;
       }
     }
+    &--logoArea{
+      width:100%;
+      height: 60px;
+      text-align: center;
+      @include desktop {
+        width: 100%;
+        height: 170px;
+      }
+    }
     &--logoImg{
-      display: block;
-      width: 13rem;
-      margin: 0 auto;
+      display: inline-block;
+      margin-top : 15px;
+      width: auto;
+      height: 50%;
+
       @include desktop(){
-        width: 23rem;
+        display: inline-block;
+        width: auto;
+        height: 40%;
+        margin-top: 40px;
       }
     }
   }

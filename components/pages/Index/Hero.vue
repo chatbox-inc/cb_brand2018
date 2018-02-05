@@ -1,6 +1,5 @@
 <template>
   <div class="p-hero">
-    <!--<img src="/img/moc/1200x600.png" class="p-hero&#45;&#45;background">-->
     <div class="p-hero--slogan">
       <div class="p-hero--slogan_bg"></div>
       <div class="p-hero--slogan_text_wrapper">
@@ -8,7 +7,7 @@
         <div class="p-hero--slogan_text"><span></span><span>「作る」</span><span>「伝える」</span><span>「語り合う」</span></div>
       </div>
     </div>
-    <div class="p-hero--border"></div>
+    <div class="p-hero--bgImg"></div>
   </div>
 </template>
 
@@ -18,20 +17,19 @@
   @import "~assets/scss/object/component/_title.scss";
 
   .p-hero{
-    @include c-container;
     margin-bottom: 60px;
-    padding-top: 8rem;
-    padding-bottom: 10em;
-    height: 30rem;
+    height: 300px;
     background-color: #fff;
-    background-image: url("/images/brand_top.jpg");
-    background-position: 100% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    animation: hero_bg_img 1s cubic-bezier(.4, .2, 0, 1) 0s 1 alternate both running;
     position: relative;
 
+    @include desktop(){
+      max-width: 1920px;
+      height: 800px;
+      background-size: cover;
+    }
+
     &::after {
+      // border
       display: inline-block;
       content: "";
       width: 2px;
@@ -42,51 +40,33 @@
       bottom: -35px;
       transform: translateX(-1px);
       @include desktop() {
-        width: 3px;
-        height: 160px;
-        bottom: -60px;
+        height: 140px;
+        bottom: -80px;
       }
-    }
-
-    @keyframes hero_bg_img {
-      from {
-        opacity: 0;
-        background-position: 100% 100%;
-      }
-      to {
-        opacity: 1;
-        background-position: 100% 50%;
-      }
-    }
-
-    @include desktop(){
-      background-size: 90%;
-      padding-top: 30rem;
-      height: 70rem;
-    }
-
-    &--inner{
-      @include c-containerInner
     }
 
     &--slogan{
-      //display: absolute;
-      position: relative;
+      z-index: 100;
+      display: inline-block;
+      width: 90%;
       color: white;
       font-size: 1.5rem;
-      width: 80%;
-      margin-top:3rem;
       border-radius: 0 6px 6px 0;
       text-align: left;
-      z-index: 1;
-      &_bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(195,80,79,0.9);
-        animation: slogan 1s cubic-bezier(.4, .2, 0, 1) 1s 1 alternate both running;
-        z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 60%;
+      transform: translateY(calc(-100px /2));
+
+      @include desktop {
+        width: 60vw;
+        max-width: 900px;
+        font-size: 3rem;
+        line-height: 8rem;
+        top: 60%;
+        transform: translateY(calc(-330px /2));
       }
+
       @keyframes slogan {
         0% {
           width: 0%;
@@ -96,9 +76,21 @@
         }
       }
 
+      &_bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(195,80,79,0.9);
+        animation: slogan 1s cubic-bezier(.4, .2, 0, 1) 1s 1 alternate both running;
+        z-index: -1;
+      }
+
       &_text_wrapper {
         padding: 2.5rem 1rem 2rem;
         padding-left: 10%;
+        @include desktop {
+          padding: 60px 30px 80px 15vw;
+        }
       }
       &_text {
         margin-bottom: 1rem;
@@ -136,9 +128,33 @@
           }
         }
       }
+    }
+    &--bgImg {
+      width: 100%;
+      height: 100%;
+      background-image: url("/images/brand_top.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: hero_bg_img 2s cubic-bezier(.4, .2, 0, 1) 0s 1 alternate both running;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @keyframes hero_bg_img {
+        from {
+          opacity: 0;
+          background-position: 100% 100%;
+        }
+        to {
+          opacity: 1;
+          background-position: 100% 50%;
+        }
+      }
+
       @include desktop(){
-        font-size: 3rem;
-        line-height: 8rem;
+        width: 90vw;
+        background-size: cover;
       }
     }
   }
