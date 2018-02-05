@@ -11,22 +11,30 @@
             </div>
             <div class="p-contact_check">
                 <div class="c-link">
-                    <label class="c-link_anchor current">
-                        <input type="checkbox" name="checkbox01[]" class="checkbox01-input" checked="checked">
+                    <div class="c-link_anchor current">
+                        <label class="c-link_label">
+                            <input type="checkbox" name="checkbox01[]" class="checkbox01-input" checked>
+                        </label>
                         <span class="checkbox01-parts">Web制作</span>
-                    </label>
-                    <label class="c-link_anchor">
-                        <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                    </div>
+                    <div class="c-link_anchor">
+                        <label class="c-link_label">
+                            <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                        </label>
                         <span class="checkbox01-parts">技術顧問</span>
-                    </label>
-                    <label class="c-link_anchor">
-                        <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                    </div>
+                    <div class="c-link_anchor">
+                        <label class="c-link_label">
+                            <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                        </label>
                         <span class="checkbox01-parts">イベント</span>
-                    </label>
-                    <label class="c-link_anchor">
-                        <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                    </div>
+                    <div class="c-link_anchor">
+                        <label class="c-link_label">
+                            <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                        </label>
                         <span class="checkbox01-parts">その他</span>
-                    </label>
+                    </div>
                 </div>
                 <p class="c_modal_text">Web制作に関するお問い合わせは、見積もり相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。</p>
             </div>
@@ -52,11 +60,13 @@
                     </dl>
                 </div>
             </div>
-
         </div>
         <div class="p-contact p-contact_submit">
             <div class="submit">
-                <a class="c-btn_base" href="#">送信する</a>
+                <a class="c-btn_base" href="#">
+                    <span>送信する</span>
+                    <i class="fas fa-angle-right c-icon_arrow"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -66,6 +76,59 @@
     @import "~assets/scss/object/component/_container.scss";
     @import "~assets/scss/object/component/_title.scss";
     @import "~assets/scss/object/component/_button.scss";
+
+    .c-link_label {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: 25px;
+        border: 1px solid #B3B3B3;
+        background: #fff;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 40%;
+            left: 5px;
+            display: block;
+            margin-top: -8px;
+            width: 14px;
+            height: 21px;
+            border-right: 3px solid #4B4B4B;
+            border-bottom: 3px solid #4B4B4B;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            z-index: 1;
+        }
+    }
+
+    .checkbox01-input {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: -40px;
+        box-shadow: 39px 0px #FFF;
+        z-index: 2;
+        &:checked {
+            box-shadow: none;
+        }
+        &:checked:focus {
+            box-shadow: 39px 0px #666;
+            opacity: 0.1;
+        }
+        &:focus {
+            box-shadow: 39px 0px #EEE;
+        }
+    }
 
     .p_form {
         margin-top: 7%;
