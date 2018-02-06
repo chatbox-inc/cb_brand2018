@@ -21,6 +21,9 @@
       PageInfo,
       PageForm
     }
+//    mounted () {
+//      new WOW().init()
+//    }
   }
 
 </script>
