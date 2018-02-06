@@ -3,7 +3,7 @@
     <div class="p-greeting--title">
       {{messages.title}}
     </div>
-    <div class="p-greeting--body">
+    <div class="p-greeting--body" :style="imageStyle1">
       <div class="p-greeting--bodyInner">
         <div class="p-greeting--contents">
           <h2 class="p-greeting--bodyTitle">
@@ -23,8 +23,32 @@
         props: {
             messages: Object
         },
+        data () {
+            return {
+                image1: null
+            }
+        },
         components: {
             PageLink
+        },
+        computed: {
+            imageStyle1 () {
+                if (this.image1) {
+                    return {
+                        backgroundImage: `url('${this.image1}')`
+                    }
+                } else {
+                    return {}
+                }
+            }
+        },
+        async mounted () {
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve()
+                }, 1000)
+            })
+            this.image1 = this.messages.image1
         }
     }
 
@@ -45,7 +69,6 @@
       margin-bottom: 10px;
     }
     &--body{
-      background: url("/images/intro01.jpg");
       background-repeat: no-repeat;
       background-size: contain;
     }

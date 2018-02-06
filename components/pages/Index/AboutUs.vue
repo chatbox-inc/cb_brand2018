@@ -49,7 +49,7 @@
           {label: '従業員数', data: '4名'}
         ],
         aboutImage: {
-          backgroundImage: `url("/images/about01.jpg")`
+          backgroundImage: `url("/images/about_photo01.jpg")`
         }
       }
     },

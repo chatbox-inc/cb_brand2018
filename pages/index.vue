@@ -38,15 +38,16 @@
             title: 'We are thinking about Web',
             subtitle: '作るだけなく、伝え語り合う会社でありたい',
             message: 'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。',
+            image1: '/images/message_photo01.jpg'
           },
           creation: {
             title: 'Creation',
             subtitle: '高い技術力を活かしたWeb制作',
             message: 'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。',
-            image1: '/images/creation01.jpg',
-            image2: '/images/creation02.jpg',
+            image1: '/images/creation_photo01.jpg',
+            image2: '/images/creation_photo02.jpg',
             link: {
-              image: '/images/creation01.jpg',
+              image: '/images/creation_btn.jpg',
               href: '',
               title: 'Web制作を詳しく見る'
             },
@@ -59,10 +60,10 @@
             title: 'Talking',
             subtitle: '技術豊富なスタッフがお客様の開発現場に直接訪問',
             message: 'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。',
-            image1: '/images/talking01.jpg',
-            image2: '/images/talking02.jpg',
+            image1: '/images/talking_photo01.jpg',
+            image2: '/images/talking_photo02.jpg',
             link: {
-              image: '/images/enjoy01.jpg',
+              image: '/images/talking_btn.jpg',
               href: '',
               title: '技術顧問を詳しく見る'
             },
@@ -75,10 +76,10 @@
             title: 'Enjoy',
             subtitle: 'IT系イベントの運営・支援を通じて、高い技術力を維持',
             message: 'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。',
-            image1: '/images/enjoy01.jpg',
-            image2: '/images/enjoy02.jpg',
+            image1: '/images/enjoy_photo01.jpg',
+            image2: '/images/enjoy_photo02.jpg',
             link: {
-              image: '/images/enjoy01.jpg',
+              image: '/images/enjoy_btn.jpg',
               href: '',
               title: 'イベント・スクールを詳しく見る'
             },
@@ -91,8 +92,9 @@
             title: 'Member',
             subtitle: 'chatboxで働く個性的なメンバー',
             message: 'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。',
+            image1: '/images/member_photo01.jpg',
             link: {
-              image: '/images/enjoy01.jpg',
+              image: '/images/member_btn.jpg',
               href: '',
               title: 'メンバーを詳しく見る'
             }
