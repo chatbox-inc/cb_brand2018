@@ -112,7 +112,7 @@
   }
 
   .p-aboutTable{
-    margin-bottom: 40px;
+
     &--header{
       width: 8rem;
       text-align: left;
@@ -128,6 +128,7 @@
     margin-top: 20px;
     @include desktop() {
       display: flex;
+      margin-top: 40px;
     }
     &--box{
       display: inline-block;
