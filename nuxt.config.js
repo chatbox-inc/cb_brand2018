@@ -15,7 +15,8 @@ module.exports = {
         { hid: 'description', name: 'description', content: 'Meta description' },
     ],
     link: [
-        { rel: 'favicon', href: 'favicon.ico' }
+        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel:'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'}
     ]
   },
   css: [ ],
