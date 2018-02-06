@@ -30,8 +30,6 @@
         </div>
       </div>
     </div>
-    <!--仮-->
-    <script src="https://use.fontawesome.com/c086a26845.js"></script>
   </div>
 </template>
 

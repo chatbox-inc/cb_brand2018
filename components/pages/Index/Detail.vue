@@ -15,7 +15,7 @@
           <div class="p-detail--content1">
             <h2 class="p-detail--subtitle">{{messages.subtitle}}</h2>
             <p class="p-detail--body">{{messages.message}}</p>
-            <div class="p-detail--image" v-if='image1' :style="imageStyle1"></div>
+            <div class="p-detail--image wow fadeInUP" v-if='image1' :style="imageStyle1"></div>
           </div>
           <div class="p-detail--content2">
             <div class="p-detail--image2" v-if='image2' :style="imageStyle2"></div>

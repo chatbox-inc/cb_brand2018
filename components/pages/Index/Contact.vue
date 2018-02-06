@@ -42,7 +42,7 @@
     }
     &--button{
       display: inline-block;
-      padding: 1.5rem 3rem;
+      padding: 3rem;
       width:100%;
       text-align: center;
       border-radius: 4px;
@@ -54,7 +54,6 @@
       position:relative;
       transition: all .5s;
       @include desktop {
-        padding: 3rem;
         max-width: 450px;
         font-size: 2rem;
       }
