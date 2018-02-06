@@ -174,6 +174,15 @@
       background:#C3504F;
       text-decoration: none;
       position:relative;
+      transition: all .5s;
+      &:hover {
+        opacity: .8;
+        transition: all .5s;
+        &::before {
+          right: .2rem;
+          transition: all .5s;
+        }
+      }
     }
     &--button::before {
       content: "";
@@ -189,6 +198,7 @@
       right: .7rem;
       top: 50%;
       transform: translateY(-50%);
+      transition: all .5s;
     }
   }
   .p-detail{

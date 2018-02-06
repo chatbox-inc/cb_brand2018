@@ -49,7 +49,7 @@
             link: {
               image: '/images/creation_btn.jpg',
               href: '',
-              title: 'Web制作を詳しく見る'
+              title: 'Web制作について'
             },
             tags: {
                 tagItem1: 'Webページ制作',
@@ -65,7 +65,7 @@
             link: {
               image: '/images/talking_btn.jpg',
               href: '',
-              title: '技術顧問を詳しく見る'
+              title: '技術顧問について'
             },
             tags: {
                 tagItem1: '社員研修',
@@ -81,7 +81,7 @@
             link: {
               image: '/images/enjoy_btn.jpg',
               href: '',
-              title: 'イベント・スクールを詳しく見る'
+              title: 'イベント・スクールについて'
             },
             tags: {
                 tagItem1: 'スクール',
@@ -96,7 +96,7 @@
             link: {
               image: '/images/member_btn.jpg',
               href: '',
-              title: 'メンバーを詳しく見る'
+              title: 'メンバーについて'
             }
           }
         }

@@ -1,15 +1,15 @@
 <template>
   <div class="p-greeting">
-    <div class="p-greeting--title">
-      {{messages.title}}
-    </div>
-    <div class="p-greeting--body" :style="imageStyle1">
-      <div class="p-greeting--bodyInner">
-        <div class="p-greeting--contents">
-          <h2 class="p-greeting--bodyTitle">
-            {{messages.subtitle}}
-          </h2>
-          <div class="p-greeting--bodyMessage">{{messages.message}}</div>
+    <div class="p-greeting--inner">
+      <div class="p-greeting--title">{{messages.title}}</div>
+      <div class="p-greeting--body" :style="imageStyle1">
+        <div class="p-greeting--bodyInner">
+          <div class="p-greeting--contents">
+            <h2 class="p-greeting--bodyTitle">
+              {{messages.subtitle}}
+            </h2>
+            <div class="p-greeting--bodyMessage">{{messages.message}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -55,15 +55,17 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "~assets/scss/layout/_layout.scss";
   @import "~assets/scss/object/component/_container.scss";
   @import "~assets/scss/object/component/_title.scss";
+
   .p-greeting{
-    @include c-container;
+    margin-top: 2.0rem;
     @include desktop() {
       margin-top: 100px;
     }
-    margin-top: 2.0rem;
+    &--inner {
+      @include c-container;
+    }
     &--title{
       @include c-title;
       margin-bottom: 10px;
@@ -73,23 +75,24 @@
       background-size: contain;
     }
     &--bodyInner{
-      padding-top: 110px;
-
+      padding:  100px 20px 0;
       @include desktop(){
-        padding-top: 0;
+        padding: 0;
         display: flex;
         justify-content: flex-end;
       }
     }
     &--contents{
+      margin-top: 0;
       padding: 2.5rem;
       box-sizing: border-box;
       background: white;
       @include desktop(){
-        padding: 40px 0;
-        padding-left: 100px;
-        width: 450px;
-        background: linear-gradient(left, rgba(252,252,252,0) 0%, rgba(254,254,254,0.4) 20%, rgba(255,255,255,0.45) 25%, rgba(255,255,255,0.81) 61%, rgba(255,255,255,1) 80%);
+        margin-top: 250px;
+        padding: 40px 40px;
+        padding-right: 10%;
+        width: 85%;
+        background: linear-gradient(right, rgba(252,252,252,0) 0%, rgba(252,252,252,0.5) 10%, rgba(254,254,254,0.8) 20%, rgba(255,255,255,0.85) 25%, rgba(255,255,255,0.9) 61%, rgba(255,255,255,1) 80%);
         position: relative;
         right:0;
       }

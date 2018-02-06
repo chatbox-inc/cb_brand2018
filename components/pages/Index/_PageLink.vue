@@ -44,6 +44,9 @@
     }
     &--inner{
       @include c-containerInner;
+      @include desktop {
+        max-width: 800px;
+      }
     }
     &--contents{
       display: flex;
@@ -53,8 +56,13 @@
       @include desktop(){
         border: 1px solid #C3504F;
         margin-right: 10px;
-        -webkit-box-shadow: 10px 10px 0 0 #C3504F;
-        box-shadow: 10px 10px 0 0 #C3504F;
+        box-shadow: 7px 7px 0 0 #C3504F;
+        transition: all .3s;
+      }
+      &:hover {
+        transform: translate(4px,4px);
+        box-shadow: 3px 3px 0 0 #C3504F;
+        transition: all .3s;
       }
     }
     &--image{
@@ -63,8 +71,8 @@
       background-size: cover;
       background-position: center;
       @include desktop(){
-        width: 45rem;
-        height: 15rem;
+        width: 30%;
+        height: 140px;
       }
     }
     a {
@@ -74,12 +82,12 @@
       margin: 0 auto;
     }
     &--link{
-      width: 150px;
+      width: 140px;
       font-size: 1.2rem;
       font-weight: bold;
       letter-spacing: 2px;
       color: #C3504F;
-      text-align: left;
+      text-align: center;
       @include desktop(){
         text-align: center;
         width: 100%;
@@ -91,7 +99,6 @@
       display: inline-block;
       width: 1.6rem;
       height: 1.6rem;
-      font-size: 1.4rem;
       background-image: url("~static/images/icon_externalLink.svg");
       background-repeat: no-repeat;
       background-size: contain;
@@ -100,6 +107,12 @@
       right: 15px;
       top: 50%;
       transform: translateY(-0.8rem);
+      @include desktop {
+        width: 2.2rem;
+        height: 2.2rem;
+        transform: translateY(-1.1rem);
+        right: 2rem;
+      }
     }
   }
 </style>

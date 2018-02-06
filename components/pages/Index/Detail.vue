@@ -97,7 +97,7 @@
     &--inner{
       @include desktop{
         display: flex;
-        padding-bottom: 70px;
+        justify-content: space-between;
       }
     }
     &--title{
@@ -106,6 +106,7 @@
     &--content1{
       @include desktop(){
         width: 50%;
+        justify-content: space-between;
       }
     }
     &--subtitle{
@@ -115,6 +116,9 @@
       @include c-sentence;
       margin-bottom: 3rem;
       width: 100%;
+      @include desktop {
+        margin-bottom: 50px;
+      }
     }
     &--image{
       margin-bottom: 1rem;
@@ -129,7 +133,7 @@
       display: flex;
       @include desktop(){
         display: block;
-        width: 50%;
+        width: 45%;
       }
     }
     &--image2{
@@ -140,7 +144,7 @@
       background-position-y: 50%;
       background-repeat: no-repeat;
       @include desktop(){
-        height: 32rem;
+        height: 500px;
         width: 100%;
       }
     }
@@ -152,24 +156,31 @@
 
       @include desktop(){
         width: 100%;
-        margin-left: -35%;
+        justify-content: start;
       }
 
     }
     &--tagItem{
-      color: #C3504F;
-      font-weight: bold;
       margin: .5rem 1rem;
       height: 20rem;
+      color: #C3504F;
+      font-weight: bold;
       writing-mode: vertical-rl;
       text-orientation: upright;
       font-feature-settings: 'pkna';
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+    }
+    &--linkArea{
+      @include desktop {
+        margin-bottom: 80px;
+      }
     }
   }
   //画像の順番とかも無理あるかも Talking だけ別コンポーネントも検討
   .is-colored{
     @include desktop() {
-      margin-top: 80px;
+      margin-top: 40px;
     }
     .p-detail{
       &--titleArea{

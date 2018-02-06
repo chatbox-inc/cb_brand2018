@@ -1,6 +1,6 @@
 @import "../../layout/layout";
 
-.c-container {
+@mixin c-container(){
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
@@ -8,11 +8,6 @@
   @include desktop {
     padding: 0;
   }
-}
-@mixin c-container(){
-  width: 100%;
-  max-width: 1020px;
-  margin: 0 auto;
 }
 
 @mixin c-containerInner(){
