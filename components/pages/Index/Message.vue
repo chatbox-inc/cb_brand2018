@@ -18,22 +18,22 @@
 </template>
 
 <script>
-  import PageLink from './_PageLink.vue'
-  export default {
-    props: {
-      messages: Object
-    },
-    components: {
-      PageLink
+    import PageLink from './_PageLink.vue'
+    export default {
+        props: {
+            messages: Object
+        },
+        components: {
+            PageLink
+        }
     }
-  }
 
 </script>
 
 <style lang="scss" scoped>
-   @import "~assets/scss/layout/_layout.scss";
-   @import "~assets/scss/object/component/_container.scss";
-   @import "~assets/scss/object/component/_title.scss";
+  @import "~assets/scss/layout/_layout.scss";
+  @import "~assets/scss/object/component/_container.scss";
+  @import "~assets/scss/object/component/_title.scss";
   .p-greeting{
     @include c-container;
     @include desktop() {
@@ -41,7 +41,6 @@
     }
     margin-top: 2.0rem;
     &--title{
-      @include c-containerInner;
       @include c-title;
       margin-bottom: 10px;
     }
@@ -51,8 +50,8 @@
       background-size: contain;
     }
     &--bodyInner{
-      @include c-containerInner;
       padding-top: 110px;
+
       @include desktop(){
         padding-top: 0;
         display: flex;
@@ -64,9 +63,12 @@
       box-sizing: border-box;
       background: white;
       @include desktop(){
+        padding: 40px 0;
+        padding-left: 100px;
+        width: 450px;
+        background: linear-gradient(left, rgba(252,252,252,0) 0%, rgba(254,254,254,0.4) 20%, rgba(255,255,255,0.45) 25%, rgba(255,255,255,0.81) 61%, rgba(255,255,255,1) 80%);
         position: relative;
         right:0;
-        width: 355px;
       }
 
     }

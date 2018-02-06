@@ -95,7 +95,6 @@
       padding: 1rem 0;
     }
     &--inner{
-      @include c-containerInner;
       @include desktop{
         display: flex;
         padding-bottom: 70px;

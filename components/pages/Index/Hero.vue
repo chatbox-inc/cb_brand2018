@@ -4,7 +4,7 @@
       <div class="p-hero--slogan_bg"></div>
       <div class="p-hero--slogan_text_wrapper">
         <div class="p-hero--slogan_text"><span>Webのこれからを語り合う</span></div>
-        <div class="p-hero--slogan_text"><span></span><span>「作る」</span><span>「伝える」</span><span>「語り合う」</span></div>
+        <div class="p-hero--slogan_text"><span>「作る」</span><span>「伝える」</span><span>「語り合う」</span></div>
       </div>
     </div>
     <div class="p-hero--bgImg"></div>
@@ -81,6 +81,7 @@
         width: 100%;
         height: 100%;
         background-color: rgba(195,80,79,0.9);
+        border-radius: 0 6px 6px 0;
         animation: slogan 1s cubic-bezier(.4, .2, 0, 1) 1s 1 alternate both running;
         z-index: -1;
       }
@@ -106,6 +107,7 @@
         span {
           display: inline-block;
           transform-origin: 50% 50% -10px;
+          letter-spacing: 1px;
         }
         span:nth-child(1) {
           animation: slogan_text .8s cubic-bezier(.4, .2, 0, 1) 2s 1 alternate both running;

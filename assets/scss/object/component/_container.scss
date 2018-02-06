@@ -1,17 +1,12 @@
 @mixin c-container(){
   width: 100%;
-  max-width: 1140px;
+  max-width: 1020px;
   margin: 0 auto;
-  //background-color: blue;
-  &--inner{
-    @include c-containerInner;
-  }
 }
 
 @mixin c-containerInner(){
   padding: 0 2.5rem;
   width: 100%;
-  max-width: 940px;
+  max-width: 980px;
   margin: 0 auto;
-  //background-color: red;
 }
