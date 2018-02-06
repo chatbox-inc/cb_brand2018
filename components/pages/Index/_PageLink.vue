@@ -88,6 +88,7 @@
       letter-spacing: 2px;
       color: #C3504F;
       text-align: center;
+      line-height: 1.5;
       @include desktop(){
         text-align: center;
         width: 100%;

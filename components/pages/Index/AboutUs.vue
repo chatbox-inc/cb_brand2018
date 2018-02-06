@@ -112,6 +112,7 @@
   }
 
   .p-aboutTable{
+    margin-bottom: 40px;
     &--header{
       width: 8rem;
       text-align: left;

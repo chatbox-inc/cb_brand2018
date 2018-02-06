@@ -110,7 +110,11 @@
       }
     }
     &--subtitle{
-      @include c-caption
+      @include c-caption;
+      @include desktop {
+        padding-top: 2.5rem;
+        margin-bottom: 3rem;
+      }
     }
     &--body{
       @include c-sentence;
