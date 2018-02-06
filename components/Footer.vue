@@ -99,24 +99,24 @@
     &--instagram {
       display: inline-block;
       margin-right: 20px;
-      color: #B43B3E;
+      color: #c3504f;
       &:hover {
-        opacity: .8;
+        opacity: .7;
       }
     }
     &--twitter {
       display: inline-block;
       margin-right: 20px;
-      color: #B43B3E;
+      color: #c3504f;
       &:hover {
-        opacity: .8;
+        opacity: .7;
       }
     }
     &--facebook {
       display: inline-block;
-      color: #B43B3E;
+      color: #c3504f;
       &:hover {
-        opacity: .8;
+        opacity: .7;
       }
     }
   }
@@ -127,6 +127,7 @@
     font-weight: bold;
     border-bottom: 1px solid rgba(195,80,79,0.5);
     letter-spacing: 1px;
+    color: #c3504f;
     @include desktop{
       justify-content: flex-start;
       font-size: 1.5rem;
@@ -136,7 +137,7 @@
       padding: 1.2rem 0;
       color: inherit;
       &:hover {
-        opacity: .8;
+        opacity: .7;
       }
       @include desktop{
         padding-top: 3rem;
