@@ -4,7 +4,11 @@
       <div class="p-hero--slogan_bg"></div>
       <div class="p-hero--slogan_text_wrapper">
         <div class="p-hero--slogan_text"><span>Webのこれからを語り合う</span></div>
-        <div class="p-hero--slogan_text"><span>「作る」</span><span>「伝える」</span><span>「語り合う」</span></div>
+        <div class="p-hero--slogan_text">
+          <span></span>
+          <span>「作る」</span>
+          <span>「伝える」</span>
+          <span>「語り合う」</span></div>
       </div>
     </div>
     <div class="p-hero--bgImg"></div>
@@ -35,13 +39,31 @@
       width: 2px;
       height: 70px;
       background: #c2504f;
-      position: absolute;
+      position: relative;
       left: 50%;
-      bottom: -35px;
+      top: 270px;
       transform: translateX(-1px);
+      animation: border_sp .5s ease 4.5s alternate both running;
       @include desktop() {
         height: 140px;
-        bottom: -80px;
+        animation: border_pc .5s ease 4.5s alternate both running;
+        top: 740px;
+      }
+      @keyframes border_sp {
+        0% {
+          height: 0;
+        }
+        100% {
+          height: 70px;
+        }
+      }
+      @keyframes border_pc {
+        0% {
+          height: 0;
+        }
+        100% {
+          height: 140px;
+        }
       }
     }
 
