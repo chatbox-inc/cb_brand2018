@@ -17,8 +17,15 @@
           <div class="p-footer--icon"></div>
           <div class="p-footer--copyright">Copyright © chatbox.inc All Rights Reserved.</div>
           <div class="p-footer--sns">
-            <i class="fa fa-instagram p-footer--instagram" aria-hidden="true"></i>
-            <i class="fa fa-facebook p-footer--facebook" aria-hidden="true"></i>
+            <a class="p-footer--instagram" href="https://www.instagram.com/chatbox_inc/" target="_blank">
+              <i class="fa fa-instagram " aria-hidden="true"></i>
+            </a>
+            <a class="p-footer--twitter" href="https://twitter.com/chatbox_inc/" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="p-footer--facebook" href="https://www.facebook.com/chatbox.inc/" target="_blank">
+              <i class="fa fa-facebook p-footer--facebook" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -38,7 +45,7 @@
     border-top: 2px solid #C3504F;
     background-color: #FAF7F7;
     @include desktop() {
-      margin-top: 0;
+      margin-top: 100px;
     }
   }
 
@@ -46,6 +53,10 @@
     @include c-container;
     color: #B43B3E;
     padding-bottom: 1rem;
+    @include desktop {
+      padding-bottom: 60px;
+    }
+
     &--pageTop {
       position: relative;
     }
@@ -56,7 +67,6 @@
       bottom : 20px;
       right: 20px;
       @include desktop() {
-        bottom: 100px;
         right: 150px;
       }
     }
@@ -78,6 +88,10 @@
     }
     &--copyright {
       display: inline-block;
+      width: 50%;
+      @include desktop {
+        font-size: 1.3rem;
+      }
     }
     &--sns {
       display: inline-block;
@@ -87,6 +101,25 @@
     &--instagram {
       display: inline-block;
       margin-right: 20px;
+      color: #B43B3E;
+      &:hover {
+        opacity: .8;
+      }
+    }
+    &--twitter {
+      display: inline-block;
+      margin-right: 20px;
+      color: #B43B3E;
+      &:hover {
+        opacity: .8;
+      }
+    }
+    &--facebook {
+      display: inline-block;
+      color: #B43B3E;
+      &:hover {
+        opacity: .8;
+      }
     }
   }
   .p-navi{
@@ -98,11 +131,15 @@
     letter-spacing: 1px;
     @include desktop{
       justify-content: flex-start;
+      font-size: 1.5rem;
     }
     &--link{
       text-decoration: none;
       padding: 1.2rem 0;
       color: inherit;
+      &:hover {
+        opacity: .8;
+      }
       @include desktop{
         padding-top: 3rem;
         padding-bottom: 2rem;

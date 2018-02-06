@@ -83,7 +83,7 @@
     }
     &--link{
       width: 140px;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       font-weight: bold;
       letter-spacing: 2px;
       color: #C3504F;

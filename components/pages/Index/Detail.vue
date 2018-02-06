@@ -168,8 +168,11 @@
       writing-mode: vertical-rl;
       text-orientation: upright;
       font-feature-settings: 'pkna';
-      font-size: 1.7rem;
+      font-size: 1.2rem;
       letter-spacing: 2px;
+      @include desktop {
+        font-size: 1.7rem;
+      }
     }
     &--linkArea{
       @include desktop {
