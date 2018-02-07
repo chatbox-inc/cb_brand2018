@@ -16,7 +16,7 @@
         @include c-container;
         margin-bottom: 2rem;
         @include desktop(){
-            margin-top:18rem;
+            margin-top: 4rem;
         }
         &--title{
             @include c-title;
@@ -31,6 +31,9 @@
             color: #2B292B;
             line-height: 5.5rem;
             text-align: center;
+            @include desktop() {
+                font-size: 16px;
+            }
         }
     }
 </style>

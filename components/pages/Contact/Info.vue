@@ -24,6 +24,9 @@
         letter-spacing: 4px;
         line-height: 45px;
         padding-top: 3rem;
+        @include desktop() {
+            font-size: 20px;
+        }
         &--contact_sub_info {
             text-align: center;
             color: #393739;
@@ -31,6 +34,11 @@
             font-weight: 500;
             line-height: 4.8rem;
             padding: 1rem 2rem;
+            @include desktop() {
+                font-size: 16px;
+                width: 540px;
+                margin: 0 auto;
+            }
         }
     }
 

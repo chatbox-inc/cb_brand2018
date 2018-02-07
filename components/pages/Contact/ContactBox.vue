@@ -4,16 +4,20 @@
             <div class="c_border_content c_content_center">
                 <div class="p-contact_box">
                     <div class="c_contact_sns_box">
-                        <div class="ttl">
-                            SNSチャットツールからのお問い合わせ
-
+                        <div class="ttl">SNSチャットツールからのお問い合わせ</div>
+                        <div class="c-link">
+                            <a class="c-btn_base" href="#">
+                                <i class="fa fa-facebook c-icon_fb" aria-hidden="true"></i>
+                                <span>Facebookからメッセージを送る</span>
+                                <i class="fas fa-angle-right c-icon_arrow"></i>
+                            </a>
                         </div>
                         <div class="c-link">
                             <a class="c-btn_base" href="#">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>Facebookからメッセージを送る</a>
-                        </div>
-                        <div class="c-link">
-                            <a class="c-btn_base" href="#">Chatworkからコンタクトを送る</a>
+                                <img src="/images/icn_chatwork.svg" alt="" class="c-icon_cw">
+                                <span>Chatworkからコンタクトを送る</span>
+                                <i class="fas fa-angle-right c-icon_arrow"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="c_contact_tel_box">
@@ -52,6 +56,10 @@
                 letter-spacing: 3px;
                 line-height: 3.6rem;
                 text-align: center;
+                @include desktop() {
+                    font-size: 16px;
+                    font-weight: normal;
+                }
             }
         }
         .c_contact_tel_box{
@@ -64,11 +72,17 @@
                 font-family: YuGothic;
                 font-weight: bold;
                 color: #C3504F;
+                @include desktop() {
+                    font-size: 36px;
+                }
             }
-            .c_modal_text{
+            .c_modal_text {
                 font-size: 2.4rem;
                 color: #393739;
                 margin: 2rem 0 4rem 0;
+                @include desktop() {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -77,8 +91,27 @@
         .c-btn_base{
             @include c-btn_base();
             font-size: 2.4rem;
+            text-decoration: none;
+            @include desktop() {
+                width: 200px;
+                height: 50px;
+            }
         }
     }
+
+    .c-icon {
+        &_fb {
+            margin-right: 20px;
+        }
+        &_cw {
+            width: 25px;
+            margin-right: 20px;
+        }
+        &_arrow {
+            margin-left: 30px;
+        }
+    }
+
     .c-contactContainer {
         line-height: 1.6;
         padding: 0 14px;
@@ -103,7 +136,6 @@
     .c_border_content {
         border: 1px solid #C3504F;
     }
-
 
     .checkbox01-input {
         display: none;
@@ -141,7 +173,6 @@
         border: 1px solid #C3504F;
         background-color: #FFFFFF;
         border-radius: 4px;
-
     }
 
     .current {

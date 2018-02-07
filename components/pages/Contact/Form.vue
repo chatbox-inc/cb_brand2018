@@ -1,6 +1,6 @@
 <template>
     <div class="u-container">
-        <div class="p_form_box">
+        <div class="p-form_box">
             <div class="u-container">
                 <h2 class="p-intro">
                     フォームからのお問い合わせ
@@ -11,52 +11,60 @@
             </div>
             <div class="p-contact_check">
                 <div class="c-link">
-                    <label class="c-link_anchor current">
-                        <input type="checkbox" name="checkbox01[]" class="checkbox01-input" checked="checked">
+                    <div class="c-link_anchor current">
+                        <label class="c-link_label">
+                            <input type="checkbox" name="checkbox01[]" class="checkbox01-input" checked>
+                        </label>
                         <span class="checkbox01-parts">Web制作</span>
-                    </label>
-                    <label class="c-link_anchor">
-                        <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                    </div>
+                    <div class="c-link_anchor">
+                        <label class="c-link_label">
+                            <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                        </label>
                         <span class="checkbox01-parts">技術顧問</span>
-                    </label>
-                    <label class="c-link_anchor">
-                        <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                    </div>
+                    <div class="c-link_anchor">
+                        <label class="c-link_label">
+                            <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                        </label>
                         <span class="checkbox01-parts">イベント</span>
-                    </label>
-                    <label class="c-link_anchor">
-                        <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                    </div>
+                    <div class="c-link_anchor">
+                        <label class="c-link_label">
+                            <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+                        </label>
                         <span class="checkbox01-parts">その他</span>
-                    </label>
+                    </div>
                 </div>
                 <p class="c_modal_text">Web制作に関するお問い合わせは、見積もり相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。</p>
             </div>
             <div class="p-contact">
-                <div class="p_form">
-                    <dl>
-                        <dt>名前</dt>
-                        <dd>
-                            <input type="text" name="">
-                        </dd>
-                        <dt>E-mail</dt>
-                        <dd>
-                            <input type="text" name="">
-                        </dd>
-                        <dt>件名</dt>
-                        <dd>
-                            <input type="text" name="">
-                        </dd>
-                        <dt>内容</dt>
-                        <dd>
-                            <textarea name="#" rows="4" cols="40"></textarea>
-                        </dd>
-                    </dl>
+                <div class="p-form">
+                    <div class="p-form_wrapper">
+                        <label class="p-form_label">名前</label>
+                        <input type="text" name="" class="p-form_textBox">
+                    </div>
+                    <div class="p-form_wrapper">
+                        <label class="p-form_label">E-mail</label>
+                        <input type="text" name="" class="p-form_textBox">
+                    </div>
+                    <div class="p-form_wrapper">
+                        <label class="p-form_label">件名</label>
+                        <input type="text" name="" class="p-form_textBox">
+                    </div>
+                    <div class="p-form_wrapper">
+                        <label class="p-form_label">内容</label>
+                        <textarea name="#" rows="4" cols="40" class="p-form_textArea"></textarea>
+                    </div>
                 </div>
             </div>
-
         </div>
         <div class="p-contact p-contact_submit">
-            <div class="submit">
-                <a class="c-btn_base" href="#">送信する</a>
+            <div class="p-btn_baseWrapper">
+                <a class="c-btn_base" href="#">
+                    <span>送信する</span>
+                    <i class="fas fa-angle-right c-icon_arrow"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -67,20 +75,80 @@
     @import "~assets/scss/object/component/_title.scss";
     @import "~assets/scss/object/component/_button.scss";
 
-    .p_form {
+    .c-link_label {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: 25px;
+        border: 1px solid #B3B3B3;
+        background: #fff;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 40%;
+            left: 5px;
+            display: block;
+            margin-top: -8px;
+            width: 14px;
+            height: 21px;
+            border-right: 3px solid #4B4B4B;
+            border-bottom: 3px solid #4B4B4B;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            z-index: 1;
+        }
+    }
+
+    .chatbox01 {
+        &-input {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: -40px;
+            box-shadow: 39px 0px #FFF;
+            z-index: 2;
+            &:checked {
+                box-shadow: none;
+            }
+            &:checked:focus {
+                box-shadow: 39px 0px #666;
+                opacity: 0.1;
+            }
+            &:focus {
+                box-shadow: 39px 0px #EEE;
+            }
+        }
+        &-parts {}
+    }
+
+    .p-form {
         margin-top: 7%;
-        dt {
+        @include desktop() {
+            width: 50%;
+            margin: 0 auto;
+        }
+        &_label {
             margin-bottom: 1%;
             color: #393739;
             font-family: YuGothic;
             font-size: 2.4rem;
             font-weight: 500;
             line-height: 3.6rem;
+            @include desktop() {
+                font-size: 16px;
+            }
         }
-        dd {
-            margin-bottom: 3%;
-        }
-        input, textarea {
+        &_textBox {
             border: 1px solid #CCCCCC;
             background-color: #FAF7F7;
             padding: 2%;
@@ -89,44 +157,72 @@
             box-sizing: border-box;
             line-height: 1.2;
             font-size: 120%;
+            @include desktop() {
+                height: 40px;
+            }
+        }
+        &_textArea {
+            border: 1px solid #CCCCCC;
+            background-color: #FAF7F7;
+            padding: 2%;
+            width: 100%;
+            height: 300px;
+            box-sizing: border-box;
+            line-height: 1.2;
+            font-size: 120%;
+            resize: none;
+        }
+        &_box {
+            padding: 5rem 2rem;
         }
     }
 
-    .contact_sub {
-        margin-bottom: 87px;
+    .contact {
+        &_sub {
+            margin-bottom: 87px;
+        }
+        &_check {
+        }
     }
 
-    .p-contact_check {
+    .p-intro {
+        color: #393739;
+        font-family: YuGothic;
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: .4rem;
+        line-height: 4.5rem;
+        text-align: center;
+        @include desktop() {
+            font-size: 20px;
+            padding: 0;
+        }
     }
-
-    .p_form_box {
-        padding: 5rem 2rem;
-        .p-intro {
-            color: #393739;
-            font-family: YuGothic;
-            font-size: 3rem;
-            font-weight: bold;
-            letter-spacing: .4rem;
-            line-height: 4.5rem;
-            text-align: center;
+    .c-contact_sub_info {
+        color: #393739;
+        font-family: YuGothic;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 4.8rem;
+        text-align: center;
+        padding-top: 3rem;
+        @include desktop() {
+            font-size: 16px;
         }
-        .c-contact_sub_info {
-            color: #393739;
-            font-family: YuGothic;
-            font-size: 2.4rem;
-            font-weight: 500;
-            line-height: 4.8rem;
-            text-align: center;
-            padding-top: 3rem;
+    }
+    .c-link {
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        @include desktop() {
+            width: 600px;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
-        .c-link {
-            display: -webkit-flex;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-justify-content: space-around; /* Safari */
-            justify-content: space-around;
-        }
-        .c-link_anchor {
+        &_anchor {
             border: 1px solid #C3504F;
             border-radius: 7px;
             color: #c3504f;
@@ -138,64 +234,76 @@
             white-space: nowrap;
             font-size: 2.4rem;
             width: 45%;
-            input{
-
+            @include desktop() {
+                width: 250px;
+                height: 50px;
             }
         }
-        .current {
-            background-color: #C3504F;
-            color: #FFFFFF;
-        }
-        .c_modal_text {
-            color: #B43B3E;
-            font-family: YuGothic;
-            font-size: 2.4rem;
-            font-weight: 500;
-            line-height: 4.8rem;
-            text-align: center;
+    }
+    .current {
+        background-color: #C3504F;
+        color: #FFFFFF;
+    }
+    .c_modal_text {
+        color: #B43B3E;
+        font-family: YuGothic;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 4.8rem;
+        text-align: center;
+        @include desktop() {
+            font-size: 16px;
         }
     }
 
     .p-contact {
         text-align: left;
+        &_submit {
+            padding: 5rem 2rem;
+            margin-bottom: 10rem;
+        }
+        @include desktop() {
+            margin-top: 30px;
+        }
     }
 
-    .p-contact_submit {
-        padding: 5rem 2rem;
-        margin-bottom: 10rem;
-    }
-
-    .submit {
+    .p-btn_baseWrapper {
         text-align: center;
         width: 100%;
         height: 12rem;
         font-size: 2rem;
         border-radius: 6px;
         background-color: #C3504F;
-        a {
+        @include desktop() {
+            width: 20%;
+            height: 50px;
+            margin: 0 auto;
+        }
+        &::after {
+            font-family: 'FontAwesome';
+            content: "\f054";
+            position: absolute;
+            top: 50%;
+            right: 9%;
+            margin-top: -12px;
             color: #FFFFFF;
-            font-family: YuGothic;
-            font-size: 3rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-            line-height: 12rem;
-            text-decoration: none;
         }
     }
-
-    .submit::after {
-        font-family: 'FontAwesome';
-        content: "\f054";
-        position: absolute;
-        top: 50%;
-        right: 9%;
-        margin-top: -12px;
-        color: #FFFFFF;
-
-    }
-
     i {
         margin-right: 3%;
     }
 
+    .c-btn_base {
+        color: #FFFFFF;
+        font-family: YuGothic;
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 12rem;
+        text-decoration: none;
+        @include desktop() {
+            line-height: 50px;
+            font-size: 16px;
+        }
+    }
 </style>
