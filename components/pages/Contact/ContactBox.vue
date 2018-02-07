@@ -1,5 +1,5 @@
 <template>
-    <div class="c-container">
+    <div class="c-container contact_contents">
         <div class="p-contact">
             <div class="c_border_content c_content_center">
                 <div class="p-contact_box">
@@ -38,51 +38,83 @@
     @import "~assets/scss/object/component/_button.scss";
     .c-contaiter{
         @include c-container();
+        font-size: 62.5%;
+    }
+    .contact_contents{
+        width: 100%;
+    @media screen and (min-width: 768px) {
+        width: 73%;
+        margin: 0 auto;
+    }
     }
     .p-contact {
         padding: 5rem 2rem;
         .p-contact_box {
             overflow: auto;
             padding: 5% 3% 2%;
+            @media screen and (min-width: 768px) {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+            .c_contact_sns_box{
+                width: 100%;
+                @media screen and (min-width: 768px) {
+                    width: 100%;
+                }
+            }
             .c_border {
                 margin-bottom: 3%;
             }
             .ttl {
                 margin-bottom: 3%;
                 color: #393739;
-                font-family: YuGothic;
-                font-size: 2.4rem;
+                font-size: 1em;
                 font-weight: bold;
-                letter-spacing: 3px;
+                letter-spacing: .1em;
                 line-height: 3.6rem;
                 text-align: center;
+                @media screen and (min-width: 768px) {
+                    font-size: 2.2em;
+                }
                 @include desktop() {
                     font-size: 16px;
                     font-weight: normal;
                 }
+
+            }
+            .c-btn_base{
+                font-size: 1em;
+                padding: 5% 3%;
             }
         }
         .c_contact_tel_box{
+
             .c_border {
-                margin: 4rem 0;
+                margin: 1.8em 0 .8em 0;
                 border: 1px solid #C3504F;
             }
             .c_modal_text_number{
-                font-size: 5.3rem;
-                font-family: YuGothic;
-                font-weight: bold;
+                font-size: 32px;
                 color: #C3504F;
                 @include desktop() {
                     font-size: 36px;
                 }
             }
+            @media screen and (min-width: 768px) {
+                font-size: 5.3rem;
+                width: 30%;
+            }
             .c_modal_text {
-                font-size: 2.4rem;
+                font-size: 1em;
                 color: #393739;
-                margin: 2rem 0 4rem 0;
+                margin: 2em 0;
                 @include desktop() {
                     font-size: 16px;
                 }
+            }
+            @media screen and (min-width: 768px) {
+                font-size: 2.4rem;
             }
         }
     }
@@ -104,7 +136,7 @@
             margin-right: 20px;
         }
         &_cw {
-            width: 25px;
+            width: 10px;
             margin-right: 20px;
         }
         &_arrow {
