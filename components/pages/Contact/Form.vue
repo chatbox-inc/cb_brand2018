@@ -77,32 +77,35 @@
 
     .c-link_label {
         cursor: pointer;
-        width: 40px;
-        height: 40px;
-        margin-left: 20px;
-        margin-top: 25px;
+        width: 20px;
+        height: 20px;
+        margin: 6px 9px;
         border: 1px solid #B3B3B3;
         background: #fff;
         overflow: hidden;
         position: relative;
         display: inline-block;
         box-sizing: border-box;
+        @media screen and (min-width: 768px) {
+            margin: 15px 9px 0 15px;
+        }
         &:after {
             content: '';
             position: absolute;
-            top: 40%;
+            top: 52%;
             left: 5px;
             display: block;
             margin-top: -8px;
-            width: 14px;
-            height: 21px;
-            border-right: 3px solid #4B4B4B;
-            border-bottom: 3px solid #4B4B4B;
+            width: 7px;
+            height: 10px;
+            border-right: 2px solid #4B4B4B;
+            border-bottom: 2px solid #4B4B4B;
             transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
             z-index: 1;
         }
+
     }
 
     .chatbox01 {
@@ -140,8 +143,7 @@
         &_label {
             margin-bottom: 1%;
             color: #393739;
-            font-family: YuGothic;
-            font-size: 2.4rem;
+            font-size: 1em;
             font-weight: 500;
             line-height: 3.6rem;
             @include desktop() {
@@ -153,10 +155,11 @@
             background-color: #FAF7F7;
             padding: 2%;
             width: 100%;
-            height: 9rem;
+            height: 3.2rem;
             box-sizing: border-box;
             line-height: 1.2;
             font-size: 120%;
+            -webkit-appearance: none;
             @include desktop() {
                 height: 40px;
             }
@@ -171,9 +174,10 @@
             line-height: 1.2;
             font-size: 120%;
             resize: none;
+            -webkit-appearance: none;
         }
         &_box {
-            padding: 5rem 2rem;
+            padding:2rem;
         }
     }
 
@@ -187,11 +191,10 @@
 
     .p-intro {
         color: #393739;
-        font-family: YuGothic;
-        font-size: 3rem;
+        font-size: 1.3em;
         font-weight: bold;
-        letter-spacing: .4rem;
-        line-height: 4.5rem;
+        letter-spacing: .1em;
+        line-height: 1em;
         text-align: center;
         @include desktop() {
             font-size: 20px;
@@ -200,14 +203,18 @@
     }
     .c-contact_sub_info {
         color: #393739;
-        font-family: YuGothic;
-        font-size: 2.4rem;
+        font-size: 1em;
         font-weight: 500;
-        line-height: 4.8rem;
+        line-height: 2;
         text-align: center;
-        padding-top: 3rem;
+        padding-top: 1em;
+        margin-bottom: 5%;
         @include desktop() {
             font-size: 16px;
+        }
+        @media screen and (min-width: 768px) {
+            font-size:  1.2em;
+            line-height: 2em;
         }
     }
     .c-link {
@@ -226,17 +233,20 @@
             border: 1px solid #C3504F;
             border-radius: 7px;
             color: #c3504f;
-            height: 9rem;
-            line-height: 9rem;
+            height: 2.5em;
+            line-height: 4em;
             font-weight: bold;
-            margin: 1rem;
+            margin: 5px 0;
             box-sizing: border-box;
             white-space: nowrap;
-            font-size: 2.4rem;
-            width: 45%;
+            font-size: 1.3em;
+            width: 47%;
             @include desktop() {
                 width: 250px;
                 height: 50px;
+            }
+            @media screen and (min-width: 768px) {
+                line-height: 2.8em;
             }
         }
     }
@@ -246,11 +256,11 @@
     }
     .c_modal_text {
         color: #B43B3E;
-        font-family: YuGothic;
-        font-size: 2.4rem;
+        font-size: 1em;
         font-weight: 500;
-        line-height: 4.8rem;
+        line-height: 2;
         text-align: center;
+        margin-top: 5%;
         @include desktop() {
             font-size: 16px;
         }
@@ -259,8 +269,7 @@
     .p-contact {
         text-align: left;
         &_submit {
-            padding: 5rem 2rem;
-            margin-bottom: 10rem;
+            padding:2rem;
         }
         @include desktop() {
             margin-top: 30px;
@@ -270,7 +279,6 @@
     .p-btn_baseWrapper {
         text-align: center;
         width: 100%;
-        height: 12rem;
         font-size: 2rem;
         border-radius: 6px;
         background-color: #C3504F;
@@ -295,11 +303,10 @@
 
     .c-btn_base {
         color: #FFFFFF;
-        font-family: YuGothic;
-        font-size: 3rem;
+        font-size: 1.5rem;
         font-weight: bold;
         letter-spacing: 2px;
-        line-height: 12rem;
+        line-height: 5rem;
         text-decoration: none;
         @include desktop() {
             line-height: 50px;

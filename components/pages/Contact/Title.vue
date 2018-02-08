@@ -20,19 +20,24 @@
         }
         &--title{
             @include c-title;
-            font-size: 5rem;
+            font-size: 2em;
             text-align: center;
         }
         &--sub_info{
-            font-family:"YuGothic";
-            font-size: 2.4rem;
-            padding: .5rem 2rem;
-            letter-spacing: .6rem;
+            font-size: 1em;
+            letter-spacing: 5px;
+            padding: 1rem 0;
             color: #2B292B;
-            line-height: 5.5rem;
+            line-height: 2;
             text-align: center;
             @include desktop() {
                 font-size: 16px;
+            }
+            @media screen and (min-width: 768px) {
+                font-size: 1.1em;
+                letter-spacing: .6rem;
+                padding: .5rem 2rem;
+                line-height: 5.5rem;
             }
         }
     }

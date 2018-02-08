@@ -39,7 +39,7 @@
   @import "~assets/scss/object/component/_button.scss";
 
   .p-footerArea{
-    margin-top: 10rem;
+    margin-top: 5em;
     border-top: 2px solid #C3504F;
     background-color: #FAF7F7;
     @include desktop() {
