@@ -11,7 +11,6 @@
 <style lang="scss" scoped>
   @import "~assets/scss/object/component/_container.scss";
   @import "~assets/scss/object/component/_title.scss";
-  @import "~assets/scss/object/component/_button.scss";
 
   .p-contact{
     @include c-container;
