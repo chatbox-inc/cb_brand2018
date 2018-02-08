@@ -18,8 +18,8 @@
       top: 0;
       left: 0;
       border: 30px solid transparent;
-      border-top: 30px solid #c2504f;
-      border-left: 30px solid #c2504f;
+      border-top: 30px solid #c3504f;
+      border-left: 30px solid #c3504f;
       &::after {
         content: "";
         display: inline-block;
@@ -40,8 +40,8 @@
       }
       @include desktop(){
         border: 50px solid transparent;
-        border-top: 50px solid #c2504f;
-        border-left: 50px solid #c2504f;
+        border-top: 50px solid #c3504f;
+        border-left: 50px solid #c3504f;
       }
     }
     &--logoArea{
