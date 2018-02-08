@@ -93,6 +93,9 @@
             .c_border {
                 margin: 1.8em 0 .8em 0;
                 border: 1px solid #C3504F;
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
             }
             .c_modal_text_number{
                 font-size: 32px;
@@ -120,6 +123,10 @@
     }
 
     .c-link{
+        @media screen and (min-width: 768px) {
+            display: inline-block;
+            margin-right: 3%;
+        }
         .c-btn_base{
             @include c-btn_base();
             font-size: 2.4rem;
@@ -127,6 +134,10 @@
             @include desktop() {
                 width: 200px;
                 height: 50px;
+            }
+            @media screen and (min-width: 768px) {
+                height: 80px;
+                width: 235px;
             }
         }
     }
