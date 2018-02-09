@@ -45,39 +45,39 @@
                 <form class="p-contact__formContact">
                     <!--TODO ココからコーディング-->
                     <div>
-                        <input type="checkbox">
-                        <label>Web制作</label>
+                        <input type="checkbox" id="web" name="web">
+                        <label for="web">Web制作</label>
                     </div>
                     <div>
-                        <input type="checkbox">
-                        <label>技術顧問</label>
+                        <input type="checkbox" id="advise" name="advise">
+                        <label for="advise">技術顧問</label>
                     </div>
                     <div>
-                        <input type="checkbox">
-                        <label>イベント・スクール</label>
+                        <input type="checkbox" id="event" name="event">
+                        <label for="event">イベント・スクール</label>
                     </div>
                     <div>
-                        <input type="checkbox">
-                        <label>その他</label>
+                        <input type="checkbox" id="etc" name="etc">
+                        <label for="etc">その他</label>
                     </div>
                     <div>Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。</div>
                     <div>
                         <label for="name">名前</label>
-                        <input type="text" id="name">
+                        <input type="text" id="name" name="name">
                     </div>
                     <div>
                         <label for="email">E-mail</label>
-                        <input type="text" id="email">
+                        <input type="text" id="email" name="email">
                     </div>
                     <div>
                         <label for="title">件名</label>
-                        <input type="text" id="title">
+                        <input type="text" id="title" name="title">
                     </div>
                     <div>
                         <label for="content">内容</label>
-                        <textarea id="content"></textarea>
+                        <textarea id="content" name="content"></textarea>
                     </div>
-                    <button>送信</button>
+                    <button type="submit">送信</button>
                 </form>
             </div>
         </div>
