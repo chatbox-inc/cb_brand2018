@@ -37,7 +37,32 @@
             </div>
         </div>
         <div class="p-contact__form">
-
+            <div class="p-contact__inner">
+                <form action="">
+                    <div>
+                        <label class="" for="contact_name">名前</label>
+                        <input class="p-contact__textbox" type="text" id="contact_name">
+                    </div>
+                    <div>
+                        <label class="" for="contact_e-mail">E-mail</label>
+                        <input class="p-contact__textbox" type="text" id="contact_e-mail">
+                    </div>
+                    <div>
+                        <label class="" for="contact_subject">件名</label>
+                        <input class="p-contact__textbox" type="text" id="contact_subject">
+                    </div>
+                    <div>
+                        <label class="" for="contact_contents">内容</label>
+                        <textarea class="p-contact__textarea" id="contact_contents"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">
+                            送信
+                            <i class="fas fa-angle-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </template>
@@ -139,6 +164,22 @@
         &__ohterContentsTelInfo {
             display: inline-block;
 
+        }
+        &__form {
+            text-align: center;
+        }
+        &__textbox {
+            height: 40px;
+            width: 540px;
+            border: 1px solid #CCCCCC;
+            background-color: #FAF7F7;
+        }
+        &__textarea {
+            height: 200px;
+            width: 540px;
+            border: 1px solid #CCCCCC;
+            background-color: #FAF7F7;
+            resize: none;
         }
     }
 
