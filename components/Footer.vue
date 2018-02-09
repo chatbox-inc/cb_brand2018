@@ -35,6 +35,7 @@
 
 <style lang="scss" scoped>
   @import "~assets/scss/object/component/_container.scss";
+  @import "~assets/scss/layout/_layout.scss";
   @import "~assets/scss/object/component/_title.scss";
 
   .p-footerArea{
