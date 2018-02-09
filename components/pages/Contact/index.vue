@@ -10,9 +10,7 @@
             <div class="p-contact__inner">
                 <div class="p-contact__ohterHeading">
                     <h3 class="p-contact__ohterHeadingTitle">各種お問合わせ</h3>
-                    <span class="p-contact__ohterHeadingIntro">
-                    各種お問い合わせをご用意しております。お気軽にご利用ください。
-                </span>
+                    <span class="p-contact__ohterHeadingIntro">各種お問い合わせをご用意しております。お気軽にご利用ください。</span>
                 </div>
                 <div class="p-contact__ohterContents">
                     <div class="p-contact__ohterContentsChat">
@@ -38,29 +36,35 @@
         </div>
         <div class="p-contact__form">
             <div class="p-contact__inner">
-                <form action="">
-                    <div>
-                        <label class="" for="contact_name">名前</label>
-                        <input class="p-contact__textbox" type="text" id="contact_name">
-                    </div>
-                    <div>
-                        <label class="" for="contact_e-mail">E-mail</label>
-                        <input class="p-contact__textbox" type="text" id="contact_e-mail">
-                    </div>
-                    <div>
-                        <label class="" for="contact_subject">件名</label>
-                        <input class="p-contact__textbox" type="text" id="contact_subject">
-                    </div>
-                    <div>
-                        <label class="" for="contact_contents">内容</label>
-                        <textarea class="p-contact__textarea" id="contact_contents"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit">
-                            送信
-                            <i class="fas fa-angle-right"></i>
-                        </button>
-                    </div>
+                <div class="p-contact__formHeading">
+                    <h3 class="p-contact__formHeadingTitle">フォームでのお問い合わせ</h3>
+                    <span class="p-contact__formHeadingIntro">Webからお問い合わせ出来ます。
+                        <br>以下の中からお問い合わせ内容を選択し、フォームを入力してください。
+                    </span>
+                </div>
+                <form class="p-contact__formContact">
+                    <!--<div>-->
+                        <!--<label class="" for="contact_name">名前</label>-->
+                        <!--<input class="p-contact__textbox" type="text" id="contact_name">-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<label class="" for="contact_e-mail">E-mail</label>-->
+                        <!--<input class="p-contact__textbox" type="text" id="contact_e-mail">-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<label class="" for="contact_subject">件名</label>-->
+                        <!--<input class="p-contact__textbox" type="text" id="contact_subject">-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<label class="" for="contact_contents">内容</label>-->
+                        <!--<textarea class="p-contact__textarea" id="contact_contents"></textarea>-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<button type="submit">-->
+                            <!--送信-->
+                            <!--<i class="fas fa-angle-right"></i>-->
+                        <!--</button>-->
+                    <!--</div>-->
                 </form>
             </div>
         </div>
@@ -94,6 +98,7 @@
         &__ohter {
             padding: 50px 0 70px;
             background: #FAF7F7;
+            margin-bottom: 80px;
         }
         &__ohterHeading {
             text-align: center;
@@ -125,9 +130,6 @@
             padding: 40px 20px;
             box-sizing: border-box;
             background: #fff;
-            @include desktop {
-
-            }
         }
         &__ohterContentsChat {
             display: inline-block;
@@ -167,6 +169,19 @@
         }
         &__form {
             text-align: center;
+        }
+        &__formHeading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        &__formHeadingTitle {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        &__formHeadingIntro {
+            line-height: 1.8;
         }
         &__textbox {
             height: 40px;
