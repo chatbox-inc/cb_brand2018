@@ -44,6 +44,40 @@
                 </div>
                 <form class="p-contact__formContact">
                     <!--TODO ココからコーディング-->
+                    <div>
+                        <input type="checkbox">
+                        <label>Web制作</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>技術顧問</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>イベント・スクール</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>その他</label>
+                    </div>
+                    <div>Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。</div>
+                    <div>
+                        <label for="name">名前</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email">
+                    </div>
+                    <div>
+                        <label for="title">件名</label>
+                        <input type="text" id="title">
+                    </div>
+                    <div>
+                        <label for="content">内容</label>
+                        <textarea id="content"></textarea>
+                    </div>
+                    <button>送信</button>
                 </form>
             </div>
         </div>
