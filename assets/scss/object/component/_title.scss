@@ -2,18 +2,15 @@
 
 @mixin c-title {
   font-family: "Yu Mincho Medium", YuMincho, serif;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 2.5rem;
   color: #393739;
   &::first-letter {
     font-size: 1.5em;
     color: #C3504F;
   }
-  @include tablet{
-    font-size: 3.0rem;
-  }
   @include desktop{
-    font-size: 5.0rem;
+    font-size: 5rem;
   }
 }
 
@@ -42,31 +39,3 @@
   line-height: 2;
   color: #393739;
 }
-
-
-//.c-overview {
-//  font-family: YuGothic, serif;
-//  font-size: 20px;
-//  font-weight: bold;
-//  color: #C3504F;
-//}
-//
-//.c-address {
-//  line-height: 40px;
-//  &_text {
-//    font-family: YuGothic, serif;
-//    font-size: 20px;
-//    font-weight: bold;
-//    color: #393739;
-//  }
-//}
-//
-//.c-access {
-//  line-height: 40px;
-//  &_text {
-//    font-family: YuGothic, serif;
-//    font-size: 15px;
-//    font-weight: 500;
-//    color: #393739;
-//  }
-//}

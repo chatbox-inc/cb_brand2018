@@ -71,11 +71,11 @@
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
-            color: #c2504f;
+            color: #c3504f;
         }
     }
     .active {
-        color: #c2504f;
+        color: #c3504f;
     }
     .show {
         display: inline;

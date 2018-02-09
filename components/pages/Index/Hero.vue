@@ -38,7 +38,7 @@
       content: "";
       width: 2px;
       height: 70px;
-      background: #c2504f;
+      background: #c3504f;
       position: relative;
       left: 50%;
       top: 270px;
