@@ -12,23 +12,19 @@
 </template>
 
 <script>
-//  import PageHeader from '~/components/pages/Index/Header.vue'
   import PageHero from '~/components/pages/Index/Hero.vue'
   import PageMessage from '~/components/pages/Index/Message.vue'
   import PageDetail from '~/components/pages/Index/Detail.vue'
   import PageAboutus from '~/components/pages/Index/AboutUs.vue'
   import PageContact from '~/components/pages/Index/Contact.vue'
-//  import PageFooter from '~/components/pages/Index/Footer.vue'
 
   export default {
     components: {
-//      PageHeader,
       PageHero,
       PageMessage,
       PageDetail,
       PageAboutus,
-      PageContact,
-//      PageFooter
+      PageContact
     },
     data () {
       return {
