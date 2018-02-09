@@ -1,4 +1,5 @@
 <template>
+    <!--TOOD ナビゲーションメニュー　リリース後実装-->
     <div class="p-navigationArea sticky">
         <div class="p-navigation">
             <nav class="p-navigation--inner">
