@@ -43,39 +43,38 @@
                     </span>
                 </div>
                 <form class="p-contact__formContact">
-                    <!--TODO ココからコーディング-->
-                    <div>
-                        <input type="checkbox" id="web" name="web">
-                        <label for="web">Web制作</label>
+                    <div class="p-contact__checkBoxWrapper">
+                        <input type="checkbox" id="web" name="web" class="p-contact__checkBox">
+                        <label for="web" class="p-contact__checkBoxLabel">Web制作</label>
                     </div>
-                    <div>
-                        <input type="checkbox" id="advise" name="advise">
-                        <label for="advise">技術顧問</label>
+                    <div class="p-contact__checkBoxWrapper">
+                        <input type="checkbox" id="advise" name="advise" class="p-contact__checkBox">
+                        <label for="advise" class="p-contact__checkBoxLabel">技術顧問</label>
                     </div>
-                    <div>
-                        <input type="checkbox" id="event" name="event">
-                        <label for="event">イベント・スクール</label>
+                    <div class="p-contact__checkBoxWrapper">
+                        <input type="checkbox" id="event" name="event" class="p-contact__checkBox">
+                        <label for="event" class="p-contact__checkBoxLabel">イベント・スクール</label>
                     </div>
-                    <div>
-                        <input type="checkbox" id="etc" name="etc">
-                        <label for="etc">その他</label>
+                    <div class="p-contact__checkBoxWrapper">
+                        <input type="checkbox" id="etc" name="etc" class="p-contact__checkBox">
+                        <label for="etc" class="p-contact__checkBoxLabel">その他</label>
                     </div>
                     <div>Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。</div>
-                    <div>
-                        <label for="name">名前</label>
-                        <input type="text" id="name" name="name">
+                    <div class="p-contact__textBoxWrapper">
+                        <label for="name" class="p-contact__textBoxLabel">名前</label>
+                        <input type="text" id="name" name="name" class="p-contact__textBox">
                     </div>
-                    <div>
-                        <label for="email">E-mail</label>
-                        <input type="text" id="email" name="email">
+                    <div class="p-contact__textBoxWrapper">
+                        <label for="email" class="p-contact__textBoxLabel">E-mail</label>
+                        <input type="text" id="email" name="email" class="p-contact__textBox">
                     </div>
-                    <div>
-                        <label for="title">件名</label>
-                        <input type="text" id="title" name="title">
+                    <div class="p-contact__textBoxWrapper">
+                        <label for="title" class="p-contact__textBoxLabel">件名</label>
+                        <input type="text" id="title" name="title" class="p-contact__textBox">
                     </div>
-                    <div>
-                        <label for="content">内容</label>
-                        <textarea id="content" name="content"></textarea>
+                    <div class="p-contact__textBoxWrapper">
+                        <label for="content" class="p-contact__textBoxLabel">内容</label>
+                        <textarea id="content" name="content" class="p-contact__textBox"></textarea>
                     </div>
                     <button type="submit">送信</button>
                 </form>
