@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="layout">
     <page-header></page-header>
     <nuxt/>
     <page-footer></page-footer>
@@ -23,5 +23,5 @@
 </script>
 
 
-<style>
+<style lang="scss">
 </style>
