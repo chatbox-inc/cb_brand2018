@@ -43,7 +43,7 @@
       background: transparent;
     }
     &--inner{
-      @include c-containerInner;
+      @include c-container;
       @include desktop {
         max-width: 800px;
       }
