@@ -43,6 +43,8 @@
       display: inline-block;
       padding: 3rem;
       width:100%;
+      max-width: 100%;
+      box-sizing: border-box;
       text-align: center;
       border-radius: 4px;
       color: #FFF;
