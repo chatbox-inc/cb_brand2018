@@ -16,11 +16,11 @@
                     <div class="p-contact__ohterContentsChat">
                         <span class="p-contact__ohterContentsChatTitle">SNS、チャットツールからお問合わせ</span>
                         <div class="p-contact__ohterButtons">
-                            <a href="" class="p-contact__ohterButtonFacebook">
+                            <a href="https://www.facebook.com/chatbox.inc/" class="p-contact__ohterButtonFacebook">
                                 Facebookから<br>
                                 メッセージを送る
                             </a>
-                            <a href="" class="p-contact__ohterButtonTwitter">
+                            <a href="https://chatwork.com/g/chatbox-inc" class="p-contact__ohterButtonTwitter">
                                 ChatWorkから<br>
                                 メッセージを送る
                             </a>
