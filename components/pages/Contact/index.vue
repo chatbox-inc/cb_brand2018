@@ -290,6 +290,10 @@
             }
         }
 
+        &__textAreaLabel {
+            vertical-align: top;
+        }
+
         &__textBox {
             width: 100%;
             max-width: 550px;
