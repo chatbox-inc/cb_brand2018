@@ -54,7 +54,7 @@
                         </div>
                         <div class="p-contact__content">
                             <input type="checkbox" id="event" name="event" class="p-contact__checkBox">
-                            <label for="event" class="p-contact__checkBoxLabel">イベント・スクール</label>
+                            <label for="event" class="p-contact__checkBoxLabel">イベント</label>
                         </div>
                         <div class="p-contact__content">
                             <input type="checkbox" id="etc" name="etc" class="p-contact__checkBox">
@@ -219,7 +219,8 @@
 
         &__content {
             display: inline-block;
-            width: 270px;
+            width: 40%;
+            max-width: 270px;
             height: 60px;
             margin-bottom: 30px;
             border: 1px solid #C3504F;
@@ -260,15 +261,25 @@
         &__textBoxWrapper, &__textAreaWrapper {
             margin-bottom: 20px;
             text-align: left;
+            @include desktop() {
+                text-align: center;
+            }
         }
 
-        &__textBoxLabel {
+        &__textBoxLabel, &__textAreaLabel {
             display: inline-block;
             margin-bottom: 5px;
+            @include desktop() {
+                width: 50px;
+                margin-bottom: 0;
+                margin-right: 30px;
+                text-align: right;
+            }
         }
 
         &__textBox {
             width: 100%;
+            max-width: 550px;
             height: 30px;
             padding-left: 5px;
             background: #f7f7f7;
@@ -278,6 +289,7 @@
 
         &__textArea {
             width: 100%;
+            max-width: 550px;
             height: 200px;
             padding-left: 5px;
             padding-top: 5px;
