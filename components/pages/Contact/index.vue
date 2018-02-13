@@ -44,21 +44,9 @@
                 </div>
                 <form class="p-contact__formContact">
                     <div class="p-contact__contentWrapper">
-                        <div class="p-contact__content">
-                            <input type="checkbox" id="web" name="web" class="p-contact__checkBox">
-                            <label for="web" class="p-contact__checkBoxLabel">Web制作</label>
-                        </div>
-                        <div class="p-contact__content">
-                            <input type="checkbox" id="advise" name="advise" class="p-contact__checkBox">
-                            <label for="advise" class="p-contact__checkBoxLabel">技術顧問</label>
-                        </div>
-                        <div class="p-contact__content">
-                            <input type="checkbox" id="event" name="event" class="p-contact__checkBox">
-                            <label for="event" class="p-contact__checkBoxLabel">イベント</label>
-                        </div>
-                        <div class="p-contact__content">
-                            <input type="checkbox" id="etc" name="etc" class="p-contact__checkBox">
-                            <label for="etc" class="p-contact__checkBoxLabel">その他</label>
+                        <div class="p-contact__content" v-for="item in items">
+                            <input type="checkbox" :id="item.id" :name="item.name" class="p-contact__checkBox">
+                            <label :for="item.id" class="p-contact__checkBoxLabel">{{ item.title }}</label>
                         </div>
                     </div>
                     <div class="p-contact__comment">Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。</div>
@@ -84,6 +72,37 @@
         </div>
     </section>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                items: [
+                    {
+                        title: 'Web制作',
+                        id: 'web',
+                        name: 'web'
+                    },
+                    {
+                        title: '技術顧問',
+                        id: 'advise',
+                        name: 'advise'
+                    },
+                    {
+                        title: 'イベント',
+                        id: 'event',
+                        name: 'event'
+                    },
+                    {
+                        title: 'その他',
+                        id: 'etc',
+                        name: 'etc'
+                    },
+                ]
+            }
+        }
+    }
+</script>
 
 <style lang="scss" scoped>
     @import "~assets/scss/layout/_layout.scss";
@@ -222,7 +241,7 @@
             width: 40%;
             max-width: 270px;
             height: 60px;
-            margin-bottom: 0px;
+            margin-bottom: 20px;
             border: 1px solid #C3504F;
             border-radius: 5px;
             color: #C3504F;
