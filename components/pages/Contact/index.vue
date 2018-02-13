@@ -52,21 +52,21 @@
                     <div class="p-contact__comment">Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。</div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="name" class="p-contact__textBoxLabel">名前</label>
-                        <input type="text" id="name" name="name" class="p-contact__textBox" required>
+                        <input type="text" id="name" name="name" class="p-contact__textBox" required v-model="message.name">
                     </div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="email" class="p-contact__textBoxLabel">E-mail</label>
-                        <input type="text" id="email" name="email" class="p-contact__textBox" required>
+                        <input type="text" id="email" name="email" class="p-contact__textBox" required v-model="message.email">
                     </div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="title" class="p-contact__textBoxLabel">件名</label>
-                        <input type="text" id="title" name="title" class="p-contact__textBox" required>
+                        <input type="text" id="title" name="title" class="p-contact__textBox" required v-model="message.title">
                     </div>
                     <div class="p-contact__textAreaWrapper">
                         <label for="content" class="p-contact__textAreaLabel">内容</label>
-                        <textarea id="content" name="content" class="p-contact__textArea" required></textarea>
+                        <textarea id="content" name="content" class="p-contact__textArea" required v-model="message.body"></textarea>
                     </div>
-                    <button type="submit" class="p-contact__submit">送信する</button>
+                    <button type="submit" class="p-contact__submit" @click="sendMail()">送信する</button>
                 </form>
             </div>
         </div>
@@ -74,6 +74,8 @@
 </template>
 
 <script>
+    import axios from 'axios'
+
     export default {
         data() {
             return {
@@ -98,7 +100,35 @@
                         id: 'etc',
                         name: 'etc'
                     },
-                ]
+                ],
+                message: {
+                    title: '',
+                    name: '',
+                    email: '',
+                    body: '',
+                }
+            }
+        },
+        methods: {
+            sendMail() {
+                axios({
+                    url: 'https://vh6zjd2it0.execute-api.us-east-1.amazonaws.com/dev/chatbox/contact',
+                    method: "POST",
+                    crossDomain: true,
+                    data: JSON.stringify({
+                        message: this.message
+                    })
+                }, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        console.log(response.data)
+                    })
+                    .catch(error => {
+                        console.log(error.response)
+                    })
             }
         }
     }
