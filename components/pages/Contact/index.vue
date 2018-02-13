@@ -56,7 +56,7 @@
                     </div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="email" class="p-contact__textBoxLabel">E-mail</label>
-                        <input type="text" id="email" name="email" class="p-contact__textBox" required v-model="message.email">
+                        <input type="email" id="email" name="email" class="p-contact__textBox" required v-model="message.email">
                     </div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="title" class="p-contact__textBoxLabel">件名</label>
