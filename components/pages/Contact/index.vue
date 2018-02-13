@@ -222,7 +222,7 @@
             width: 40%;
             max-width: 270px;
             height: 60px;
-            margin-bottom: 30px;
+            margin-bottom: 0px;
             border: 1px solid #C3504F;
             border-radius: 5px;
             color: #C3504F;
@@ -231,16 +231,28 @@
             transition: all 0.3s;
 
             &:nth-child(odd) {
-                margin-right: 15px;
+                margin-right: 10px;
             }
 
             &:nth-child(even) {
-                margin-left: 15px;
+                margin-left: 10px;
             }
 
             &:hover {
                 background: #C3504F;
                 color: #fff;
+            }
+
+            @include desktop() {
+                margin-bottom: 30px;
+
+                &:nth-child(odd) {
+                    margin-right: 15px;
+                }
+
+                &:nth-child(even) {
+                    margin-left: 15px;
+                }
             }
         }
 
@@ -263,6 +275,7 @@
             text-align: left;
             @include desktop() {
                 text-align: center;
+                margin-right: 80px;
             }
         }
 
