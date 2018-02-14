@@ -141,7 +141,6 @@
     @import "~assets/scss/object/component/_button.scss";
 
     .p-contact {
-        font-size: 1.6rem;
         &__inner {
             @include c-container;
         }
@@ -151,66 +150,116 @@
         }
         &__headingTitle{
             @include c-title;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             text-align: center;
         }
         &__headingIntro {
             letter-spacing: 3px;
             display: inline-block;
+            font-size: 1.5rem;
+            @include desktop {
+                font-size: 1.4rem;
+            }
         }
         &__ohter {
-            padding: 50px 0 70px;
+            padding: 30px 0 40px;
             background: #FAF7F7;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
+            @include desktop {
+                padding: 50px 0 70px;
+                margin-bottom: 80px;
+            }
         }
         &__ohterHeading {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
+            @include desktop {
+                margin-bottom: 30px;
+            }
         }
         &__ohterHeadingTitle {
-            margin-bottom: 30px;
-            font-size: 2rem;
+            margin-bottom: 25px;
+            font-size: 1.7rem;
             font-weight: bold;
             letter-spacing: 3px;
+            @include desktop {
+                margin-bottom: 30px;
+                font-size: 2rem;
+            }
         }
         &__ohterHeadingIntro {
             line-height: 1.8;
         }
         &__ohterButtons {
             display: flex;
+            flex-wrap: wrap;
             padding: 0 20px;
             justify-content: space-between;
+
+            @include desktop {
+                flex-wrap: nowrap;
+            }
         }
         &__ohterButtonFacebook {
             @include c-contactButton(facebook);
+            margin-bottom: 20px;
+            @include desktop {
+                margin-bottom: 0;
+            }
         }
         &__ohterButtonTwitter {
             @include c-contactButton(chatwork);
+            margin-bottom: 40px;
+            @include desktop {
+                margin-bottom: 0;
+            }
         }
         &__ohterContents {
             display: flex;
+            flex-wrap: wrap;
             border: 1px solid #c3504f;
             padding: 40px 20px;
             box-sizing: border-box;
             background: #fff;
+            @include desktop {
+                flex-wrap: nowrap;
+            }
         }
         &__ohterContentsChat {
             display: inline-block;
-            border-right: 1px solid #c3504f;
-            width: 60%;
+            margin-bottom: 40px;
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid #c3504f;
             text-align: center;
+
+            @include desktop {
+                width: 60%;
+                border-right: 1px solid #c3504f;
+                border-bottom: none;
+                margin-bottom: 0;
+            }
         }
         &__ohterContentsChatTitle {
             display: inline-block;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             letter-spacing: 2px;
             font-weight: bold;
+            font-size: 1.3rem;
+            @include desktop {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
         }
 
         &__ohterContentsTel {
             display: inline-block;
-            width: 40%;
+            width: 100%;
             text-align: center;
+
+            @include desktop {
+                width: 40%;
+            }
         }
 
         &__ohterContentsTelTitle {
@@ -218,6 +267,10 @@
             margin-bottom: 2rem;
             letter-spacing: 2px;
             font-weight: bold;
+            font-size: 1.3rem;
+            @include desktop {
+                font-size: 1.5rem;
+            }
         }
         &__ohterContentsTelNumber {
             display: block;
@@ -237,10 +290,14 @@
             margin-bottom: 30px;
         }
         &__formHeadingTitle {
-            margin-bottom: 30px;
-            font-size: 2rem;
+            margin-bottom: 25px;
+            font-size: 1.7rem;
             font-weight: bold;
             letter-spacing: 3px;
+            @include desktop {
+                margin-bottom: 30px;
+                font-size: 2rem;
+            }
         }
         &__formHeadingIntro {
             line-height: 1.8;
@@ -254,7 +311,7 @@
         &__content {
             display: inline-block;
             width: 40%;
-            max-width: 270px;
+            max-width: 40%;
             height: 60px;
             margin-bottom: 20px;
             border: 1px solid #C3504F;
@@ -265,6 +322,9 @@
             transition: all 0.3s;
             cursor: pointer;
             position: relative;
+            @include desktop {
+                max-width: 270px;
+            }
 
             &::before {
                 display: inline-block;
@@ -348,7 +408,10 @@
             width: 100%;
             color: #c3504f;
             line-height: 1.8;
-            margin-bottom: 5rem;
+            margin-bottom: 30px;
+            @include desktop {
+                margin-bottom: 80px;
+            }
         }
 
         &__textBoxWrapper, &__textAreaWrapper {
@@ -359,10 +422,10 @@
                 margin-right: 80px;
             }
         }
-
         &__textBoxLabel, &__textAreaLabel {
             display: inline-block;
             margin-bottom: 5px;
+            min-width: 100px;
             @include desktop() {
                 width: 50px;
                 margin-bottom: 0;
@@ -377,22 +440,24 @@
 
         &__textBox {
             width: 100%;
+            padding-left: 5px;
             max-width: 550px;
             height: 30px;
-            padding-left: 5px;
+            box-sizing: border-box;
             background: #FAF7F7;
             border: 1px solid #ccc;
             outline: none;
         }
 
         &__textArea {
+            border: 1px solid #ccc;
+            padding-left: 5px;
+            padding-top: 5px;
             width: 100%;
             max-width: 550px;
             height: 200px;
-            padding-left: 5px;
-            padding-top: 5px;
+            box-sizing: border-box;
             background: #FAF7F7;
-            border: 1px solid #ccc;
             resize: none;
             outline: none;
         }
