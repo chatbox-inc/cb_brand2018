@@ -154,11 +154,11 @@
             text-align: center;
         }
         &__headingIntro {
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             display: inline-block;
             font-size: 1.5rem;
             @include desktop {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
             }
         }
         &__ohter {
