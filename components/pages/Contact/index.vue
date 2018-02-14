@@ -440,7 +440,7 @@
 
         &__textBox {
             width: 100%;
-            padding-left: 5px;
+            padding: 1.6rem;
             max-width: 550px;
             height: 30px;
             box-sizing: border-box;
@@ -451,8 +451,7 @@
 
         &__textArea {
             border: 1px solid #ccc;
-            padding-left: 5px;
-            padding-top: 5px;
+            padding: 1.6rem;
             width: 100%;
             max-width: 550px;
             height: 200px;
