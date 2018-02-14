@@ -310,8 +310,8 @@
 
         &__content {
             display: inline-block;
-            width: 40%;
-            max-width: 40%;
+            width: 45%;
+            max-width: 45%;
             height: 60px;
             margin-bottom: 20px;
             border: 1px solid #C3504F;
