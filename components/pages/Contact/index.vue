@@ -45,7 +45,7 @@
                 <form class="p-contact__formContact">
                     <div class="p-contact__contentWrapper">
                         <div class="p-contact__content" v-for="item in items">
-                            <input type="checkbox" :id="item.id" :name="item.name" class="p-contact__checkBox">
+                            <input type="label" :id="item.id" :name="item.name" class="p-contact__checkBox">
                             <label :for="item.id" class="p-contact__checkBoxLabel">{{ item.title }}</label>
                         </div>
                     </div>
@@ -228,7 +228,6 @@
         }
         &__ohterContentsTelInfo {
             display: inline-block;
-
         }
         &__form {
             text-align: center;
@@ -246,20 +245,6 @@
         &__formHeadingIntro {
             line-height: 1.8;
         }
-        &__textbox {
-            height: 40px;
-            width: 540px;
-            border: 1px solid #CCCCCC;
-            background-color: #FAF7F7;
-        }
-        &__textarea {
-            height: 200px;
-            width: 540px;
-            border: 1px solid #CCCCCC;
-            background-color: #FAF7F7;
-            resize: none;
-        }
-
         &__contentWrapper {
             max-width: 700px;
             width: 100%;
@@ -278,6 +263,34 @@
             text-align: left;
             line-height: 60px;
             transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+
+            &::before {
+                display: inline-block;
+                content: "";
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgba(195,80,79,.5);
+                background: #FAF7F7;
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-10px);
+            }
+            &::after {
+                display: inline-block;
+                content: "";
+                width: 18px;
+                height: 18px;
+                background: url("/images/icon_check-mute.svg") no-repeat;
+                background-size: contain;
+                background-position: center;
+                position: absolute;
+                top: 50%;
+                left: 17px;
+                transform: translateY(-9px);
+            }
 
             &:nth-child(odd) {
                 margin-right: 10px;
@@ -305,18 +318,37 @@
             }
         }
 
+        &__content.is-active {
+            background: #C3504F;
+            color: #fff;
+            &::after {
+                display: inline-block;
+                content: "";
+                width: 18px;
+                height: 18px;
+                background: url("/images/icon_check.svg") no-repeat;
+                background-size: contain;
+                background-position: center;
+                position: absolute;
+                top: 50%;
+                left: 17px;
+                transform: translateY(-9px);
+            }
+        }
         &__checkBox {
+            display: none;
             margin-left: 15px;
         }
 
         &__checkBoxLabel {
-            margin-left: 15px;
+            margin-left: 55px;
         }
 
         &__comment {
             width: 100%;
             color: #c3504f;
-            margin-bottom: 30px;
+            line-height: 1.8;
+            margin-bottom: 5rem;
         }
 
         &__textBoxWrapper, &__textAreaWrapper {
@@ -348,7 +380,7 @@
             max-width: 550px;
             height: 30px;
             padding-left: 5px;
-            background: #f7f7f7;
+            background: #FAF7F7;
             border: 1px solid #ccc;
             outline: none;
         }
@@ -359,7 +391,7 @@
             height: 200px;
             padding-left: 5px;
             padding-top: 5px;
-            background: #f7f7f7;
+            background: #FAF7F7;
             border: 1px solid #ccc;
             resize: none;
             outline: none;
@@ -419,5 +451,4 @@
             }
         }
     }
-
 </style>
