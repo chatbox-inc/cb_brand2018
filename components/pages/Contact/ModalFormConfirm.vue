@@ -32,17 +32,22 @@
         &__inner  {
             @include c-container;
             position: relative;
-            top: 35%;
+            top: 18%;
             text-align: center;
+            @include desktop() {
+                top: 35%;
+            }
         }
         &__contets {
             display: inline-block;
             margin: 0 auto;
             padding: 30px;
-            min-width: 500px;
-            /*height: 540px;*/
+            min-width: 80%;
             background: #fff;
             border-radius: 10px;
+            @include desktop() {
+                min-width: 500px;
+            }
         }
         &__ttl{
             font-size: 2rem;
@@ -55,9 +60,10 @@
         }
         &__form,&__back{
             display: inline-block;
+            margin-bottom: 5%;
             padding: 1.5rem;
-            width: 40%;
-            max-width: 100%;
+            width: 100%;
+            max-width: 500px;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             text-align: center;
@@ -68,15 +74,24 @@
             border:  1px solid #C3504F;
             background: #FFF;
             text-decoration: none;
+            @include desktop() {
+                min-width: 0;
+                width: 40%;
+                margin-bottom: 0;
+            }
             &:hover {
                 color: #FFF;
                 background-color: #C3504F;
+                @include desktop() {
+                }
             }
         }
         &__form{
-            margin-right: 3%;
+            margin-right: 0;
             display: inline-block;
+            @include desktop() {
+                margin-right: 5%;
+            }
         }
     }
-
 </style>
