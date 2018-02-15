@@ -1,13 +1,21 @@
 <template>
     <section class="p-modalConfirm">
         <div class="p-modalConfirm__inner">
+            <!--<div class="p-modalConfirm__contets">-->
+                <!--<h2 class="p-modalConfirm__ttl">確認</h2>-->
+                <!--<p class="p-modalConfirm__texts">フォームの内容を送信します。<br>-->
+                    <!--よろしければ、送信ボタンを押してください。</p>-->
+                <!--<div class="p-modalConfirm__btn">-->
+                    <!--<a href="#" class="p-modalConfirm__form">送信</a>-->
+                    <!--<a href="#" class="p-modalConfirm__back">戻る</a>-->
+                <!--</div>-->
+            <!--</div>-->
             <div class="p-modalConfirm__contets">
                 <h2 class="p-modalConfirm__ttl">確認</h2>
                 <p class="p-modalConfirm__texts">フォームの内容を送信します。<br>
                     よろしければ、送信ボタンを押してください。</p>
                 <div class="p-modalConfirm__btn">
-                    <a href="#" class="p-modalConfirm__form">送信</a>
-                    <a href="#" class="p-modalConfirm__back">戻る</a>
+                    <a href="#" class="p-modalConfirm__back">閉じる</a>
                 </div>
             </div>
         </div>
