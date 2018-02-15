@@ -1,6 +1,6 @@
 <template>
   <div id="layout">
-    <modal-form-confirm></modal-form-confirm>
+    <modal-form></modal-form>
     <page-header></page-header>
     <nuxt/>
     <page-footer></page-footer>
@@ -9,13 +9,13 @@
 
 
 <script>
-  import ModalFormConfirm from '~/components/pages/Contact/ModalFormConfirm.vue'
+  import ModalForm from '~/components/pages/Contact/ModalForm.vue'
   import PageHeader from '~/components/Header.vue'
   import PageFooter from '~/components/Footer.vue'
 
   export default {
     components: {
-      ModalFormConfirm,
+      ModalForm,
       PageHeader,
       PageFooter
     },
