@@ -60,9 +60,8 @@
         }
         &__form,&__back{
             display: inline-block;
-            margin-bottom: 5%;
             padding: 1.5rem;
-            width: 100%;
+            width: 45%;
             max-width: 500px;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -75,9 +74,7 @@
             background: #FFF;
             text-decoration: none;
             @include desktop() {
-                min-width: 0;
                 width: 40%;
-                margin-bottom: 0;
             }
             &:hover {
                 color: #FFF;
@@ -87,11 +84,8 @@
             }
         }
         &__form{
-            margin-right: 0;
+            margin-right: 5%;
             display: inline-block;
-            @include desktop() {
-                margin-right: 5%;
-            }
         }
     }
 </style>
