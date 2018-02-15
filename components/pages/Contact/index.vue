@@ -44,8 +44,8 @@
                 </div>
                 <form class="p-contact__formContact">
                     <div class="p-contact__contentWrapper">
-                        <div class="p-contact__content" v-for="item in items">
-                            <input type="label" :id="item.id" :name="item.name" class="p-contact__checkBox">
+                        <div :class="contactContentClass(item.id)" v-for="item in items" @click="changeSubject(item.id)">
+                            <input type="radio" :id="item.id" :name="item.name" :value="item.id" v-model="message.subject" class="p-contact__checkBox">
                             <label :for="item.id" class="p-contact__checkBoxLabel">{{ item.title }}</label>
                         </div>
                     </div>
@@ -102,6 +102,7 @@
                     },
                 ],
                 message: {
+                    subject: '',
                     title: '',
                     name: '',
                     email: '',
@@ -110,6 +111,15 @@
             }
         },
         methods: {
+            contactContentClass(value){
+                return {
+                    "p-contact__content":true,
+                    "is-active": this.message.subject === value
+                }
+            },
+            changeSubject(value){
+                this.message.subject = value
+            },
             sendMail() {
                 axios({
                     url: 'https://vh6zjd2it0.execute-api.us-east-1.amazonaws.com/dev/chatbox/contact',
