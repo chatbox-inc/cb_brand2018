@@ -8,11 +8,11 @@
                     よろしければ、送信ボタンを押してください。
                 </p>
                 <div class="p-modalForm__contetsAction">
-                    <a class="p-modalForm__contetsActionButtonSubmit">送信</a>
-                    <a class="p-modalForm__contetsActionButtonClose">戻る</a>
+                    <a class="p-modalForm__contetsActionButtonSubmit" @click="send()">送信</a>
+                    <a class="p-modalForm__contetsActionButtonClose" @click="back()">戻る</a>
                 </div>
             </div>
-            <div class="p-modalForm__contets">
+            <div class="p-modalForm__contets" :class="complete">
                 <h2 class="p-modalForm__contetsTitle">送信完了</h2>
                 <p class="p-modalForm__contetsDescription">
                     ご連絡ありがとうございます。<br><br>
@@ -20,7 +20,7 @@
                     3営業日以内にご連絡をさせていただきます。
                 </p>
                 <div class="p-modalForm__contetsAction">
-                    <a class="p-modalForm__contetsActionButtonClose">閉じる</a>
+                    <a class="p-modalForm__contetsActionButtonClose" @click="close()">閉じる</a>
                 </div>
             </div>
         </div>
@@ -30,6 +30,25 @@
 <script>
     export default {
         props: ['isActive'],
+        data() {
+            return {
+                complete: ''
+            }
+        },
+        methods: {
+            send() {
+                this.isActive.confirm = ''
+                this.complete = 'is-active'
+            },
+            back() {
+                this.isActive.confirm = ''
+                this.isActive.background = ''
+            },
+            close() {
+                this.complete = ''
+                this.isActive.background = ''
+            }
+        }
     }
 </script>
 

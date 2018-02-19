@@ -116,7 +116,6 @@
                 isActive: {
                     background: '',
                     confirm: '',
-                    complete: ''
                 }
             }
         },
