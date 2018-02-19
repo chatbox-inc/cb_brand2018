@@ -1,5 +1,6 @@
 <template>
     <section class="p-contact">
+        <modal-form></modal-form>
         <div class="p-contact__inner">
             <div class="p-contact__heading">
                 <h2 class="p-contact__headingTitle">Contact</h2>
