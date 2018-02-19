@@ -1,7 +1,7 @@
 <template>
-    <section class="p-modalForm">
+    <section class="p-modalForm is-active">
         <div class="p-modalForm__inner">
-            <div class="p-modalForm__contets">
+            <div class="p-modalForm__contets is-active">
                 <h2 class="p-modalForm__contetsTitle">送信確認</h2>
                 <p class="p-modalForm__contetsDescription">
                     フォームの内容を送信します。<br>
@@ -37,9 +37,9 @@
     @import "~assets/scss/object/component/_button.scss";
     .p-modalForm.is-active {
         display: block;
-        &__contets.is-active {
-            display: inline-block;
-        }
+    }
+    .p-modalForm__contets.is-active {
+        display: inline-block;
     }
 
     .p-modalForm {

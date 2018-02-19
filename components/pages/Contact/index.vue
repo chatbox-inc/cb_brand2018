@@ -66,7 +66,7 @@
                         <label for="content" class="p-contact__textAreaLabel">内容</label>
                         <textarea id="content" name="content" class="p-contact__textArea" required v-model="message.body"></textarea>
                     </div>
-                    <button type="submit" class="p-contact__submit" @click="sendMail()">送信する</button>
+                    <button type="button" class="p-contact__submit" @click="confirm()">送信する</button>
                 </form>
             </div>
         </div>
@@ -75,8 +75,12 @@
 
 <script>
     import axios from 'axios'
+    import ModalForm from './ModalForm.vue'
 
     export default {
+        components: {
+            ModalForm: ModalForm
+        },
         data() {
             return {
                 items: [
@@ -139,6 +143,9 @@
                     .catch(error => {
                         console.log(error.response)
                     })
+            },
+            confirm() {
+
             }
         }
     }
