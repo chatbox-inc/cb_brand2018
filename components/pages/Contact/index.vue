@@ -1,6 +1,6 @@
 <template>
     <section class="p-contact">
-        <modal-form></modal-form>
+        <modal-form :isActive="isActive"></modal-form>
         <div class="p-contact__inner">
             <div class="p-contact__heading">
                 <h2 class="p-contact__headingTitle">Contact</h2>
@@ -112,6 +112,11 @@
                     name: '',
                     email: '',
                     body: '',
+                },
+                isActive: {
+                    background: '',
+                    confirm: '',
+                    complete: ''
                 }
             }
         },
@@ -146,7 +151,8 @@
                     })
             },
             confirm() {
-
+                this.isActive.background = 'is-active'
+                this.isActive.confirm = 'is-active'
             }
         }
     }

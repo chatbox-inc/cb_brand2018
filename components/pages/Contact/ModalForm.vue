@@ -1,7 +1,7 @@
 <template>
-    <section class="p-modalForm is-active">
+    <section class="p-modalForm" :class="isActive.background">
         <div class="p-modalForm__inner">
-            <div class="p-modalForm__contets is-active">
+            <div class="p-modalForm__contets" :class="isActive.confirm">
                 <h2 class="p-modalForm__contetsTitle">送信確認</h2>
                 <p class="p-modalForm__contetsDescription">
                     フォームの内容を送信します。<br>
@@ -28,6 +28,9 @@
 </template>
 
 <script>
+    export default {
+        props: ['isActive'],
+    }
 </script>
 
 <style lang="scss" scoped>
