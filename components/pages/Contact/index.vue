@@ -45,12 +45,12 @@
                 </div>
                 <form class="p-contact__formContact">
                     <div class="p-contact__contentWrapper">
-                        <div :class="contactContentClass(item.id)" v-for="item in items" @click="changeSubject(item.id)">
+                        <div :class="contactContentClass(item.id)" v-for="item in items" @click="changeSubject(item.id) + changeInfo(item)">
                             <input type="radio" :id="item.id" :name="item.name" :value="item.id" v-model="message.subject" class="p-contact__checkBox">
                             <label :for="item.id" class="p-contact__checkBoxLabel">{{ item.title }}</label>
                         </div>
                     </div>
-                    <div class="p-contact__comment">Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。</div>
+                    <div class="p-contact__comment">{{ info }}</div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="name" class="p-contact__textBoxLabel">名前</label>
                         <input type="text" id="name" name="name" class="p-contact__textBox" required v-model="message.name">
@@ -88,22 +88,26 @@
                     {
                         title: 'Web制作',
                         id: 'web',
-                        name: 'web'
+                        name: 'web',
+                        description: 'Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。'
                     },
                     {
                         title: '技術顧問',
                         id: 'advise',
-                        name: 'advise'
+                        name: 'advise',
+                        description: 'foo'
                     },
                     {
                         title: 'イベント',
                         id: 'event',
-                        name: 'event'
+                        name: 'event',
+                        description: 'bar'
                     },
                     {
                         title: 'その他',
                         id: 'etc',
-                        name: 'etc'
+                        name: 'etc',
+                        description: 'baz'
                     },
                 ],
                 message: {
@@ -116,7 +120,8 @@
                 isActive: {
                     background: '',
                     confirm: '',
-                }
+                },
+                info: ''
             }
         },
         methods: {
@@ -128,6 +133,9 @@
             },
             changeSubject(value){
                 this.message.subject = value
+            },
+            changeInfo(item) {
+                this.info = item.description
             },
             sendMail() {
                 axios({
@@ -429,6 +437,7 @@
 
         &__comment {
             width: 100%;
+            height: 30px;
             color: #c3504f;
             line-height: 1.8;
             margin-bottom: 30px;
