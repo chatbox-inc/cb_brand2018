@@ -28,8 +28,13 @@
 </template>
 
 <script>
+    import axios from 'axios'
+
     export default {
-        props: ['isActive'],
+        props: [
+            'isActive',
+            'message'
+        ],
         data() {
             return {
                 complete: ''
@@ -37,6 +42,26 @@
         },
         methods: {
             send() {
+                console.log(this.message)
+                axios({
+                    url: 'https://vh6zjd2it0.execute-api.us-east-1.amazonaws.com/dev/chatbox/contact',
+                    method: 'POST',
+                    crossDomain: true,
+                    data: JSON.stringify({
+                        message: this.message
+                    })
+                }, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        console.log(response.data)
+                    })
+                    .catch(error => {
+                        console.log(error.response)
+                    })
+
                 this.isActive.confirm = ''
                 this.complete = 'is-active'
             },
