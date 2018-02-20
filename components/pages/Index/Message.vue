@@ -90,9 +90,9 @@
       @include desktop(){
         margin-top: 250px;
         margin-bottom: 40px;
-        padding: 40px 40px;
+        padding: 50px 40px;
         padding-right: 10%;
-        width: 85%;
+        width: 100%;
         background: linear-gradient(right, rgba(252,252,252,0) 0%, rgba(252,252,252,0.5) 10%, rgba(254,254,254,0.8) 20%, rgba(255,255,255,0.85) 25%, rgba(255,255,255,0.9) 61%, rgba(255,255,255,1) 80%);
         position: relative;
         right:0;
