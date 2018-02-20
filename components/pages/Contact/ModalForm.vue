@@ -1,18 +1,18 @@
 <template>
-    <section class="p-modalForm">
+    <section class="p-modalForm" :class="isActive.background">
         <div class="p-modalForm__inner">
-            <div class="p-modalForm__contets">
+            <div class="p-modalForm__contets" :class="isActive.confirm">
                 <h2 class="p-modalForm__contetsTitle">送信確認</h2>
                 <p class="p-modalForm__contetsDescription">
                     フォームの内容を送信します。<br>
                     よろしければ、送信ボタンを押してください。
                 </p>
                 <div class="p-modalForm__contetsAction">
-                    <a class="p-modalForm__contetsActionButtonSubmit">送信</a>
-                    <a class="p-modalForm__contetsActionButtonClose">戻る</a>
+                    <a class="p-modalForm__contetsActionButtonSubmit" @click="send()">送信</a>
+                    <a class="p-modalForm__contetsActionButtonClose" @click="back()">戻る</a>
                 </div>
             </div>
-            <div class="p-modalForm__contets">
+            <div class="p-modalForm__contets" :class="complete">
                 <h2 class="p-modalForm__contetsTitle">送信完了</h2>
                 <p class="p-modalForm__contetsDescription">
                     ご連絡ありがとうございます。<br><br>
@@ -20,7 +20,7 @@
                     3営業日以内にご連絡をさせていただきます。
                 </p>
                 <div class="p-modalForm__contetsAction">
-                    <a class="p-modalForm__contetsActionButtonClose">閉じる</a>
+                    <a class="p-modalForm__contetsActionButtonClose" @click="close()">閉じる</a>
                 </div>
             </div>
         </div>
@@ -28,6 +28,53 @@
 </template>
 
 <script>
+    import axios from 'axios'
+
+    export default {
+        props: [
+            'isActive',
+            'message'
+        ],
+        data() {
+            return {
+                complete: ''
+            }
+        },
+        methods: {
+            send() {
+                console.log(this.message)
+                axios({
+                    url: 'https://vh6zjd2it0.execute-api.us-east-1.amazonaws.com/dev/chatbox/contact',
+                    method: 'POST',
+                    crossDomain: true,
+                    data: JSON.stringify({
+                        message: this.message
+                    })
+                }, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        console.log(response.data)
+                    })
+                    .catch(error => {
+                        console.log(error.response)
+                    })
+
+                this.isActive.confirm = ''
+                this.complete = 'is-active'
+            },
+            back() {
+                this.isActive.confirm = ''
+                this.isActive.background = ''
+            },
+            close() {
+                this.complete = ''
+                this.isActive.background = ''
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -37,9 +84,9 @@
     @import "~assets/scss/object/component/_button.scss";
     .p-modalForm.is-active {
         display: block;
-        &__contets.is-active {
-            display: inline-block;
-        }
+    }
+    .p-modalForm__contets.is-active {
+        display: inline-block;
     }
 
     .p-modalForm {
@@ -49,6 +96,7 @@
         width: 100vw;
         height: 100vh;
         position: fixed;
+        top: 0;
 
         &__inner  {
             @include c-container;

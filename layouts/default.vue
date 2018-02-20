@@ -1,6 +1,5 @@
 <template>
   <div id="layout">
-    <modal-form></modal-form>
     <page-header></page-header>
     <nuxt/>
     <page-footer></page-footer>
