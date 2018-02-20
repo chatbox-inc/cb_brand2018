@@ -1,5 +1,6 @@
 <template>
     <section class="p-contact">
+        <modal-form :isActive="isActive" :message="message"></modal-form>
         <div class="p-contact__inner">
             <div class="p-contact__heading">
                 <h2 class="p-contact__headingTitle">Contact</h2>
@@ -44,12 +45,12 @@
                 </div>
                 <form class="p-contact__formContact">
                     <div class="p-contact__contentWrapper">
-                        <div :class="contactContentClass(item.id)" v-for="item in items" @click="changeSubject(item.id)">
+                        <div :class="contactContentClass(item.id)" v-for="item in items" @click="changeSubject(item.id) + changeInfo(item)">
                             <input type="radio" :id="item.id" :name="item.name" :value="item.id" v-model="message.subject" class="p-contact__checkBox">
                             <label :for="item.id" class="p-contact__checkBoxLabel">{{ item.title }}</label>
                         </div>
                     </div>
-                    <div class="p-contact__comment">Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。</div>
+                    <div class="p-contact__comment">{{ info }}</div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="name" class="p-contact__textBoxLabel">名前</label>
                         <input type="text" id="name" name="name" class="p-contact__textBox" required v-model="message.name">
@@ -66,7 +67,7 @@
                         <label for="content" class="p-contact__textAreaLabel">内容</label>
                         <textarea id="content" name="content" class="p-contact__textArea" required v-model="message.body"></textarea>
                     </div>
-                    <button type="submit" class="p-contact__submit" @click="sendMail()">送信する</button>
+                    <button type="button" class="p-contact__submit" @click="confirm()">送信する</button>
                 </form>
             </div>
         </div>
@@ -74,31 +75,38 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    import ModalForm from './ModalForm.vue'
 
     export default {
+        components: {
+            ModalForm: ModalForm
+        },
         data() {
             return {
                 items: [
                     {
                         title: 'Web制作',
                         id: 'web',
-                        name: 'web'
+                        name: 'web',
+                        description: 'Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。'
                     },
                     {
                         title: '技術顧問',
                         id: 'advise',
-                        name: 'advise'
+                        name: 'advise',
+                        description: 'foo'
                     },
                     {
                         title: 'イベント',
                         id: 'event',
-                        name: 'event'
+                        name: 'event',
+                        description: 'bar'
                     },
                     {
                         title: 'その他',
                         id: 'etc',
-                        name: 'etc'
+                        name: 'etc',
+                        description: 'baz'
                     },
                 ],
                 message: {
@@ -107,7 +115,12 @@
                     name: '',
                     email: '',
                     body: '',
-                }
+                },
+                isActive: {
+                    background: '',
+                    confirm: '',
+                },
+                info: ''
             }
         },
         methods: {
@@ -120,25 +133,12 @@
             changeSubject(value){
                 this.message.subject = value
             },
-            sendMail() {
-                axios({
-                    url: 'https://vh6zjd2it0.execute-api.us-east-1.amazonaws.com/dev/chatbox/contact',
-                    method: "POST",
-                    crossDomain: true,
-                    data: JSON.stringify({
-                        message: this.message
-                    })
-                }, {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                    .then(response => {
-                        console.log(response.data)
-                    })
-                    .catch(error => {
-                        console.log(error.response)
-                    })
+            changeInfo(item) {
+                this.info = item.description
+            },
+            confirm() {
+                this.isActive.background = 'is-active'
+                this.isActive.confirm = 'is-active'
             }
         }
     }
@@ -416,6 +416,7 @@
 
         &__comment {
             width: 100%;
+            height: 30px;
             color: #c3504f;
             line-height: 1.8;
             margin-bottom: 30px;
