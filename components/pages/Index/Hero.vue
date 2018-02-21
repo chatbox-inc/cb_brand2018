@@ -81,7 +81,7 @@
       transform: translateY(calc(-100px /2));
 
       @include desktop {
-        width: 60vw;
+        width: 40vw;
         max-width: 900px;
         font-size: 3rem;
         line-height: 8rem;
@@ -112,7 +112,7 @@
         padding: 2.5rem 1rem 2rem;
         padding-left: 10%;
         @include desktop {
-          padding: 60px 30px 80px 15vw;
+          padding: 60px 30px 80px 12vw;
         }
       }
       &_text {
