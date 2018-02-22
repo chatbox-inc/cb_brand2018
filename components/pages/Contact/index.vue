@@ -153,12 +153,16 @@
                 this.isActive.background = 'is-active'
                 this.isActive.confirm = 'is-active'
             },
+            checkGenre(info) {
+                if (info && info !== 'お問い合わせ内容を選択してください。') return true;
+            },
             checkForm:function(e) {
-                if(this.message.name && this.message.email && this.message.title && this.message.body && this.validEmail(this.message.email)) {
+                if(this.message.name && this.message.email && this.message.title && this.message.body && this.validEmail(this.message.email) && this.checkGenre(this.info)) {
                     this.errors.name = this.errors.email = this.errors.title = this.errors.body = this.errors.emailValid = false;
-                    console.log(this.errors)
                     return true;
                 } else {
+                    if (!this.info) this.info = 'お問い合わせ内容を選択してください。';
+
                     !this.message.name ? this.errors.name = true : this.errors.name = false;
                     if(!this.message.email) {
                       this.errors.email = true;
