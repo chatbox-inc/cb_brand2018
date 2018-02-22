@@ -83,37 +83,47 @@
     @import "~assets/scss/object/component/_title.scss";
     @import "~assets/scss/object/component/_button.scss";
     .p-modalForm.is-active {
-        display: block;
+        opacity: 1;
+        z-index: 10000;
+        transition: all .5s .3s;
     }
     .p-modalForm__contets.is-active {
-        display: inline-block;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all .8s;
+        z-index: 11000;
     }
 
     .p-modalForm {
-        display: none;
-        z-index: 1000000;
+        z-index: 0;
         background: rgba(0,0,0,.5);
         width: 100vw;
         height: 100vh;
+        text-align: center;
         position: fixed;
         top: 0;
+        transition: all .5s .5s;
+        opacity: 0;
 
         &__inner  {
             @include c-container;
             text-align: center;
         }
         &__contets {
-            display: none;
+            display: inline-block;
             border-radius: 10px;
             margin-top: 20vh;
             padding: 40px 30px;
             min-width: 100%;
             box-sizing: border-box;
             background: #fff;
+            transform: translateY(-25%);
+            opacity: 0;
+            transition: all .5s;
             @include desktop() {
                 min-width: 600px;
                 max-width: 600px;
-                margin-top: 33vh;
+                margin-top: 20vh;
             }
         }
         &__contetsTitle{
