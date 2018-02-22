@@ -86,7 +86,6 @@
         opacity: 1;
         z-index: 10000;
         transition: all .5s .3s;
-        display: inline-block;
         visibility: visible;
     }
     .p-modalForm__contets.is-active {
@@ -94,7 +93,6 @@
         transform: translate(-50%, 0);
         transition: all .8s;
         z-index: 11000;
-        display: inline-block;
         visibility: visible;
         position: absolute;
         top: 0;
@@ -111,7 +109,6 @@
         top: 0;
         transition: all .5s .5s;
         opacity: 0;
-        /*display: none;*/
         visibility: hidden;
 
         &__inner  {
