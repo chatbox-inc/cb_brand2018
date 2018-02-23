@@ -53,24 +53,32 @@
                     <div class="p-contact__comment">{{ info }}</div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="name" class="p-contact__textBoxLabel">名前</label>
-                        <input type="text" id="name" name="name" class="p-contact__textBox" required v-model="message.name">
-                        <p class="p-contact__textBoxError" v-if="errors.name">入力してください。</p>
+                        <div class="p-contact__textBoxArea">
+                          <input type="text" id="name" name="name" class="p-contact__textBox" required v-model="message.name">
+                          <p class="p-contact__textBoxError" v-if="errors.name">入力してください。</p>
+                        </div>
                     </div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="email" class="p-contact__textBoxLabel">E-mail</label>
-                        <input type="email" id="email" name="email" class="p-contact__textBox" required v-model="message.email">
-                        <p class="p-contact__textBoxError" v-if="errors.email">入力してください。</p>
-                        <p class="p-contact__textBoxError" v-if="errors.emailValid">正しいメールアドレス形式で入力して下さい。</p>
+                        <div class="p-contact__textBoxArea">
+                          <input type="email" id="email" name="email" class="p-contact__textBox" required v-model="message.email">
+                          <p class="p-contact__textBoxError" v-if="errors.email">入力してください。</p>
+                          <p class="p-contact__textBoxError" v-if="errors.emailValid">正しいメールアドレス形式で入力して下さい。</p>
+                        </div>
                     </div>
                     <div class="p-contact__textBoxWrapper">
                         <label for="title" class="p-contact__textBoxLabel">件名</label>
-                        <input type="text" id="title" name="title" class="p-contact__textBox" required v-model="message.title">
-                        <p class="p-contact__textBoxError" v-if="errors.title">入力してください。</p>
+                        <div class="p-contact__textBoxArea">
+                          <input type="text" id="title" name="title" class="p-contact__textBox" required v-model="message.title">
+                          <p class="p-contact__textBoxError" v-if="errors.title">入力してください。</p>
+                        </div>
                     </div>
                     <div class="p-contact__textAreaWrapper">
                         <label for="content" class="p-contact__textAreaLabel">内容</label>
-                        <textarea id="content" name="content" class="p-contact__textArea" required v-model="message.body"></textarea>
-                        <p class="p-contact__textBoxError" v-if="errors.body">入力してください。</p>
+                        <div class="p-contact__textBoxArea">
+                          <textarea id="content" name="content" class="p-contact__textArea" required v-model="message.body"></textarea>
+                          <p class="p-contact__textBoxError" v-if="errors.body">入力してください。</p>
+                        </div>
                     </div>
                     <button type="button" class="p-contact__submit" @click="confirm($event)">送信する</button>
                 </form>
@@ -487,6 +495,19 @@
 
         &__textAreaLabel {
             vertical-align: top;
+        }
+
+        &__textBoxLabel {
+            vertical-align: top;
+        }
+
+        &__textBoxArea {
+            display: inline-block;
+            width: 100%;
+            max-width: 550px;
+            @include desktop() {
+                  text-align: left;
+            }
         }
 
         &__textBox {
