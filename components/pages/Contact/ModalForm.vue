@@ -86,12 +86,17 @@
         opacity: 1;
         z-index: 10000;
         transition: all .5s .3s;
+        visibility: visible;
     }
     .p-modalForm__contets.is-active {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(-50%, 0);
         transition: all .8s;
         z-index: 11000;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 50%;
     }
 
     .p-modalForm {
@@ -104,6 +109,7 @@
         top: 0;
         transition: all .5s .5s;
         opacity: 0;
+        visibility: hidden;
 
         &__inner  {
             @include c-container;
@@ -111,13 +117,17 @@
         }
         &__contets {
             display: inline-block;
+            visibility:hidden;
+            position: absolute;
+            top: 0;
+            left: 50%;
             border-radius: 10px;
             margin-top: 20vh;
             padding: 40px 30px;
             min-width: 100%;
             box-sizing: border-box;
             background: #fff;
-            transform: translateY(-25%);
+            transform: translate(-50%, -25%);
             opacity: 0;
             transition: all .5s;
             @include desktop() {
@@ -165,7 +175,7 @@
                 max-width: 160px;
             }
             &:hover {
-                opacity: .8;
+                opacity: .7;
                 transition: all .5s;
             };
         }
@@ -189,7 +199,7 @@
                 max-width: 160px;
             }
             &:hover {
-                opacity: .8;
+                background: rgba(195,80,79,.1);
                 transition: all .5s;
             };
 
