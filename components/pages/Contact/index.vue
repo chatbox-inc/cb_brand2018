@@ -157,9 +157,13 @@
                 this.info = item.description
             },
             confirm(e) {
-                this.checkForm(e)
-                this.isActive.background = 'is-active'
-                this.isActive.confirm = 'is-active'
+                if(this.checkForm(e)) {
+                    this.isActive.background = 'is-active'
+                    this.isActive.confirm = 'is-active'
+                } else {
+                    this.isActive.background = ''
+                    this.isActive.confirm = ''
+                }
             },
             checkGenre(info) {
                 if (info && info !== 'お問い合わせ内容を選択してください。') return true;
