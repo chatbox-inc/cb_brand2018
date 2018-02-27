@@ -87,7 +87,6 @@
       font-weight: bold;
       letter-spacing: 2px;
       color: #C3504F;
-      text-align: center;
       line-height: 1.5;
       @include desktop(){
         text-align: center;
@@ -105,7 +104,7 @@
       background-size: contain;
       background-position: center;
       position: absolute;
-      right: 15px;
+      right: 8px;
       top: 50%;
       transform: translateY(-0.8rem);
       @include desktop {
