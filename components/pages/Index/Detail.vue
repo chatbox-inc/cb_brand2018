@@ -138,6 +138,7 @@
       @include desktop(){
         display: block;
         width: 45%;
+        margin-bottom: 110px;
       }
     }
     &--image2{
