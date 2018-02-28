@@ -1,7 +1,7 @@
 <template>
-    <section class="p-modalForm" :class="isActive.background">
+    <section class="p-modalForm" v-bind:class="{ 'is-active': isModalActive }">
         <div class="p-modalForm__inner">
-            <div class="p-modalForm__contets" :class="isActive.confirm">
+            <div class="p-modalForm__contets" v-bind:class="{ 'is-active': confirmation() }">
                 <h2 class="p-modalForm__contetsTitle">送信確認</h2>
                 <p class="p-modalForm__contetsDescription">
                     フォームの内容を送信します。<br>
@@ -12,7 +12,7 @@
                     <a class="p-modalForm__contetsActionButtonClose" @click="back()">戻る</a>
                 </div>
             </div>
-            <div class="p-modalForm__contets" :class="complete">
+            <div class="p-modalForm__contets" v-bind:class="{ 'is-active': complete }">
                 <h2 class="p-modalForm__contetsTitle">送信完了</h2>
                 <p class="p-modalForm__contetsDescription">
                     ご連絡ありがとうございます。<br><br>
@@ -32,12 +32,12 @@
 
     export default {
         props: [
-            'isActive',
+            'isModalActive',
             'message'
         ],
         data() {
             return {
-                complete: ''
+                complete: false,
             }
         },
         methods: {
@@ -62,16 +62,21 @@
                         console.log(error.response)
                     })
 
-                this.isActive.confirm = ''
-                this.complete = 'is-active'
+                this.complete = true
             },
             back() {
-                this.isActive.confirm = ''
-                this.isActive.background = ''
+                this.$emit("close")
             },
             close() {
-                this.complete = ''
-                this.isActive.background = ''
+                this.complete = false
+                this.$emit("close")
+            },
+            confirmation() {
+                if(this.isModalActive && this.complete === false ) {
+                    return true
+                } else {
+                    return false
+                }
             }
         }
     }
