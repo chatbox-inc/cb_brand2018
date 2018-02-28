@@ -45,7 +45,7 @@
                 </div>
                 <form class="p-contact__formContact">
                     <div class="p-contact__contentWrapper">
-                        <div :class="contactContentClass(item.id)" v-for="item in items" @click="changeSubject(item.id) + changeInfo(item)">
+                        <div :class="contactContentClass(item.id)" v-for="item in items" @click="changeSubject(item.id) + changeInfo(item) + inputSubject(item.title)">
                             <input type="radio" :id="item.id" :name="item.name" :value="item.id" v-model="message.subject" class="p-contact__checkBox">
                             <label :for="item.id" class="p-contact__checkBoxLabel">{{ item.title }}</label>
                         </div>
@@ -187,6 +187,9 @@
             validEmail:function(email) {
               let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
               return re.test(email);
+            },
+            inputSubject(title) {
+                this.message.title = title
             }
         }
     }
