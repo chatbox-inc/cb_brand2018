@@ -74,8 +74,6 @@
         }
       },
       markdown() {
-          console.log(this.messages)
-          console.log(marked(this.messages.message, { sanitize: true }))
         return marked(this.messages.message, { sanitize: true })
       }
     },
