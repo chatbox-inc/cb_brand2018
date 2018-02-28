@@ -1,6 +1,6 @@
 <template>
     <section class="p-contact">
-        <modal-form :isActive="isActive" :message="message"></modal-form>
+        <modal-form :isModalActive="isModalActive" :message="message" @close="isModalActive = false"></modal-form>
         <div class="p-contact__inner">
             <div class="p-contact__heading">
                 <h2 class="p-contact__headingTitle">Contact</h2>
@@ -129,10 +129,7 @@
                     email: '',
                     body: '',
                 },
-                isActive: {
-                    background: '',
-                    confirm: '',
-                },
+                isModalActive: false,
                 info: '',
                 errors: {
                   name: false,
@@ -157,9 +154,11 @@
                 this.info = item.description
             },
             confirm(e) {
-                this.checkForm(e)
-                this.isActive.background = 'is-active'
-                this.isActive.confirm = 'is-active'
+                if(this.checkForm(e)) {
+                    this.isModalActive = true
+                } else {
+                    this.isModalActive = false
+                }
             },
             checkGenre(info) {
                 if (info && info !== 'お問い合わせ内容を選択してください。') return true;
