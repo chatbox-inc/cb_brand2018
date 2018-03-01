@@ -89,7 +89,6 @@
       background: white;
       @include desktop(){
         margin-top: 250px;
-        margin-bottom: 40px;
         padding: 50px 40px;
         padding-right: 10%;
         width: 100%;
