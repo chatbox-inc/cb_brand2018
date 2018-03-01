@@ -15,7 +15,7 @@
       </table>
       <div class="p-placement">
         <div class="p-placement--box">
-        <h2 class="p-placement--title">Placement</h2>
+        <h2 class="p-placement--title">Access</h2>
         <div class="p-placement--sentence">
           <div class="">〒541-0059</div>
           <div class="">大阪府大阪市中央区博労町1-2-17
@@ -24,9 +24,7 @@
           </div>
         </div>
         <div class="p-placement--route">
-          <div class="">大阪市営地下鉄「堺筋本町」駅 3号出入口より徒歩10分</div>
-          <div class="">大阪市営地下鉄「本町」駅 11号出入口より徒歩15分</div>
-          <div class="">大阪市営地下鉄「松屋町」駅 1号出入口より徒歩15分</div>
+          <div class="">大阪市営地下鉄「堺筋本町」駅 3号出入口より徒歩8分</div>
         </div>
         <a class="p-placement--button" href="https://goo.gl/maps/LLuR2E8Nwos" target="_blank">Google Mapで開く</a>
         </div>
