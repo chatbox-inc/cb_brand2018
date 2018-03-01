@@ -1,25 +1,32 @@
 <template>
   <div class="p-header" id="top">
-    <div class="p-header--triangle"></div>
+    <a href="https://chatbox-inc.com/" target="_blank" class="p-header--triangle"></a>
     <div class="p-header--logoArea">
-        <img class="p-header--logoImg" src="/images/logo.svg" alt="">
+      <img class="p-header--logoImg" src="/images/logo.svg" alt="">
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
   @import "~assets/scss/object/component/_container.scss";
-  @import "~assets/scss/object/component/_title.scss";
   @import "~assets/scss/layout/_layout.scss";
   .p-header{
     &--triangle{
+      display: inline-block;
       position: fixed;
       top: 0;
       left: 0;
       border: 30px solid transparent;
-      border-top: 30px solid #c3504f;
-      border-left: 30px solid #c3504f;
+      border-top: 30px solid #c2504f;
+      border-left: 30px solid #c2504f;
       z-index: 100000;
+      transition: all .3s;
+
+      &:hover {
+        opacity: .8;
+        transition: all .3s;
+      }
+
       &::after {
         content: "";
         display: inline-block;
@@ -40,8 +47,8 @@
       }
       @include desktop(){
         border: 50px solid transparent;
-        border-top: 50px solid #c3504f;
-        border-left: 50px solid #c3504f;
+        border-top: 50px solid #c2504f;
+        border-left: 50px solid #c2504f;
       }
     }
     &--logoArea{
@@ -61,7 +68,7 @@
       @include desktop(){
         display: inline-block;
         width: auto;
-        height: 7rem;
+        height: 6rem;
       }
     }
   }
