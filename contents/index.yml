@@ -83,5 +83,5 @@ member:
   image1: "/images/member_photo01.jpg"
   link:
     image: "/images/member_btn.jpg"
-    href: ''
+    href: 'http://members.chatbox-inc.com/'
     title: メンバーについて
