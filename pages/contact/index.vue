@@ -12,9 +12,6 @@
         components: {
             PageContact
         }
-//    mounted () {
-//      new WOW().init()
-//    }
     }
 
 </script>

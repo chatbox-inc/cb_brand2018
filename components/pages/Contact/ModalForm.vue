@@ -1,7 +1,7 @@
 <template>
-    <section class="p-modalForm" :class="isActive.background">
+    <section class="p-modalForm" v-bind:class="{ 'is-active': isModalActive }">
         <div class="p-modalForm__inner">
-            <div class="p-modalForm__contets" :class="isActive.confirm">
+            <div class="p-modalForm__contets" v-bind:class="{ 'is-active': confirmation() }">
                 <h2 class="p-modalForm__contetsTitle">送信確認</h2>
                 <p class="p-modalForm__contetsDescription">
                     フォームの内容を送信します。<br>
@@ -12,7 +12,7 @@
                     <a class="p-modalForm__contetsActionButtonClose" @click="back()">戻る</a>
                 </div>
             </div>
-            <div class="p-modalForm__contets" :class="complete">
+            <div class="p-modalForm__contets" v-bind:class="{ 'is-active': complete }">
                 <h2 class="p-modalForm__contetsTitle">送信完了</h2>
                 <p class="p-modalForm__contetsDescription">
                     ご連絡ありがとうございます。<br><br>
@@ -32,12 +32,12 @@
 
     export default {
         props: [
-            'isActive',
+            'isModalActive',
             'message'
         ],
         data() {
             return {
-                complete: ''
+                complete: false,
             }
         },
         methods: {
@@ -62,16 +62,21 @@
                         console.log(error.response)
                     })
 
-                this.isActive.confirm = ''
-                this.complete = 'is-active'
+                this.complete = true
             },
             back() {
-                this.isActive.confirm = ''
-                this.isActive.background = ''
+                this.$emit("close")
             },
             close() {
-                this.complete = ''
-                this.isActive.background = ''
+                this.complete = false
+                this.$emit("close")
+            },
+            confirmation() {
+                if(this.isModalActive && this.complete === false ) {
+                    return true
+                } else {
+                    return false
+                }
             }
         }
     }
@@ -86,12 +91,17 @@
         opacity: 1;
         z-index: 10000;
         transition: all .5s .3s;
+        visibility: visible;
     }
     .p-modalForm__contets.is-active {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(-50%, 0);
         transition: all .8s;
         z-index: 11000;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 50%;
     }
 
     .p-modalForm {
@@ -104,6 +114,7 @@
         top: 0;
         transition: all .5s .5s;
         opacity: 0;
+        visibility: hidden;
 
         &__inner  {
             @include c-container;
@@ -111,13 +122,17 @@
         }
         &__contets {
             display: inline-block;
+            visibility:hidden;
+            position: absolute;
+            top: 0;
+            left: 50%;
             border-radius: 10px;
             margin-top: 20vh;
             padding: 40px 30px;
             min-width: 100%;
             box-sizing: border-box;
             background: #fff;
-            transform: translateY(-25%);
+            transform: translate(-50%, -25%);
             opacity: 0;
             transition: all .5s;
             @include desktop() {
@@ -165,7 +180,7 @@
                 max-width: 160px;
             }
             &:hover {
-                opacity: .8;
+                opacity: .7;
                 transition: all .5s;
             };
         }
@@ -189,7 +204,7 @@
                 max-width: 160px;
             }
             &:hover {
-                opacity: .8;
+                background: rgba(195,80,79,.1);
                 transition: all .5s;
             };
 

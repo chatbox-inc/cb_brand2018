@@ -14,7 +14,7 @@
         <div class="p-detail--inner">
           <div class="p-detail--content1">
             <h2 class="p-detail--subtitle">{{messages.subtitle}}</h2>
-            <p class="p-detail--body">{{messages.message}}</p>
+            <div class="p-detail--body" v-html="markdown"></div>
             <div class="p-detail--image" v-if='image1' :style="imageStyle1"></div>
           </div>
           <div class="p-detail--content2">
@@ -35,6 +35,8 @@
 
 <script>
   import PageLink from './_PageLink.vue'
+  import marked from 'marked'
+
   export default {
     props: {
       messages: Object,
@@ -70,6 +72,9 @@
         } else {
           return {}
         }
+      },
+      markdown() {
+        return marked(this.messages.message, { sanitize: true })
       }
     },
     async mounted () {
@@ -144,6 +149,7 @@
       @include desktop(){
         display: block;
         width: 45%;
+        margin-bottom: 110px;
       }
     }
     &--image2{
@@ -208,3 +214,5 @@
     }
   }
 </style>
+
+
