@@ -26,7 +26,7 @@ creation:
   image2: "/images/creation_photo02.jpg"
   link:
     image: "/images/creation_btn.jpg"
-    href: ''
+    href: 'http://works.chatbox-inc.com/'
     title: Web制作について
   tags:
     tagItem1: Webページ制作
@@ -47,7 +47,7 @@ talking:
   image2: "/images/talking_photo02.jpg"
   link:
     image: "/images/talking_btn.jpg"
-    href: ''
+    href: 'http://works.chatbox-inc.com/'
     title: 技術顧問について
   tags:
     tagItem1: 社員研修
@@ -68,7 +68,7 @@ enjoy:
   image2: "/images/enjoy_photo02.jpg"
   link:
     image: "/images/enjoy_btn.jpg"
-    href: ''
+    href: 'http://works.chatbox-inc.com/'
     title: イベント・スクールについて
   tags:
     tagItem1: スクール

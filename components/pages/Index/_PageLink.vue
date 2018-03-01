@@ -1,7 +1,7 @@
 <template>
   <div class="p-link">
     <div class="p-link--inner">
-      <a :href="link.href">
+      <a :href="link.href" target="_blank">
         <div class="p-link--contents">
           <div class="p-link--image" :style="imgStyle"></div>
           <div class="p-link--linkWrapper">

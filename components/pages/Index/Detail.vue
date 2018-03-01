@@ -111,7 +111,7 @@
     }
     &--mainArea{
       @include desktop {
-        padding-bottom: 60px;
+        padding-bottom: 50px;
       }
     }
     &--content1{
@@ -149,7 +149,6 @@
       @include desktop(){
         display: block;
         width: 45%;
-        margin-bottom: 110px;
       }
     }
     &--image2{
@@ -169,7 +168,6 @@
       width: 40%;
       justify-content: center;
       flex-wrap: wrap;
-
       @include desktop(){
         width: 100%;
         justify-content: start;
