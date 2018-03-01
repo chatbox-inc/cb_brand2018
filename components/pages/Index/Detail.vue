@@ -91,8 +91,9 @@
 
   .p-detail{
     @include c-container;
+
     &--titleArea{
-      padding: 1rem 0;
+      padding: .5rem 0;
     }
     &--inner{
       @include desktop{
@@ -103,6 +104,11 @@
     &--title{
       @include c-title
     }
+    &--mainArea{
+      @include desktop {
+        padding-bottom: 60px;
+      }
+    }
     &--content1{
       @include desktop(){
         width: 50%;
@@ -112,7 +118,7 @@
     &--subtitle{
       @include c-caption;
       @include desktop {
-        padding-top: 2.5rem;
+        padding-top: 0;
         margin-bottom: 3rem;
       }
     }
