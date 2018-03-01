@@ -22,7 +22,7 @@
 
   .p-hero{
     margin-bottom: 60px;
-    height: 300px;
+    height: 340px;
     background-color: #fff;
     position: relative;
 
@@ -41,7 +41,7 @@
       background: #c3504f;
       position: relative;
       left: 50%;
-      top: 270px;
+      top: 310px;
       transform: translateX(-1px);
       animation: border_sp .5s ease 4.5s alternate both running;
       @include desktop() {
@@ -71,6 +71,7 @@
       z-index: 100;
       display: inline-block;
       width: 90%;
+      max-width: 62vw;
       color: white;
       font-size: 1.5rem;
       border-radius: 0 6px 6px 0;
@@ -157,27 +158,28 @@
       width: 100%;
       height: 100%;
       background-image: url("/images/brand_top.jpg");
-      background-position: center;
-      background-size: cover;
       background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
       animation: hero_bg_img 2s cubic-bezier(.4, .2, 0, 1) 0s 1 alternate both running;
       position: absolute;
       top: 0;
       right: 0;
 
-      @keyframes hero_bg_img {
-        from {
-          opacity: 0;
-          background-position: 100% 100%;
-        }
-        to {
-          opacity: 1;
-          background-position: 100% 50%;
-        }
-      }
+      /*@keyframes hero_bg_img {*/
+        /*from {*/
+          /*opacity: 0;*/
+          /*background-position: 100% 100%;*/
+        /*}*/
+        /*to {*/
+          /*opacity: 1;*/
+          /*background-position: 100% 50%;*/
+        /*}*/
+      /*}*/
 
       @include desktop(){
         width: 90vw;
+        background-position: center;
         background-size: cover;
       }
     }
