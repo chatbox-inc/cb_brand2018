@@ -4,7 +4,7 @@
   font-family: "Yu Mincho Medium", YuMincho, serif;
   font-weight: normal;
   font-size: 2.8rem;
-  color: #393739;
+  color: #4d4b4d;
   &::first-letter {
     font-size: 1.5em;
     color: #C3504F;
@@ -31,9 +31,9 @@
   font-family: YuMincho, serif;
   font-size: 2.5rem;
   font-weight: 500;
-  color: #393739;
+  color: #4d4b4d;
 }
 
 @mixin c-sentence {
-  color: #393739;
+  color: #4d4b4d;
 }
