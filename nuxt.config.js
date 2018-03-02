@@ -13,12 +13,12 @@ module.exports = {
   ** Common headers are already provided by @nuxtjs/pwa preset
   */
   head: {
-    titleTemplate: '株式会社chatbox',
+    titleTemplate: meta.title,
     meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no' },
         { name: 'description', content: meta.description },
-        { name: 'keyword', content: meta.title },
+        { name: 'keyword', content: "大阪,Web制作,技術顧問,イベント,PHP,フロントエンド,株式会社chatbox,チャットボックス" },
         { property: 'og:title', content: meta.title },
         { property: 'og:image', content: 'https://chatbox-inc.com/images/ogp.jpg' },
         { property: 'og:url', content: 'https://chatbox-inc.com/' },
@@ -26,8 +26,8 @@ module.exports = {
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@chatbox_inc' },
         { name: 'twitter:creator', content: '@chatbox_inc' },
-        { name: 'twitter:title', content: meta.title }, // TODO content内変更
-        { name: 'twitter:description', content: meta.description }, // TODO content内変更
+        { name: 'twitter:title', content: meta.title },
+        { name: 'twitter:description', content: meta.description },
         { name: 'twitter:image', content: 'https://chatbox-inc.com/images/ogp.jpg' },
     ],
     link: [
