@@ -102,25 +102,25 @@ export default {
           id: "web",
           name: "web",
           description:
-            "Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。"
+            "見積り相談や制作可能かの相談からお気軽にお寄せください。ご連絡頂いた後に詳細な内容の確認等こちらから折り返しご連絡させていただきます。"
         },
         {
           title: "技術顧問",
           id: "advise",
           name: "advise",
-          description: "foo"
+          description: "制作現場でのお困りごと、相談内容などお気軽にお寄せください。現場に合わせた適切な解決プランを提案させていただきます。"
         },
         {
           title: "イベント",
           id: "event",
           name: "event",
-          description: "bar"
+          description: "イベント・セミナーに関するお問い合わせ、ご相談などお気軽にお寄せください。共催やファシリテイトとご依頼もお待ちしております。"
         },
         {
           title: "その他",
           id: "etc",
           name: "etc",
-          description: "baz"
+          description: "その他 chatbox に関するご依頼・ご相談などお気軽にお寄せください。"
         }
       ],
       message: {
