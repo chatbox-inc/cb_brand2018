@@ -69,7 +69,7 @@
                     <div class="p-contact__textBoxWrapper">
                         <label for="title" class="p-contact__textBoxLabel">件名</label>
                         <div class="p-contact__textBoxArea">
-                          <input type="text" id="title" name="title" class="p-contact__textBox" required v-model="message.title" disabled>
+                          <input type="text" id="title" name="title" class="p-contact__textBox" required v-model="message.title">
                           <p class="p-contact__textBoxError" v-if="errors.title">入力してください。</p>
                         </div>
                     </div>
@@ -102,21 +102,21 @@ export default {
           id: "web",
           name: "web",
           description:
-            "見積り相談や制作可能かの相談からお気軽にお寄せください。ご連絡頂いた後に詳細な内容の確認等こちらから折り返しご連絡させていただきます。"
+            "見積り相談や制作可能かの相談からお気軽にお寄せください。"
         },
         {
           title: "技術顧問",
           id: "advise",
           name: "advise",
           description:
-            "制作現場でのお困りごと、相談内容などお気軽にお寄せください。現場に合わせた適切な解決プランを提案させていただきます。"
+            "制作現場でのお困りごと、相談内容などお気軽にお寄せください。"
         },
         {
           title: "イベント",
           id: "event",
           name: "event",
           description:
-            "イベント・セミナーに関するお問い合わせ、ご相談などお気軽にお寄せください。共催やファシリテイトとご依頼もお待ちしております。"
+            "イベント・セミナーに関するお問い合わせ、ご相談などお気軽にお寄せください。"
         },
         {
           title: "その他",
@@ -207,7 +207,7 @@ export default {
       return re.test(email);
     },
     inputSubject(title) {
-      this.message.title = title;
+      this.message.title = title + "について";
     }
   }
 };
