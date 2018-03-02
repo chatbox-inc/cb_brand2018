@@ -533,6 +533,7 @@ export default {
     padding: 1.6rem;
     max-width: 550px;
     height: 30px;
+    font-size: 1.5rem;
     box-sizing: border-box;
     background: #faf7f7;
     border: 1px solid #ccc;
@@ -551,6 +552,7 @@ export default {
     width: 100%;
     max-width: 550px;
     height: 200px;
+    font-size: 1.5rem;
     box-sizing: border-box;
     background: #faf7f7;
     resize: none;
