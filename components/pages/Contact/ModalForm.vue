@@ -58,6 +58,7 @@ export default {
       )
         .then(response => {
           console.log(response.data);
+          this.$emit("sent");
         })
         .catch(error => {
           console.log(error.response);
