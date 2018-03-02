@@ -5,17 +5,15 @@
 </template>
 
 <script>
+import PageContact from "~/components/pages/Contact/index.vue";
 
-    import PageContact from '~/components/pages/Contact/index.vue'
-
-    export default {
-        components: {
-            PageContact
-        }
-    }
-
+export default {
+  components: {
+    PageContact
+  }
+};
 </script>
 
 <style lang="scss">
-    @import "~assets/scss/app.scss";
+@import "~assets/scss/app.scss";
 </style>
