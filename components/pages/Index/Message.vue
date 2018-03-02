@@ -58,9 +58,9 @@ export default {
 @import "~assets/scss/object/component/_title.scss";
 
 .p-greeting {
-  margin-top: 2rem;
+  margin-bottom: 20px;
   @include desktop() {
-    margin-top: 100px;
+    margin-bottom: 40px;
   }
   &--inner {
     @include c-container;

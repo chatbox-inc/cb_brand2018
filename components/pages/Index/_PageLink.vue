@@ -38,7 +38,7 @@ export default {
   background: #c3504f;
   @include c-container;
   padding: 1.5rem 0;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   @include desktop() {
     background: transparent;
   }
