@@ -69,7 +69,7 @@
                     <div class="p-contact__textBoxWrapper">
                         <label for="title" class="p-contact__textBoxLabel">件名</label>
                         <div class="p-contact__textBoxArea">
-                          <input type="text" id="title" name="title" class="p-contact__textBox" required v-model="message.title">
+                          <input type="text" id="title" name="title" class="p-contact__textBox" required v-model="message.title" disabled>
                           <p class="p-contact__textBoxError" v-if="errors.title">入力してください。</p>
                         </div>
                     </div>
