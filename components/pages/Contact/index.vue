@@ -1,6 +1,6 @@
 <template>
     <section class="p-contact">
-        <modal-form :isModalActive="isModalActive" :message="message" @close="isModalActive = false"></modal-form>
+        <modal-form :isModalActive="isModalActive" :message="message" @close="isModalActive = false" @sent="sent"></modal-form>
         <div class="p-contact__inner">
             <div class="p-contact__heading">
                 <h2 class="p-contact__headingTitle">Contact</h2>
@@ -205,6 +205,13 @@ export default {
     },
     inputSubject(title) {
       this.message.title = title;
+    },
+    sent() {
+      this.message.subject = ''
+      this.message.title = ''
+      this.message.name = ''
+      this.message.email = ''
+      this.message.body = ''
     }
   }
 };
