@@ -131,7 +131,8 @@ export default {
     border-radius: 10px;
     margin-top: 20vh;
     padding: 40px 30px;
-    min-width: 100%;
+    min-width: 95vw;
+    max-width: 95vw;
     box-sizing: border-box;
     background: #fff;
     transform: translate(-50%, -25%);
