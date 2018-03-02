@@ -34,183 +34,179 @@
 </template>
 
 <script>
-  import PageLink from './_PageLink.vue'
-  import marked from 'marked'
+import PageLink from "./_PageLink.vue";
+import marked from "marked";
 
-  export default {
-    props: {
-      messages: Object,
-      coloredCover: {
-        type: Boolean,
-        default: true
-      }
-    },
-    data () {
-      return {
-        image1: null,
-        image2: null
-      }
-    },
-    components: {
-      PageLink
-    },
-    computed: {
-      imageStyle1 () {
-        if (this.image1) {
-          return {
-            backgroundImage: `url('${this.image1}')`
-          }
-        } else {
-          return {}
-        }
-      },
-      imageStyle2 () {
-        if (this.image2) {
-          return {
-            backgroundImage: `url('${this.image2}')`
-          }
-        } else {
-          return {}
-        }
-      },
-      markdown() {
-        return marked(this.messages.message, { sanitize: true })
-      }
-    },
-    async mounted () {
-      await new Promise((resolve) => {
-        setTimeout(() => {
-          resolve()
-        }, 1000)
-      })
-      this.image1 = this.messages.image1
-      this.image2 = this.messages.image2
+export default {
+  props: {
+    messages: Object,
+    coloredCover: {
+      type: Boolean,
+      default: true
     }
+  },
+  data() {
+    return {
+      image1: null,
+      image2: null
+    };
+  },
+  components: {
+    PageLink
+  },
+  computed: {
+    imageStyle1() {
+      if (this.image1) {
+        return {
+          backgroundImage: `url('${this.image1}')`
+        };
+      } else {
+        return {};
+      }
+    },
+    imageStyle2() {
+      if (this.image2) {
+        return {
+          backgroundImage: `url('${this.image2}')`
+        };
+      } else {
+        return {};
+      }
+    },
+    markdown() {
+      return marked(this.messages.message, { sanitize: true });
+    }
+  },
+  async mounted() {
+    await new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, 1000);
+    });
+    this.image1 = this.messages.image1;
+    this.image2 = this.messages.image2;
   }
+};
 </script>
 
 <style lang="scss" scoped>
-  @import "~assets/scss/object/component/_container.scss";
-  @import "~assets/scss/object/component/_title.scss";
+@import "~assets/scss/object/component/_container.scss";
+@import "~assets/scss/object/component/_title.scss";
 
+.p-detail {
+  @include c-container;
 
-  .p-detail{
-    @include c-container;
-
-    &--titleArea{
-      padding: .5rem 0;
-    }
-    &--inner{
-      @include desktop{
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-    &--title{
-      @include c-title
-    }
-    &--mainArea{
-      @include desktop {
-        padding-bottom: 50px;
-      }
-    }
-    &--content1{
-      @include desktop(){
-        width: 50%;
-        justify-content: space-between;
-      }
-    }
-    &--subtitle{
-      @include c-caption;
-      @include desktop {
-        padding-top: 0;
-        margin-bottom: 3rem;
-      }
-    }
-    &--body{
-      @include c-sentence;
-      margin-bottom: 3rem;
-      width: 100%;
-      @include desktop {
-        margin-bottom: 50px;
-      }
-    }
-    &--image{
-      margin-bottom: 1rem;
-      height: 20rem;
-      background-size: cover;
-      background-repeat: no-repeat;
-      @include desktop(){
-        height: 32rem;
-      }
-    }
-    &--content2{
+  &--titleArea {
+    padding: 0.5rem 0;
+  }
+  &--inner {
+    @include desktop {
       display: flex;
-      @include desktop(){
-        display: block;
-        width: 45%;
-      }
-    }
-    &--image2{
-      margin-bottom: 1rem;
-      height: 20rem;
-      width: 60%;
-      background-size: cover;
-      background-position-y: 50%;
-      background-repeat: no-repeat;
-      @include desktop(){
-        height: 500px;
-        width: 100%;
-      }
-    }
-    &--tags{
-      display: flex;
-      width: 40%;
-      justify-content: center;
-      flex-wrap: wrap;
-      @include desktop(){
-        width: 100%;
-        justify-content: start;
-      }
-
-    }
-    &--tagItem{
-      margin: .5rem 1rem;
-      height: 20rem;
-      color: #C3504F;
-      font-weight: bold;
-      writing-mode: vertical-rl;
-      text-orientation: upright;
-      font-feature-settings: 'pkna';
-      font-size: 1.2rem;
-      letter-spacing: 2px;
-      @include desktop {
-        font-size: 1.7rem;
-      }
-    }
-    &--linkArea{
-      @include desktop {
-        margin-bottom: 80px;
-      }
+      justify-content: space-between;
     }
   }
-  //画像の順番とかも無理あるかも Talking だけ別コンポーネントも検討
-  .is-colored{
+  &--title {
+    @include c-title;
+  }
+  &--mainArea {
+    @include desktop {
+      padding-bottom: 50px;
+    }
+  }
+  &--content1 {
     @include desktop() {
-      margin-top: 40px;
-    }
-    .p-detail{
-      &--titleArea{
-        background: linear-gradient(#fff 50%, #FAF7F7 50%);
-      }
-      &--mainArea{
-        background:#FAF7F7;
-      }
-      &--linkArea{
-        background: linear-gradient(#FAF7F7 50%,#fff 50%);
-      }
+      width: 50%;
+      justify-content: space-between;
     }
   }
+  &--subtitle {
+    @include c-caption;
+    @include desktop {
+      padding-top: 0;
+      margin-bottom: 3rem;
+    }
+  }
+  &--body {
+    @include c-sentence;
+    margin-bottom: 3rem;
+    width: 100%;
+    @include desktop {
+      margin-bottom: 50px;
+    }
+  }
+  &--image {
+    margin-bottom: 1rem;
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include desktop() {
+      height: 32rem;
+    }
+  }
+  &--content2 {
+    display: flex;
+    @include desktop() {
+      display: block;
+      width: 45%;
+    }
+  }
+  &--image2 {
+    margin-bottom: 1rem;
+    height: 20rem;
+    width: 60%;
+    background-size: cover;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    @include desktop() {
+      height: 500px;
+      width: 100%;
+    }
+  }
+  &--tags {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include desktop() {
+      width: 100%;
+      justify-content: start;
+    }
+  }
+  &--tagItem {
+    margin: 0.5rem 1rem;
+    height: 20rem;
+    color: #c3504f;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-feature-settings: "pkna";
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    @include desktop {
+      font-size: 1.7rem;
+    }
+  }
+  &--linkArea {
+    @include desktop {
+      margin-bottom: 80px;
+    }
+  }
+}
+//画像の順番とかも無理あるかも Talking だけ別コンポーネントも検討
+.is-colored {
+  @include desktop() {
+    margin-top: 40px;
+  }
+  .p-detail {
+    &--titleArea {
+      background: linear-gradient(#fff 50%, #faf7f7 50%);
+    }
+    &--mainArea {
+      background: #faf7f7;
+    }
+    &--linkArea {
+      background: linear-gradient(#faf7f7 50%, #fff 50%);
+    }
+  }
+}
 </style>
-
-

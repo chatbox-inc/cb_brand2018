@@ -1,27 +1,21 @@
-# brand.pwa
+# chatbox main site 
 
-Netlify https://app.netlify.com/sites/chatbox-brand2018/overview
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-domain https://top.chatbox-inc.com/
+http://chatbox-inc.com/
 
-Invision https://projects.invisionapp.com/d/main#/projects/prototypes/12211718
+https://app.netlify.com/sites/chatbox-brand2018
 
-## Build Setup
+## 使い方
 
-``` bash
-# install dependencies
-$ npm install # Or yarn install
+サーバの起動
 
-# serve with hot reload at localhost:3000
-# service worker is disabled in dev
+````
 $ npm run dev
+````
 
-# build for production and launch server
-$ npm run build
-$ npm start
+コードのフォーマット
 
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+````
+$ npm run fix
+````
