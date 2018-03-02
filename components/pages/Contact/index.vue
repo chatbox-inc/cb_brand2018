@@ -88,511 +88,529 @@
 </template>
 
 <script>
-    import ModalForm from './ModalForm.vue'
+import ModalForm from "./ModalForm.vue";
 
-    export default {
-        components: {
-            ModalForm: ModalForm
+export default {
+  components: {
+    ModalForm: ModalForm
+  },
+  data() {
+    return {
+      items: [
+        {
+          title: "Web制作",
+          id: "web",
+          name: "web",
+          description:
+            "Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。"
         },
-        data() {
-            return {
-                items: [
-                    {
-                        title: 'Web制作',
-                        id: 'web',
-                        name: 'web',
-                        description: 'Web制作に関するお問い合わせでは、見積り相談にも対応しておりますので内容にその旨を記述いただきご連絡ください。'
-                    },
-                    {
-                        title: '技術顧問',
-                        id: 'advise',
-                        name: 'advise',
-                        description: 'foo'
-                    },
-                    {
-                        title: 'イベント',
-                        id: 'event',
-                        name: 'event',
-                        description: 'bar'
-                    },
-                    {
-                        title: 'その他',
-                        id: 'etc',
-                        name: 'etc',
-                        description: 'baz'
-                    },
-                ],
-                message: {
-                    subject: '',
-                    title: '',
-                    name: '',
-                    email: '',
-                    body: '',
-                },
-                isModalActive: false,
-                info: '',
-                errors: {
-                  name: false,
-                  email: false,
-                  emailValid: false,
-                  title: false,
-                  body: false,
-                }
-            }
+        {
+          title: "技術顧問",
+          id: "advise",
+          name: "advise",
+          description: "foo"
         },
-        methods: {
-            contactContentClass(value){
-                return {
-                    "p-contact__content":true,
-                    "is-active": this.message.subject === value
-                }
-            },
-            changeSubject(value){
-                this.message.subject = value
-            },
-            changeInfo(item) {
-                this.info = item.description
-            },
-            confirm(e) {
-                if(this.checkForm(e)) {
-                    this.isModalActive = true
-                } else {
-                    this.isModalActive = false
-                }
-            },
-            checkGenre(info) {
-                if (info && info !== 'お問い合わせ内容を選択してください。') return true;
-            },
-            checkForm:function(e) {
-                if(this.message.name && this.message.email && this.message.title && this.message.body && this.validEmail(this.message.email) && this.checkGenre(this.info)) {
-                    this.errors.name = this.errors.email = this.errors.title = this.errors.body = this.errors.emailValid = false;
-                    return true;
-                } else {
-                    if (!this.info) this.info = 'お問い合わせ内容を選択してください。';
-
-                    !this.message.name ? this.errors.name = true : this.errors.name = false;
-                    if(!this.message.email) {
-                      this.errors.email = true;
-                      this.errors.emailValid = false;
-                    } else {
-                      this.errors.email = false;
-                      !this.validEmail(this.message.email) ? this.errors.emailValid = true : this.errors.emailValid = false;
-                    }
-                    !this.message.title ? this.errors.title = true : this.errors.title = false;
-                    !this.message.body ? this.errors.body = true : this.errors.body = false;
-                    e.preventDefault();
-                }
-            },
-            validEmail:function(email) {
-              let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-              return re.test(email);
-            },
-            inputSubject(title) {
-                this.message.title = title
-            }
+        {
+          title: "イベント",
+          id: "event",
+          name: "event",
+          description: "bar"
+        },
+        {
+          title: "その他",
+          id: "etc",
+          name: "etc",
+          description: "baz"
         }
+      ],
+      message: {
+        subject: "",
+        title: "",
+        name: "",
+        email: "",
+        body: ""
+      },
+      isModalActive: false,
+      info: "",
+      errors: {
+        name: false,
+        email: false,
+        emailValid: false,
+        title: false,
+        body: false
+      }
+    };
+  },
+  methods: {
+    contactContentClass(value) {
+      return {
+        "p-contact__content": true,
+        "is-active": this.message.subject === value
+      };
+    },
+    changeSubject(value) {
+      this.message.subject = value;
+    },
+    changeInfo(item) {
+      this.info = item.description;
+    },
+    confirm(e) {
+      if (this.checkForm(e)) {
+        this.isModalActive = true;
+      } else {
+        this.isModalActive = false;
+      }
+    },
+    checkGenre(info) {
+      if (info && info !== "お問い合わせ内容を選択してください。") return true;
+    },
+    checkForm: function(e) {
+      if (
+        this.message.name &&
+        this.message.email &&
+        this.message.title &&
+        this.message.body &&
+        this.validEmail(this.message.email) &&
+        this.checkGenre(this.info)
+      ) {
+        this.errors.name = this.errors.email = this.errors.title = this.errors.body = this.errors.emailValid = false;
+        return true;
+      } else {
+        if (!this.info) this.info = "お問い合わせ内容を選択してください。";
+
+        !this.message.name
+          ? (this.errors.name = true)
+          : (this.errors.name = false);
+        if (!this.message.email) {
+          this.errors.email = true;
+          this.errors.emailValid = false;
+        } else {
+          this.errors.email = false;
+          !this.validEmail(this.message.email)
+            ? (this.errors.emailValid = true)
+            : (this.errors.emailValid = false);
+        }
+        !this.message.title
+          ? (this.errors.title = true)
+          : (this.errors.title = false);
+        !this.message.body
+          ? (this.errors.body = true)
+          : (this.errors.body = false);
+        e.preventDefault();
+      }
+    },
+    validEmail: function(email) {
+      let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
+    inputSubject(title) {
+      this.message.title = title;
     }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-    @import "~assets/scss/layout/_layout.scss";
-    @import "~assets/scss/object/component/_container.scss";
-    @import "~assets/scss/object/component/_title.scss";
-    @import "~assets/scss/object/component/_button.scss";
+@import "~assets/scss/layout/_layout.scss";
+@import "~assets/scss/object/component/_container.scss";
+@import "~assets/scss/object/component/_title.scss";
+@import "~assets/scss/object/component/_button.scss";
 
-    .p-contact {
-        &__inner {
-            @include c-container;
-        }
-        &__heading {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-        &__headingTitle{
-            @include c-title;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        &__headingIntro {
-            letter-spacing: 4px;
-            display: inline-block;
-            font-size: 1.5rem;
-            @include desktop {
-                font-size: 1.6rem;
-            }
-        }
-        &__ohter {
-            padding: 30px 0 40px;
-            background: #FAF7F7;
-            margin-bottom: 40px;
-            @include desktop {
-                padding: 50px 0 70px;
-                margin-bottom: 80px;
-            }
-        }
-        &__ohterHeading {
-            text-align: center;
-            margin-bottom: 15px;
-            @include desktop {
-                margin-bottom: 30px;
-            }
-        }
-        &__ohterHeadingTitle {
-            margin-bottom: 25px;
-            font-size: 1.7rem;
-            font-weight: bold;
-            letter-spacing: 3px;
-            @include desktop {
-                margin-bottom: 30px;
-                font-size: 2rem;
-            }
-        }
-        &__ohterHeadingIntro {
-            line-height: 1.8;
-        }
-        &__ohterButtons {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 20px;
-            justify-content: space-between;
-
-            @include desktop {
-                flex-wrap: nowrap;
-            }
-        }
-        &__ohterButtonFacebook {
-            @include c-contactButton(facebook);
-            margin-bottom: 20px;
-            @include desktop {
-                margin-bottom: 0;
-            }
-        }
-        &__ohterButtonTwitter {
-            @include c-contactButton(chatwork);
-            margin-bottom: 40px;
-            @include desktop {
-                margin-bottom: 0;
-            }
-        }
-        &__ohterContents {
-            display: flex;
-            flex-wrap: wrap;
-            border: 1px solid #c3504f;
-            padding: 40px 20px;
-            box-sizing: border-box;
-            background: #fff;
-            @include desktop {
-                flex-wrap: nowrap;
-            }
-        }
-        &__ohterContentsChat {
-            display: inline-block;
-            margin-bottom: 40px;
-            width: 100%;
-            border-right: none;
-            border-bottom: 1px solid #c3504f;
-            text-align: center;
-
-            @include desktop {
-                width: 60%;
-                border-right: 1px solid #c3504f;
-                border-bottom: none;
-                margin-bottom: 0;
-            }
-        }
-        &__ohterContentsChatTitle {
-            display: inline-block;
-            margin-bottom: 3rem;
-            letter-spacing: 2px;
-            font-weight: bold;
-            font-size: 1.3rem;
-            @include desktop {
-                font-size: 1.5rem;
-                margin-bottom: 2rem;
-            }
-        }
-
-        &__ohterContentsTel {
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-
-            @include desktop {
-                width: 40%;
-            }
-        }
-
-        &__ohterContentsTelTitle {
-            display: inline-block;
-            margin-bottom: 2rem;
-            letter-spacing: 2px;
-            font-weight: bold;
-            font-size: 1.3rem;
-            @include desktop {
-                font-size: 1.5rem;
-            }
-        }
-        &__ohterContentsTelNumber {
-            display: block;
-            margin-bottom: 2rem;
-            color: #c3504f;
-            font-size: 3.5rem;
-            line-height: 1.5;
-        }
-        &__ohterContentsTelInfo {
-            display: inline-block;
-        }
-        &__form {
-            text-align: center;
-        }
-        &__formHeading {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        &__formHeadingTitle {
-            margin-bottom: 25px;
-            font-size: 1.7rem;
-            font-weight: bold;
-            letter-spacing: 3px;
-            @include desktop {
-                margin-bottom: 30px;
-                font-size: 2rem;
-            }
-        }
-        &__formHeadingIntro {
-            line-height: 1.8;
-        }
-        &__contentWrapper {
-            max-width: 700px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        &__content {
-            display: inline-block;
-            width: 45%;
-            max-width: 45%;
-            height: 60px;
-            margin-bottom: 20px;
-            border: 1px solid #C3504F;
-            border-radius: 5px;
-            color: #C3504F;
-            text-align: left;
-            line-height: 60px;
-            transition: all 0.3s;
-            cursor: pointer;
-            position: relative;
-            @include desktop {
-                max-width: 270px;
-            }
-
-            &::before {
-                display: inline-block;
-                content: "";
-                width: 20px;
-                height: 20px;
-                border: 1px solid rgba(195,80,79,.5);
-                background: #FAF7F7;
-                position: absolute;
-                top: 50%;
-                left: 15px;
-                transform: translateY(-10px);
-            }
-            &::after {
-                display: inline-block;
-                content: "";
-                width: 18px;
-                height: 18px;
-                background: url("/images/icon_check-mute.svg") no-repeat;
-                background-size: contain;
-                background-position: center;
-                position: absolute;
-                top: 50%;
-                left: 17px;
-                transform: translateY(-9px);
-            }
-
-            &:nth-child(odd) {
-                margin-right: 10px;
-            }
-
-            &:nth-child(even) {
-                margin-left: 10px;
-            }
-
-            &:hover {
-                background: #C3504F;
-                color: #fff;
-            }
-
-            @include desktop() {
-                margin-bottom: 30px;
-
-                &:nth-child(odd) {
-                    margin-right: 15px;
-                }
-
-                &:nth-child(even) {
-                    margin-left: 15px;
-                }
-            }
-        }
-
-        &__content.is-active {
-            background: #C3504F;
-            color: #fff;
-            &::after {
-                display: inline-block;
-                content: "";
-                width: 18px;
-                height: 18px;
-                background: url("/images/icon_check.svg") no-repeat;
-                background-size: contain;
-                background-position: center;
-                position: absolute;
-                top: 50%;
-                left: 17px;
-                transform: translateY(-9px);
-            }
-        }
-        &__checkBox {
-            display: none;
-            margin-left: 15px;
-        }
-
-        &__checkBoxLabel {
-            margin-left: 55px;
-        }
-
-        &__comment {
-            width: 100%;
-            height: 30px;
-            color: #c3504f;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            @include desktop {
-                margin-bottom: 80px;
-            }
-        }
-
-        &__textBoxWrapper, &__textAreaWrapper {
-            margin-bottom: 20px;
-            text-align: left;
-            @include desktop() {
-                text-align: center;
-                margin-right: 80px;
-            }
-        }
-        &__textBoxLabel, &__textAreaLabel {
-            display: inline-block;
-            margin-bottom: 5px;
-            min-width: 100px;
-            @include desktop() {
-                width: 50px;
-                margin-bottom: 0;
-                margin-right: 30px;
-                text-align: right;
-            }
-        }
-
-        &__textAreaLabel {
-            vertical-align: top;
-        }
-
-        &__textBoxLabel {
-            vertical-align: top;
-        }
-
-        &__textBoxArea {
-            display: inline-block;
-            width: 100%;
-            max-width: 550px;
-            @include desktop() {
-                  text-align: left;
-            }
-        }
-
-        &__textBox {
-            width: 100%;
-            padding: 1.6rem;
-            max-width: 550px;
-            height: 30px;
-            box-sizing: border-box;
-            background: #FAF7F7;
-            border: 1px solid #ccc;
-            outline: none;
-        }
-
-        &__textBoxError {
-            padding-top: 6px;
-            color: #C3504F;
-            font-size: 1.3rem;
-        }
-
-        &__textArea {
-            border: 1px solid #ccc;
-            padding: 1.6rem;
-            width: 100%;
-            max-width: 550px;
-            height: 200px;
-            box-sizing: border-box;
-            background: #FAF7F7;
-            resize: none;
-            outline: none;
-        }
-
-        &__submit {
-            display: inline-block;
-            margin-bottom: 10px;
-            padding: 2rem 1rem;
-            width:100%;
-            text-align: center;
-            border-radius: 4px;
-            border: 0;
-            color: #FFF;
-            font-size: 1.5rem;
-            font-weight: bold;
-            background:#C3504F;
-            text-decoration: none;
-            position:relative;
-            transition: all .5s;
-            outline: none;
-            cursor: pointer;
-            @include desktop {
-                font-size: 1.5rem;
-                line-height: 1.5;
-                font-weight: normal;
-                width: 45%;
-                letter-spacing: 2px;
-            }
-            &:hover {
-                opacity: .8;
-                transition: all .5s;
-                &::before {
-                    right: .2rem;
-                    transition: all .5s;
-                }
-            }
-            &::before {
-                content: "";
-                display: inline-block;
-                width: 1.4rem;
-                height: 1.4rem;
-                background-image: url("/images/icon_arrow-white.svg");
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: center;
-                position: absolute;
-                right: .7rem;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: all .5s;
-                @include desktop {
-                    width: 2rem;
-                    height: 2rem;
-                    right: 1rem;
-                }
-            }
-        }
+.p-contact {
+  &__inner {
+    @include c-container;
+  }
+  &__heading {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  &__headingTitle {
+    @include c-title;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__headingIntro {
+    letter-spacing: 4px;
+    display: inline-block;
+    font-size: 1.5rem;
+    @include desktop {
+      font-size: 1.6rem;
     }
+  }
+  &__ohter {
+    padding: 30px 0 40px;
+    background: #faf7f7;
+    margin-bottom: 40px;
+    @include desktop {
+      padding: 50px 0 70px;
+      margin-bottom: 80px;
+    }
+  }
+  &__ohterHeading {
+    text-align: center;
+    margin-bottom: 15px;
+    @include desktop {
+      margin-bottom: 30px;
+    }
+  }
+  &__ohterHeadingTitle {
+    margin-bottom: 25px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    @include desktop {
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+  }
+  &__ohterHeadingIntro {
+    line-height: 1.8;
+  }
+  &__ohterButtons {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    justify-content: space-between;
+
+    @include desktop {
+      flex-wrap: nowrap;
+    }
+  }
+  &__ohterButtonFacebook {
+    @include c-contactButton(facebook);
+    margin-bottom: 20px;
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+  &__ohterButtonTwitter {
+    @include c-contactButton(chatwork);
+    margin-bottom: 40px;
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+  &__ohterContents {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #c3504f;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background: #fff;
+    @include desktop {
+      flex-wrap: nowrap;
+    }
+  }
+  &__ohterContentsChat {
+    display: inline-block;
+    margin-bottom: 40px;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #c3504f;
+    text-align: center;
+
+    @include desktop {
+      width: 60%;
+      border-right: 1px solid #c3504f;
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+  &__ohterContentsChatTitle {
+    display: inline-block;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    @include desktop {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__ohterContentsTel {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+
+    @include desktop {
+      width: 40%;
+    }
+  }
+
+  &__ohterContentsTelTitle {
+    display: inline-block;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+  &__ohterContentsTelNumber {
+    display: block;
+    margin-bottom: 2rem;
+    color: #c3504f;
+    font-size: 3.5rem;
+    line-height: 1.5;
+  }
+  &__ohterContentsTelInfo {
+    display: inline-block;
+  }
+  &__form {
+    text-align: center;
+  }
+  &__formHeading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__formHeadingTitle {
+    margin-bottom: 25px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    @include desktop {
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+  }
+  &__formHeadingIntro {
+    line-height: 1.8;
+  }
+  &__contentWrapper {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: inline-block;
+    width: 45%;
+    max-width: 45%;
+    height: 60px;
+    margin-bottom: 20px;
+    border: 1px solid #c3504f;
+    border-radius: 5px;
+    color: #c3504f;
+    text-align: left;
+    line-height: 60px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    @include desktop {
+      max-width: 270px;
+    }
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgba(195, 80, 79, 0.5);
+      background: #faf7f7;
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-10px);
+    }
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("/images/icon_check-mute.svg") no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      top: 50%;
+      left: 17px;
+      transform: translateY(-9px);
+    }
+
+    &:nth-child(odd) {
+      margin-right: 10px;
+    }
+
+    &:nth-child(even) {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background: #c3504f;
+      color: #fff;
+    }
+
+    @include desktop() {
+      margin-bottom: 30px;
+
+      &:nth-child(odd) {
+        margin-right: 15px;
+      }
+
+      &:nth-child(even) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__content.is-active {
+    background: #c3504f;
+    color: #fff;
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("/images/icon_check.svg") no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      top: 50%;
+      left: 17px;
+      transform: translateY(-9px);
+    }
+  }
+  &__checkBox {
+    display: none;
+    margin-left: 15px;
+  }
+
+  &__checkBoxLabel {
+    margin-left: 55px;
+  }
+
+  &__comment {
+    width: 100%;
+    height: 30px;
+    color: #c3504f;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    @include desktop {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__textBoxWrapper,
+  &__textAreaWrapper {
+    margin-bottom: 20px;
+    text-align: left;
+    @include desktop() {
+      text-align: center;
+      margin-right: 80px;
+    }
+  }
+  &__textBoxLabel,
+  &__textAreaLabel {
+    display: inline-block;
+    margin-bottom: 5px;
+    min-width: 100px;
+    @include desktop() {
+      width: 50px;
+      margin-bottom: 0;
+      margin-right: 30px;
+      text-align: right;
+    }
+  }
+
+  &__textAreaLabel {
+    vertical-align: top;
+  }
+
+  &__textBoxLabel {
+    vertical-align: top;
+  }
+
+  &__textBoxArea {
+    display: inline-block;
+    width: 100%;
+    max-width: 550px;
+    @include desktop() {
+      text-align: left;
+    }
+  }
+
+  &__textBox {
+    width: 100%;
+    padding: 1.6rem;
+    max-width: 550px;
+    height: 30px;
+    box-sizing: border-box;
+    background: #faf7f7;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+
+  &__textBoxError {
+    padding-top: 6px;
+    color: #c3504f;
+    font-size: 1.3rem;
+  }
+
+  &__textArea {
+    border: 1px solid #ccc;
+    padding: 1.6rem;
+    width: 100%;
+    max-width: 550px;
+    height: 200px;
+    box-sizing: border-box;
+    background: #faf7f7;
+    resize: none;
+    outline: none;
+  }
+
+  &__submit {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 2rem 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    border: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #c3504f;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.5s;
+    outline: none;
+    cursor: pointer;
+    @include desktop {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      font-weight: normal;
+      width: 45%;
+      letter-spacing: 2px;
+    }
+    &:hover {
+      opacity: 0.8;
+      transition: all 0.5s;
+      &::before {
+        right: 0.2rem;
+        transition: all 0.5s;
+      }
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.4rem;
+      height: 1.4rem;
+      background-image: url("/images/icon_arrow-white.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      right: 0.7rem;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.5s;
+      @include desktop {
+        width: 2rem;
+        height: 2rem;
+        right: 1rem;
+      }
+    }
+  }
+}
 </style>
