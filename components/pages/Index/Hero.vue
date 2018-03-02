@@ -21,12 +21,13 @@
 @import "~assets/scss/object/component/_title.scss";
 
 .p-hero {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   height: 340px;
   background-color: #fff;
   position: relative;
 
   @include desktop() {
+    margin-bottom: 60px;
     max-width: 1920px;
     height: 800px;
     background-size: cover;

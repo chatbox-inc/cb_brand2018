@@ -2,11 +2,8 @@
   <div class="p-contact">
     <div class="p-contact--inner">
       <h1 class="p-contact--title">Contact</h1>
-      <p class="p-contact--sentence">
-        Web制作のご相談、技術顧問に関するご相談、イベント・スクールに関するお問い合わせなど、
-        chatbox に関する相談・ご質問はお気軽に下記「お問い合わせフォーム」からお願いいたします。
-      </p>
-      <a class="p-contact--button" href="/contact">お問い合わせフォームへ </a>
+      <p class="p-contact--sentence">Web制作のご相談、技術顧問に関するご相談、イベント・スクールに関するお問い合わせなど、 chatbox に関する相談・ご質問はお気軽に下記「お問い合わせフォーム」からお願いいたします。</p>
+      <a class="p-contact--button" href="https://chatbox-inc.com/contact">お問い合わせフォームへ </a>
     </div>
   </div>
 </template>
@@ -17,10 +14,11 @@
 
 .p-contact {
   @include c-container;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 40px;
+  margin-bottom: 120px;
   @include desktop() {
-    margin-top: 150px;
+    margin-top: 80px;
+    margin-bottom: 196px;
     text-align: center;
   }
   &--inner {
@@ -35,12 +33,13 @@
   }
   &--sentence {
     @include c-sentence;
-    text-align: left;
     max-width: 550px;
     margin: 0 auto;
     margin-bottom: 2rem;
+    line-height: 2;
     @include desktop() {
       margin-bottom: 4rem;
+      text-align: left;
     }
   }
   &--button {
@@ -58,6 +57,7 @@
     text-decoration: none;
     position: relative;
     transition: all 0.5s;
+    line-height: 1.2;
     @include desktop {
       max-width: 450px;
       font-size: 2rem;
