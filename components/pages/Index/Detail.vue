@@ -1,7 +1,7 @@
 <template>
   <div :class="{
       'is-colored': this.coloredCover
-    }">
+    }" class="p-detail--wrapper">
     <div class="p-detail--titleArea">
       <div class="p-detail">
         <div class="p-detail--inner">
@@ -112,6 +112,10 @@ export default {
 
 .p-detail {
   @include c-container;
+
+  &--wrapper {
+    overflow: hidden;
+  }
 
   &--titleArea {
     padding: 0.5rem 0;
