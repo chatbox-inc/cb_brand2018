@@ -79,11 +79,10 @@ export default {
 
 .p-about {
   @include c-container;
-  margin-bottom: 40px;
-  @include desktop() {
-    margin-top: 100px;
+  margin-bottom: 30px;
+  @include desktop {
+    margin-bottom: 80px;
   }
-  margin-top: 4rem;
   &--title {
     @include c-title;
     margin-bottom: 2rem;

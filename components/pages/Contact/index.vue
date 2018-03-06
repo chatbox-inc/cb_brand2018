@@ -29,7 +29,7 @@
                     </div>
                     <div class="p-contact__ohterContentsTel">
                         <span class="p-contact__ohterContentsTelTitle">お電話でのお問合わせ</span>
-                        <a class="p-contact__ohterContentsTelNumber">050-3555-1212</a>
+                        <a href="tel:050-3555-1212" class="p-contact__ohterContentsTelNumber">050-3555-1212</a>
                         <span class="p-contact__ohterContentsInfo">24時間対応：メッセージ預かり</span>
                     </div>
                 </div>
@@ -364,6 +364,7 @@ export default {
     color: #c3504f;
     font-size: 3.5rem;
     line-height: 1.5;
+    text-decoration: none;
   }
   &__ohterContentsTelInfo {
     display: inline-block;
@@ -396,20 +397,23 @@ export default {
 
   &__content {
     display: inline-block;
-    width: 45%;
-    max-width: 45%;
-    height: 60px;
-    margin-bottom: 20px;
+    width: 50%;
+    max-width: 47%;
+    height: 50px;
+    margin-bottom: 10px;
     border: 1px solid #c3504f;
     border-radius: 5px;
     color: #c3504f;
     text-align: left;
-    line-height: 60px;
+    line-height: 50px;
     transition: all 0.3s;
     cursor: pointer;
     position: relative;
     @include desktop {
+      height: 60px;
+      line-height: 60px;
       max-width: 270px;
+      margin-bottom: 15px;
     }
 
     &::before {
@@ -438,29 +442,13 @@ export default {
       transform: translateY(-9px);
     }
 
-    &:nth-child(odd) {
-      margin-right: 10px;
-    }
-
-    &:nth-child(even) {
-      margin-left: 10px;
-    }
-
     &:hover {
       background: #c3504f;
       color: #fff;
     }
 
-    @include desktop() {
-      margin-bottom: 30px;
-
-      &:nth-child(odd) {
-        margin-right: 15px;
-      }
-
-      &:nth-child(even) {
-        margin-left: 15px;
-      }
+    &:nth-child(odd) {
+      margin-right: 15px;
     }
   }
 
@@ -495,17 +483,18 @@ export default {
     height: 30px;
     color: #c3504f;
     line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     @include desktop {
-      margin-bottom: 80px;
+      margin-bottom: 30px;
     }
   }
 
   &__textBoxWrapper,
   &__textAreaWrapper {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     text-align: left;
     @include desktop() {
+      margin-bottom: 20px;
       text-align: center;
       margin-right: 80px;
     }
@@ -513,7 +502,6 @@ export default {
   &__textBoxLabel,
   &__textAreaLabel {
     display: inline-block;
-    margin-bottom: 5px;
     min-width: 100px;
     @include desktop() {
       width: 50px;
@@ -545,6 +533,7 @@ export default {
     padding: 1.6rem;
     max-width: 550px;
     height: 30px;
+    font-size: 1.5rem;
     box-sizing: border-box;
     background: #faf7f7;
     border: 1px solid #ccc;
@@ -563,6 +552,7 @@ export default {
     width: 100%;
     max-width: 550px;
     height: 200px;
+    font-size: 1.5rem;
     box-sizing: border-box;
     background: #faf7f7;
     resize: none;
