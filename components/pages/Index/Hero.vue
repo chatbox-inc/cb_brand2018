@@ -125,7 +125,7 @@
       margin-bottom: 1rem;
       font-weight: bold;
       perspective: 250px;
-      visibility:hidden;
+      visibility: hidden;
       animation-name: slogan_text;
       animation-fill-mode: forwards;
       animation-duration: 1.5s;
@@ -145,19 +145,19 @@
       }
       @keyframes slogan_text {
         0% {
-          visibility:visible;
+          visibility: visible;
           opacity: 0;
-          transform: rotateX( 88deg ) ;
+          transform: rotateX(88deg);
         }
         60% {
-          visibility:visible;
+          visibility: visible;
           opacity: 0;
-          transform: rotateX( 88deg ) ;
+          transform: rotateX(88deg);
         }
         100% {
-          visibility:visible;
+          visibility: visible;
           opacity: 1;
-          transform: rotateX( 0deg ) ;
+          transform: rotateX(0deg);
         }
       }
     }
