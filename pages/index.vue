@@ -18,6 +18,10 @@
   import PageAboutus from '~/components/pages/Index/AboutUs.vue'
   import PageContact from '~/components/pages/Index/Contact.vue'
 
+  // [Pushnate] 実行されたタイミングで、ブラウザのプッシュ通知許可ダイアログが表示
+  // var Pushnate = Pushnate || []
+  // Pushnate.push(["init", { path: "/", site_id: "SDK用ID" }]);
+
   export default {
     components: {
       PageHero,
