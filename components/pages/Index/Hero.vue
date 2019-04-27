@@ -3,12 +3,15 @@
     <div class="p-hero--slogan">
       <div class="p-hero--slogan_bg"></div>
       <div class="p-hero--slogan_text_wrapper">
-        <div class="p-hero--slogan_text"><span>Webのこれからを語り合う</span></div>
+        <div class="p-hero--slogan_text">
+          <span>Webのこれからを語り合う</span>
+        </div>
         <div class="p-hero--slogan_text">
           <span></span>
           <span>「作る」</span>
           <span>「伝える」</span>
-          <span>「語り合う」</span></div>
+          <span>「語り合う」</span>
+        </div>
       </div>
     </div>
     <div class="p-hero--bgImg"></div>
@@ -122,6 +125,12 @@
       margin-bottom: 1rem;
       font-weight: bold;
       perspective: 250px;
+      visibility: hidden;
+      animation-name: slogan_text;
+      animation-fill-mode: forwards;
+      animation-duration: 1.5s;
+      animation-timing-function: linear;
+      animation-delay: 0.7s;
       @include desktop() {
         line-height: 84px;
         font-family: YuGothic, serif;
@@ -134,27 +143,20 @@
         transform-origin: 50% 50% -10px;
         letter-spacing: 1px;
       }
-      span:nth-child(1) {
-        animation: slogan_text 0.8s cubic-bezier(0.4, 0.2, 0, 1) 2s 1 alternate
-          both running;
-      }
-      span:nth-child(2) {
-        animation: slogan_text 0.6s cubic-bezier(0.4, 0.2, 0, 1) 2.8s 1
-          alternate both running;
-      }
-      span:nth-child(3) {
-        animation: slogan_text 0.6s cubic-bezier(0.4, 0.2, 0, 1) 3.4s 1
-          alternate both running;
-      }
-      span:nth-child(4) {
-        animation: slogan_text 0.6s cubic-bezier(0.4, 0.2, 0, 1) 4s 1 alternate
-          both running;
-      }
       @keyframes slogan_text {
         0% {
+          visibility: visible;
+          opacity: 0;
+          transform: rotateX(88deg);
+        }
+        60% {
+          visibility: visible;
+          opacity: 0;
           transform: rotateX(88deg);
         }
         100% {
+          visibility: visible;
+          opacity: 1;
           transform: rotateX(0deg);
         }
       }
